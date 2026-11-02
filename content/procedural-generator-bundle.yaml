@@ -20,14 +20,14 @@ sections:
     kicker: Included generators
     title: Ten creative systems in one library
     items:
-      - Arc Generator: Create procedural arc-shaped forms and adjustable curved structures.
+      - Arc Generator: Wrap any mesh in procedural electric arcs for lightning and sci-fi energy effects.
+      - Brick Generator: Transform surfaces into stylized toy-brick-inspired procedural structures.
       - Bubble Wrap Generator: Cover surfaces with customizable bubble-wrap-style procedural geometry.
       - Chain Wrap Generator: Wrap procedural chain elements around objects and curved surfaces.
       - Crystal Generator: Generate and distribute customizable crystal formations across your objects.
       - Droplet Generator: Add procedural droplets and rounded liquid details to object surfaces.
       - Freezing Effect Generator: Create procedural ice, frost, crystals and frozen surface formations.
       - Fur Generator: Generate adjustable procedural fur with customizable direction and variation.
-      - Lego Generator: Transform surfaces into stylized toy-brick-inspired procedural structures.
       - Liquid Generator: Create stylized liquid forms and organic procedural surface effects.
       - Trash Scatter Generator: Scatter debris and trash assets across streets, environments and surfaces.
     media:
