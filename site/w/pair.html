@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pairs well with</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="widget.css">
+<style>
+  /* 960 x 320 canvas: one recommended product, cover on the left. Rotates through the top three picks. */
+  .slide {
+    position: absolute; inset: 0; display: grid; grid-template-columns: 52rem 1fr; gap: 3rem; align-items: center;
+    padding: 2.6rem 3rem 2.6rem 2.6rem; opacity: 0; visibility: hidden; transition: opacity 0.6s, visibility 0.6s;
+  }
+  .slide.on { opacity: 1; visibility: visible; }
+  .cover { position: relative; aspect-ratio: 2 / 1; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 1.2rem; box-shadow: 0 0 3.6rem rgba(155, 48, 255, 0.25); }
+  .cover img { transition: transform 0.7s; }
+  .slide:hover .cover img { transform: scale(1.05); }
+  .info { display: flex; flex-direction: column; gap: 0.7rem; min-width: 0; }
+  .info .kicker { font-size: 1.05rem; }
+  .info .name { margin-top: 0.4rem; font-size: 4.8rem; }
+  .info .tag { font-family: var(--font-display); font-size: 2rem; letter-spacing: 0.04em; line-height: 1; color: var(--brand-bright); }
+  .info .sum { font-size: 1.3rem; line-height: 1.55; color: var(--muted); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .info .btn { align-self: flex-start; margin-top: 0.6rem; }
+  .dots { position: absolute; right: 3rem; top: 2.6rem; z-index: 3; display: flex; gap: 0.6rem; }
+  .dots button { width: 2.4rem; height: 0.5rem; border: 0; border-radius: 1rem; background: var(--line-strong); cursor: pointer; transition: background 0.3s; }
+  .dots button.on { background: var(--brand-bright); }
+
+  /* Phones: the iframe is ~100 px tall; keep the cover, the name and the button. */
+  @media (max-width: 560px) {
+    .slide { grid-template-columns: 48rem 1fr; gap: 2.4rem; padding: 2.4rem; }
+    .info { gap: 0.4rem; }
+    .info .kicker, .info .sum, .info .badges, .btn .long { display: none; }
+    .info .name { font-size: 6.4rem; }
+    .info .tag { font-size: 3rem; }
+    .info .btn { margin-top: 1rem; font-size: 3rem; padding: 1.2rem 2.4rem; letter-spacing: 0.1em; }
+    .dots { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="scan"></div>
+<div id="slides"></div>
+<div class="dots" id="dots"></div>
+<div class="frame"></div>
+<script src="widget.js"></script>
+<script>
+  Widget.load().then(({ self, related }) => {
+    const { esc, productLink, badges, flag } = Widget;
+    const picks = related.slice(0, 3);
+    const label = self ? `Pairs well with ${self.name}` : 'From Voyde Procedural';
+    document.getElementById('slides').innerHTML = picks.map((p, i) => `
+      <a class="slide${i ? '' : ' on'}" ${productLink(p)}>
+        <div class="cover">${flag(p)}<img src="../${esc(p.img)}" alt="${esc(p.name)}: ${esc(p.tagline)}"></div>
+        <div class="info">
+          <p class="kicker mono">${esc(label)}</p>
+          <span class="name display">${esc(p.name)}</span>
+          <span class="tag">${esc(p.tagline)}</span>
+          <p class="sum">${esc(p.summary)}</p>
+          <div class="badges">${badges(p)}</div>
+          <span class="btn">View<span class="long"> on Superhive</span> <span class="arrow">&rarr;</span></span>
+        </div>
+      </a>`).join('');
+
+    const slides = [...document.querySelectorAll('.slide')];
+    const dots = document.getElementById('dots');
+    if (slides.length < 2) return;
+    dots.innerHTML = slides.map((_, i) => `<button type="button" aria-label="Show product ${i + 1}"${i ? '' : ' class="on"'}></button>`).join('');
+    let at = 0, timer = null;
+    const show = i => {
+      at = (i + slides.length) % slides.length;
+      slides.forEach((s, k) => s.classList.toggle('on', k === at));
+      [...dots.children].forEach((d, k) => d.classList.toggle('on', k === at));
+    };
+    [...dots.children].forEach((d, i) => d.addEventListener('click', () => show(i)));
+    const start = () => { if (!Widget.reducedMotion) timer = setInterval(() => show(at + 1), 6500); };
+    document.body.addEventListener('pointerenter', () => clearInterval(timer));
+    document.body.addEventListener('pointerleave', start);
+    start();
+  });
+</script>
+</body>
+</html>

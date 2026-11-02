@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>More from Voyde Procedural</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="widget.css">
+<style>
+  /* 960 x 620 canvas: studio panel (logo, bundle, links) on the left, four product cards on the right. */
+  body { padding: 2.6rem; display: grid; grid-template-columns: 28rem 1fr; grid-template-rows: minmax(0, 1fr); gap: 2.4rem; }
+  .brand {
+    position: relative; overflow: hidden; display: flex; flex-direction: column;
+    padding: 2.2rem; border: 1px solid var(--line-strong); border-radius: 1.6rem;
+    background: linear-gradient(170deg, rgba(60, 20, 120, 0.6), rgba(18, 13, 34, 0.92) 60%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  .id { display: flex; align-items: center; gap: 1.4rem; }
+  .logo { position: relative; flex: none; width: 6.4rem; height: 6.4rem; display: grid; place-items: center; }
+  .logo img { width: 4.8rem; height: 4.8rem; object-fit: contain; filter: drop-shadow(0 0 1.4rem rgba(155, 48, 255, 0.8)); }
+  .logo .ring { position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--line-strong); }
+  .logo .ring::after { content: ""; position: absolute; inset: -1px; border-radius: 50%; border: 1px solid transparent; border-top-color: var(--brand-bright); animation: spin 5s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .id h2 { font-size: 3.1rem; line-height: 0.92; }
+  .brand .tagline { margin-top: 1.4rem; font-size: 1rem; line-height: 1.7; color: var(--muted); }
+
+  .bundle { display: block; margin-top: 1.8rem; }
+  .bundle .kicker { font-size: 0.95rem; margin-bottom: 0.8rem; }
+  .bundle .pic { overflow: hidden; aspect-ratio: 2 / 1; border: 1px solid var(--line-strong); border-radius: 1rem; transition: border-color 0.3s, box-shadow 0.3s; }
+  .bundle .pic img { transition: transform 0.6s; }
+  .bundle:hover .pic { border-color: var(--brand-bright); box-shadow: 0 0 2.4rem rgba(155, 48, 255, 0.5); }
+  .bundle:hover .pic img { transform: scale(1.05); }
+  .bundle .line { display: flex; justify-content: space-between; gap: 1rem; margin-top: 0.8rem; font-size: 1.25rem; color: var(--text); }
+  .bundle .line b { font-weight: 600; }
+  .bundle .line span { color: var(--brand-bright); transition: transform 0.3s; }
+  .bundle:hover .line span { transform: translateX(0.4rem); }
+
+  .foot { margin-top: auto; }
+  .brand .count { display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--brand-soft); }
+  .brand .count .dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--brand-bright); }
+  .socials { display: flex; gap: 0.8rem; margin-top: 1.2rem; }
+  .socials a {
+    flex: 1; height: 3.8rem; display: grid; place-items: center; color: var(--text);
+    border: 1px solid var(--line-strong); border-radius: 0.9rem; background: rgba(25, 18, 48, 0.85);
+    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s, transform 0.25s;
+  }
+  .socials a:hover { color: #fff; border-color: var(--brand-bright); box-shadow: 0 0 1.8rem rgba(155, 48, 255, 0.5); transform: translateY(-0.2rem); }
+  .socials svg { width: 1.8rem; height: 1.8rem; }
+  .brand .btn { width: 100%; margin-top: 1rem; padding: 1.1rem 1rem; letter-spacing: 0.14em; white-space: nowrap; }
+
+  .side { display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+  .head { display: flex; justify-content: space-between; align-items: baseline; gap: 2rem; margin-bottom: 1.4rem; }
+  .head .kicker { flex: 1; }
+  .head .for { font-size: 1rem; color: var(--dim); white-space: nowrap; }
+  .grid { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 1.6rem; min-height: 0; }
+  .grid .card .cover { flex: none; }
+
+  /* Phones: the iframe is only ~200 px tall, so drop the studio panel and let the four cards fill it. */
+  @media (max-width: 560px) {
+    html { font-size: calc(100vw / 60); }
+    body { grid-template-columns: 1fr; padding: 1.6rem; }
+    .brand { display: none; }
+    .head { margin-bottom: 1rem; }
+    .head .kicker { font-size: 1.9rem; letter-spacing: 0.15em; }
+    .head .for, .card .cat, .card .tag, .card .view { display: none; }
+    .grid { gap: 1rem; }
+    .grid .card .cover { flex: 1 1 auto; aspect-ratio: auto; min-height: 0; }
+    .card .body { flex: none; padding: 0.6rem 1rem 0.8rem; }
+    .card .name { font-size: 2.4rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .flag { top: 0.6rem; left: 0.6rem; font-size: 1.5rem; padding: 0.3rem 0.7rem; }
+  }
+</style>
+</head>
+<body>
+<aside class="brand">
+  <div class="scan"></div>
+  <div class="id">
+    <div class="logo"><span class="ring"></span><img src="../brand/logo-256.png" alt="Voyde Procedural logo"></div>
+    <h2 class="display">VOYDE<br><span class="outline">PROCEDURAL</span></h2>
+  </div>
+  <p class="tagline mono" id="tagline"></p>
+  <a class="bundle" id="bundle" target="_top" hidden></a>
+  <div class="foot">
+    <p class="count mono"><span class="dot pulse"></span><span id="count"></span></p>
+    <nav class="socials" id="socials" aria-label="Voyde Procedural elsewhere"></nav>
+    <a class="btn" id="all" target="_top">All products <span class="arrow">&rarr;</span></a>
+  </div>
+</aside>
+<main class="side">
+  <div class="head"><p class="kicker mono">More from the studio</p><p class="for mono" id="for"></p></div>
+  <div class="grid" id="grid"></div>
+</main>
+<div class="frame"></div>
+<script src="widget.js"></script>
+<script>
+  Widget.load().then(({ data, self, related }) => {
+    const { esc, productLink, externalLink, flag, icon } = Widget;
+    const s = data.store;
+    document.getElementById('tagline').textContent = s.tagline;
+    document.getElementById('count').textContent = `${data.count} products on Superhive`;
+    const all = document.getElementById('all');
+    all.href = s.superhive;
+    all.innerHTML = `All ${data.count} products <span class="arrow">&rarr;</span>`;
+    const links = Object.entries(s.socials).concat([['website', s.website]]);
+    document.getElementById('socials').innerHTML = links
+      .map(([name, url]) => `<a ${externalLink(url)} aria-label="${esc(name)}" title="${esc(name)}">${icon(name)}</a>`).join('');
+    if (self) document.getElementById('for').textContent = `Picked for ${self.name}`;
+
+    // A bundle that contains this product, otherwise the first bundle.
+    const bundle = (self && data.bundles.find(b => b.includes.includes(self.id))) || data.bundles[0];
+    if (bundle) {
+      const el = document.getElementById('bundle');
+      const inIt = self && bundle.includes.includes(self.id);
+      el.href = bundle.url;
+      el.innerHTML = `
+        <p class="kicker mono">${inIt ? 'Also in the bundle' : 'Bundle deal'}</p>
+        <div class="pic"><img src="../${esc(bundle.image)}" alt="${esc(bundle.name)}: ${esc(bundle.tagline)}"></div>
+        <p class="line"><b>${bundle.includes.length} tools, one bundle</b><span>&rarr;</span></p>`;
+      el.hidden = false;
+    }
+
+    // The "Pairs well with" card rotates through the first three related products; show the next three here,
+    // then one at random from the rest so every product gets seen.
+    const picks = related.slice(3, 6);
+    const rest = related.slice(6);
+    if (rest.length) picks.push(rest[Math.floor(Math.random() * rest.length)]);
+    document.getElementById('grid').innerHTML = picks.map(p => `
+      <a class="card" ${productLink(p)}>
+        <div class="cover">${flag(p)}<img src="../${esc(p.img)}" alt="${esc(p.name)}: ${esc(p.tagline)}" loading="lazy"></div>
+        <div class="body">
+          <span class="cat mono">${esc(p.category === p.kind ? p.category : `${p.category} · ${p.kind}`)}</span>
+          <span class="name display">${esc(p.name)}</span>
+          <span class="tag">${esc(p.tagline)}</span>
+        </div>
+        <span class="view">VIEW &rarr;</span>
+      </a>`).join('');
+  });
+</script>
+</body>
+</html>

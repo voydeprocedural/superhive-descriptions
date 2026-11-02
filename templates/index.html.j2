@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voyde Procedural · Superhive descriptions</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="w/tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap">
+<style>
+  body { margin: 0; padding: 40px 20px; background: var(--page); color: var(--text); font-family: var(--font-body); }
+  main { max-width: 980px; margin: 0 auto; }
+  h1 { margin: 0; font: 400 56px/1 var(--font-display); letter-spacing: 1px; color: var(--heading); }
+  h1 span { color: var(--brand-bright); }
+  p { color: var(--muted); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 28px; }
+  .item { display: block; padding: 0 0 14px; overflow: hidden; color: inherit; text-decoration: none; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; }
+  .item:hover { border-color: var(--brand-bright); }
+  .item img { display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
+  .item b { display: block; margin: 12px 14px 2px; font: 400 26px/1 var(--font-display); letter-spacing: 0.5px; color: var(--heading); }
+  .item span { display: block; margin: 0 14px; font: 500 11px var(--font-mono); letter-spacing: 2px; text-transform: uppercase; color: var(--dim); }
+  .item.ready span { color: var(--brand-bright); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Superhive <span>descriptions</span></h1>
+  <p>Previews of the generated product descriptions. Source: <code>products.yaml</code> and <code>content/</code> in the
+  <a href="https://github.com/voydeprocedural/superhive-descriptions" style="color: var(--brand-bright)">superhive-descriptions</a> repository.</p>
+  <div class="grid">
+  {%- for p in products %}
+    {%- if p.id in previews %}
+    <a class="item ready" href="preview/{{ p.id }}.html"><img src="img/{{ p.id }}.webp" alt=""><b>{{ p.name }}</b><span>Preview &rarr;</span></a>
+    {%- else %}
+    <div class="item"><img src="img/{{ p.id }}.webp" alt=""><b>{{ p.name }}</b><span>{{ p.status }} · no content yet</span></div>
+    {%- endif %}
+  {%- endfor %}
+  </div>
+</main>
+</body>
+</html>

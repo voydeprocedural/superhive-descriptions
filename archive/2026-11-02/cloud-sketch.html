@@ -1,0 +1,139 @@
+<div style="max-width:960px;margin:0 auto;padding:30px 24px;background-color:#141218;color:#DDDDDD;font-family:Arial , Helvetica , sans-serif;font-size:16px;line-height:1.75;">
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-top:4px solid #9B5CFF;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#B88CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">BLENDER ADD-ON  ·  V0.3.0</p>
+<h2 style="margin:0 0 14px;color:#FFFFFF;font-size:34px;line-height:1.2;">Cloud Sketch</h2>
+<p style="margin:0 0 16px;color:#EEEEEE;font-size:18px;">Draw a shape in the 3D viewport and it becomes a volumetric cloud. Turn any 3D model into a cloud, pick from 68 library clouds, or fill the whole sky in one click.</p>
+<p style="margin:0 0 18px;color:#BBBBBB;font-size:13px;line-height:2.2;"><span style="padding:5px 10px;border:1px solid #403350;border-radius:999px;background-color:#19161F;">Blender 5.0+</span> <span style="padding:5px 10px;border:1px solid #403350;border-radius:999px;background-color:#19161F;">Cycles · EEVEE</span> <span style="padding:5px 10px;border:1px solid #403350;border-radius:999px;background-color:#19161F;">No baking, no VDBs</span> <span style="padding:5px 10px;border:1px solid #403350;border-radius:999px;background-color:#19161F;">Everything keyframable</span></p>
+<img alt="Volumetric clouds billowing over the ocean, including one shaped like a heart" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/01_featured.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;"/>
+</div>
+<div style="margin:0 0 22px;overflow:hidden;border:1px solid #403350;border-radius:12px;background-color:#211D29;"><div style="position:relative;width:100%;height:0;padding-bottom:56.25%;"><iframe allowfullscreen="" height="540" loading="lazy" src="https://www.youtube.com/embed/ZXIEkfSiAE8?rel=0&amp;playsinline=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" title="Cloud Sketch for Blender: draw volumetric clouds, or build a whole sky in one click" width="960"></iframe></div></div>
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#C59CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">DRAW CLOUDS</p>
+<h3 style="margin:0 0 12px;color:#FFFFFF;font-size:26px;line-height:1.25;">If you can draw it, you can render it</h3>
+<p style="margin:0 0 16px;color:#EEEEEE;">Most cloud tools hand you someone else's shapes. Cloud Sketch lets you draw the silhouette you actually want: a heart for a wedding shot, a rabbit for a children's film, a towering cumulus to frame a mountain.</p>
+<img alt="A heart is drawn in the Blender viewport, then renders as a heart-shaped volumetric cloud" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/02_draw_in_viewport.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;margin:0 0 18px;"/>
+<div style="padding:12px 16px;background-color:#19161F;border:1px solid #403350;border-left:3px solid #9B5CFF;border-radius:8px;margin:0 0 10px;">
+<p style="margin:0;color:#DDDDDD;"><strong style="color:#B88CFF;">01 · Draw.</strong> Click Draw Clouds and sketch a closed shape over your scene. Orbit or zoom between strokes and keep drawing.</p>
+</div>
+<div style="padding:12px 16px;background-color:#19161F;border:1px solid #403350;border-left:3px solid #9B5CFF;border-radius:8px;margin:0 0 10px;">
+<p style="margin:0;color:#DDDDDD;"><strong style="color:#B88CFF;">02 · Release.</strong> The outline is inflated into 3D. Wide areas get deep and round, thin parts stay slender, the way real clouds read.</p>
+</div>
+<div style="padding:12px 16px;background-color:#19161F;border:1px solid #403350;border-left:3px solid #9B5CFF;border-radius:8px;margin:0 0 18px;">
+<p style="margin:0;color:#DDDDDD;"><strong style="color:#B88CFF;">03 · Tweak.</strong> Puffiness, detail, wisps, softness and density update live in the viewport, and every one can be keyframed.</p>
+</div>
+<img alt="The heart cloud in the Blender viewport while Puffiness, Detail, Softness and Grow change" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/03_live_in_viewport.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;"/>
+<p style="margin:8px 0 0;color:#9D9D9D;font-size:14px;">Puffiness, Detail, Softness and Grow, changed live in the Rendered viewport.</p>
+</div>
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#C59CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">MODEL TO CLOUD  ·  NEW IN 0.3</p>
+<h3 style="margin:0 0 12px;color:#FFFFFF;font-size:26px;line-height:1.25;">Turn any 3D model into a cloud</h3>
+<p style="margin:0 0 12px;color:#EEEEEE;">Select meshes, text objects or curves and click Model to Cloud. Each model is hidden and a cloud of its shape takes its place.</p>
+<ul style="margin:0 0 16px;padding-left:20px;color:#DDDDDD;">
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Stays linked.</strong> The cloud follows the model when you edit, pose or animate it.</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Swell</strong> keeps thin parts from breaking up; <strong style="color:#FFFFFF;">Resolution</strong> keeps small parts from going missing.</li>
+<li style="margin:0;">Works for logos and lettering, characters, creatures and props.</li>
+</ul>
+<img alt="A dragon model dissolving into a cloud of the same dragon shape" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/06_model_to_cloud.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;"/>
+</div>
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#C59CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">SKY BUILDER  ·  NEW IN 0.3</p>
+<h3 style="margin:0 0 12px;color:#FFFFFF;font-size:26px;line-height:1.25;">Fill the whole sky in one click</h3>
+<p style="margin:0 0 16px;color:#EEEEEE;">Pick a weather, set Coverage and click Build Sky. Clouds, sun, atmosphere and haze are set up around your active camera.</p>
+<img alt="One Build Sky click for each of the nine weather presets" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/05_sky_builder.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;margin:0 0 14px;"/>
+<p style="margin:0;color:#C59CFF;font-size:13px;line-height:2.2;"><span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;">Fair Weather</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;">Cumulus Field</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;">Towering Afternoon</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;">Golden Hour</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;">Mackerel Sunset</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;">Pastel Dusk</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;">Broken Layer</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;">High Wisps</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;">Building Storm</span></p>
+</div>
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#C59CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">CLOUD LIBRARY  ·  NEW IN 0.3</p>
+<h3 style="margin:0 0 12px;color:#FFFFFF;font-size:26px;line-height:1.25;">68 ready-made clouds</h3>
+<p style="margin:0 0 12px;color:#EEEEEE;">Choose a category, click a preview and press Add. The cloud appears at the 3D cursor, facing the view, at a real-world size you can change.</p>
+<p style="margin:0 0 16px;color:#BBBBBB;font-size:13px;line-height:2.2;"><span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;"><strong style="color:#C59CFF;">Cumulus</strong> 12</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;"><strong style="color:#C59CFF;">Towering</strong> 12</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;"><strong style="color:#C59CFF;">Clusters</strong> 10</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;"><strong style="color:#C59CFF;">Scattered</strong> 8</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;"><strong style="color:#C59CFF;">Wisps</strong> 8</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;"><strong style="color:#C59CFF;">Storm</strong> 6</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;"><strong style="color:#C59CFF;">Plumes</strong> 6</span> <span style="padding:4px 9px;border:1px solid #403350;border-radius:6px;background-color:#19161F;"><strong style="color:#C59CFF;">Trails</strong> 6</span></p>
+<img alt="The cloud library stepping through its eight categories, from cumulus to contrails" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/04_cloud_library.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;"/>
+</div>
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#C59CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">ANY SHAPE</p>
+<h3 style="margin:0 0 12px;color:#FFFFFF;font-size:26px;line-height:1.25;">Your silhouette, kept</h3>
+<p style="margin:0 0 16px;color:#EEEEEE;">Concave, spiky or round, the cloud keeps the outline you drew. Shapes are inflated with a Poisson solve instead of a flat extrusion, so a circle becomes a sphere and a long limb becomes a tube.</p>
+<img alt="Clouds shaped like a cumulus, a heart, a star and a moon forming one after another" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/07_any_shape.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;"/>
+</div>
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#C59CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">LIVE CONTROLS</p>
+<h3 style="margin:0 0 12px;color:#FFFFFF;font-size:26px;line-height:1.25;">Art-direct every cloud</h3>
+<p style="margin:0 0 12px;color:#EEEEEE;">The shader reads each value straight away, so nothing needs rebaking.</p>
+<ul style="margin:0 0 16px;padding-left:20px;color:#DDDDDD;">
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Shape:</strong> Puffiness, Detail, Wisps, Billow Size, Streak, Height Shaping</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Look:</strong> Density, Softness, Seed</li>
+<li style="margin:0;">
+<strong style="color:#FFFFFF;">Motion:</strong> Grow and Evolve, keyframable like everything else</li>
+</ul>
+<img alt="One cloud as Puffiness, Detail and Wisps sweep through their range" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/08_live_controls.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;"/>
+</div>
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#C59CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">ANIMATION</p>
+<h3 style="margin:0 0 12px;color:#FFFFFF;font-size:26px;line-height:1.25;">Clouds that form, boil and drift</h3>
+<ul style="margin:0 0 16px;padding-left:20px;color:#DDDDDD;">
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Animate Formation</strong> keyframes selected clouds growing out of thin air, with an optional stagger.</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Evolve</strong> makes the billows slowly boil.</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Drift</strong> slides the high cloud layers with the wind.</li>
+<li style="margin:0;">
+<strong style="color:#FFFFFF;">Animate Day</strong> moves the sun from sunrise to sunset over the frame range.</li>
+</ul>
+<img alt="A cloud growing out of thin air" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/09_animate_formation.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;"/>
+</div>
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#C59CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">SUN &amp; ATMOSPHERE</p>
+<h3 style="margin:0 0 12px;color:#FFFFFF;font-size:26px;line-height:1.25;">Light the sky live</h3>
+<ul style="margin:0 0 12px;padding-left:20px;color:#DDDDDD;">
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Time of Day</strong> moves the sun along its daily path. Or click <strong style="color:#FFFFFF;">Point Sun</strong> and the sun follows your mouse.</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Atmosphere presets:</strong> Clear, Deep Blue, Hazy, Fiery and Pastel, with Air, Dust, Ozone and colour tint controls.</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">High Clouds:</strong> fibrous cirrus and small cloudlets high above the rest.</li>
+<li style="margin:0;">
+<strong style="color:#FFFFFF;">Haze</strong> fades distant clouds into the horizon, with an automatic colour.</li>
+</ul>
+<p style="margin:0 0 16px;color:#BBBBBB;">Everything updates live in the Rendered viewport. Your own HDRI and lights work too.</p>
+<img alt="The sun moving through the day, from morning to sunset, with the sky and clouds following" decoding="async" loading="lazy" src="https://voydeprocedural.github.io/cloud-sketch/gifs/10_time_of_day.gif" style="display:block;width:100%;max-width:100%;height:auto;border-radius:10px;border:1px solid #403350;"/>
+</div>
+<div style="padding:26px 22px;background-color:#211D29;border:1px solid #403350;border-radius:12px;margin:0 0 22px;">
+<p style="margin:0 0 9px;color:#C59CFF;font-size:12px;font-weight:bold;letter-spacing:2px;">BUILT FOR PRODUCTION</p>
+<h3 style="margin:0 0 12px;color:#FFFFFF;font-size:26px;line-height:1.25;">Light on your scene</h3>
+<ul style="margin:0;padding-left:20px;color:#DDDDDD;">
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Fast to render.</strong> Each cloud sits in a tight bounding mesh, so Cycles only marches where the cloud can be.</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Nothing to cache.</strong> No VDB files or bakes to keep track of. The shader calculates everything at render time.</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Any scale.</strong> Draw a 5 m cloud for a tabletop shot or a 2 km one for a landscape. Density adapts to the size.</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Readable in Solid mode.</strong> Each cloud shows as a soft white pillow, so you can lay out a sky without rendering.</li>
+<li style="margin:0 0 8px;">
+<strong style="color:#FFFFFF;">Cycles and EEVEE.</strong> Cycles gives the softest light; EEVEE works for previews and stylised shots.</li>
+<li style="margin:0;">
+<strong style="color:#FFFFFF;">One-click setup.</strong> Set Up Sky adds a physical sky and sun, and sets volume bounces and EEVEE volume quality for you.</li>
+</ul>
+</div>
+<div style="padding:22px;background-color:#19161F;border:1px solid #3C3150;border-radius:12px;">
+<h3 style="margin:0 0 10px;color:#FFFFFF;font-size:18px;">What's included</h3>
+<ul style="margin:0 0 16px;padding-left:20px;color:#DDDDDD;">
+<li style="margin:0 0 6px;">
+<code style="color:#B88CFF;">cloud_sketch-0.3.0.zip</code>: the extension, with the cloud library. Install it from Blender's preferences without unzipping it.</li>
+<li style="margin:0;">
+<code style="color:#B88CFF;">Cloud_Sketch_0.3.0_Demo_and_Docs.zip</code>: the scene from the featured image (packed and ready to render), a quick-start guide and the license.</li>
+</ul>
+<h3 style="margin:0 0 10px;color:#FFFFFF;font-size:18px;">Requirements</h3>
+<ul style="margin:0 0 16px;padding-left:20px;color:#DDDDDD;">
+<li style="margin:0 0 6px;">Blender 5.0 or newer (tested on 5.0, 5.1 and 5.2 LTS)</li>
+<li style="margin:0;">Cycles is recommended for final renders. A GPU (OptiX, CUDA, HIP or Metal) makes volumes much faster.</li>
+</ul>
+<h3 style="margin:0 0 10px;color:#FFFFFF;font-size:18px;">Install</h3>
+<p style="margin:0;color:#DDDDDD;">Edit › Preferences › Get Extensions › Install from Disk, then press <strong style="color:#FFFFFF;">N</strong> in the viewport and open the Cloud Sketch tab.</p>
+</div>
+</div>

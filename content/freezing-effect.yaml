@@ -1,0 +1,80 @@
+# Long description of Freezing Effect. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/freezing-effect.html), restructured into the shared layout.
+
+headline: Transform any mesh into a frozen, ice-covered surface in seconds.
+intro:
+  - "**Freezing Effect** is a procedural Geometry Nodes modifier for Blender that generates ice buildup, frost, surface crystals and hanging icicles directly on your mesh."
+  - The effect is driven by a separate controller object, so you control where the freezing starts, how far it spreads and how the frozen area evolves over time.
+chips: [Geometry Nodes modifier, Cycles & EEVEE, No textures, Non-destructive]
+hero:
+  src: https://assets.superhivemarket.com/cache/2dbd9fe8f7bc35eb04d9649cedb96dc3.gif
+  alt: Ice and icicles spreading over a mesh as the controller object moves
+
+stats:
+  - 8: modifier controls
+  - 1: controller object
+  - 0: textures needed
+
+sections:
+  - type: features
+    kicker: Key features
+    title: Ice, frost and icicles from one modifier
+    items:
+      - Distance-based freezing: Control the effect with a separate controller object.
+      - Procedural ice and frost: Generated with Geometry Nodes and Shader Nodes.
+      - Animatable freeze spread: Move or keyframe the controller to animate the freezing.
+      - Hanging icicles: Procedural icicles with adjustable density and length.
+      - Surface ice crystals: Extra crystal detail directly on the frozen surface.
+      - Clean modifier controls: Adjust the effect from the modifier panel without editing nodes.
+      - Non-destructive: Your original mesh stays untouched.
+      - No external textures: The effect is fully procedural.
+
+  - type: feature
+    kicker: How it works
+    title: Freeze outward from a controller
+    text:
+      - Freezing Effect uses a controller object to calculate the freezing area across the mesh surface. Areas closer to the controller freeze first, while areas farther away stay less affected or unfrozen, depending on your settings.
+      - Move or animate the controller to create spreading freeze effects, magical ice transformations, frozen props, winter environments and cinematic object reveals. No baking, no sculpting and no manual texture painting.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1256392/image/xlarge_og-e961cea902915f96b07112cd66894dd0.png
+      alt: A torus half covered in ice and icicles, with the Freezing Effect modifier panel open in Blender
+
+  - type: pair
+
+  - type: specs
+    kicker: Modifier controls
+    title: Every setting on the modifier panel
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1256394/image/xlarge_og-76b3b875113a05ae41f77e53283a93e6.png
+      alt: The Freezing Effect modifier panel with each control labelled
+    items:
+      - Freeze Amount: Overall amount of freezing visible on the mesh.
+      - Ice Quality: Geometry detail, for performance or higher-quality results.
+      - Ice Thickness: Thickness of the generated ice layer.
+      - Ice Breakup: Cracks, breakup and surface variation.
+      - Ice Crystal: Turns surface crystal scattering on or off.
+      - Icicle: Turns hanging icicles on or off.
+      - Icicle Density: How many icicles are generated.
+      - Icicle Length: Length of the icicles.
+
+  - type: chips
+    kicker: Perfect for
+    title: Where it fits
+    items: [Animated freezing effects, Fantasy and magic ice powers, Frozen props and objects, Winter environment details, Stylized cinematic shots, Procedural VFX workflows]
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - Freezing Effect Geometry Nodes setup
+          - Controller-based freeze system
+          - Procedural ice, frost, crystals and icicles
+          - Example setup and demo scene
+          - Documentation
+      - title: Compatibility
+        items:
+          - Recommended for Blender 5.0 and newer
+          - Tested up to Blender 5.1
+          - Works with Cycles and EEVEE

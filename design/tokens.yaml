@@ -1,0 +1,36 @@
+# Voyde Procedural description design tokens.
+#
+# Taken from voydeprocedural.com (theme-color #09070f, brand violet #9b30ff / #bf5fff) and the product covers
+# (Bebas Neue titles, mono labels, violet grid). build.py inlines these into the Superhive HTML and writes them
+# to site/w/tokens.css for the card widgets, so changing a value here restyles both.
+
+color:
+  page: "#09070f"          # outermost background, same as the website
+  bg: "#0b0816"            # description panel
+  surface: "#120d22"       # cards
+  surface2: "#191230"      # chips, hover
+  strip: "#100a20"         # top and bottom bars
+  line: "#2b1d4a"          # borders
+  line_strong: "#4a2a85"
+  brand: "#9b30ff"
+  brand_bright: "#bf5fff"
+  brand_soft: "#dcc2ff"
+  heading: "#ffffff"
+  text: "#e8e4ff"
+  muted: "#aaa4cf"
+  dim: "#8a84b0"
+  glow: "rgba(155,48,255,0.28)"
+  grid: "rgba(255,255,255,0.035)"
+
+# Superhive's product page already loads Inter and declares Bebas Neue (Adobe Fonts, "bebas-neue") and
+# IBM Plex Mono, so the description can use them without images. The widgets load the same three from Google Fonts.
+font:
+  display: "bebas-neue, 'Bebas Neue', Impact, 'Arial Narrow', sans-serif"
+  body: "Inter, 'Segoe UI', Helvetica, Arial, sans-serif"
+  mono: "'IBM Plex Mono', Consolas, 'Courier New', monospace"
+
+size:
+  pad: 28px                # side padding of every section
+  radius: 18px             # panel
+  radius_card: 12px
+  section_gap: 48px

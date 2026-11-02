@@ -1,0 +1,81 @@
+/* Card widgets embedded in the Superhive descriptions with an iframe.
+   The iframe keeps a fixed aspect ratio (scripts/build.py, WIDGETS), so the layout is drawn on a 960 px wide
+   canvas where 1rem = 10px and scales with the iframe: 1rem = 1/96 of the iframe width. */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap");
+
+html { font-size: calc(100vw / 96); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  position: relative;
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 92% -10%, var(--glow), transparent 55%),
+    radial-gradient(circle at -5% 110%, rgba(106, 31, 181, 0.22), transparent 50%),
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: auto, auto, 4.4rem 4.4rem, 4.4rem 4.4rem;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.frame { position: absolute; inset: 0; border: 1px solid var(--line-strong); border-radius: 1.4rem; pointer-events: none; }
+
+.mono { font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.25em; }
+.kicker { display: flex; align-items: center; gap: 1.2rem; font-size: 1.1rem; color: var(--brand-bright); }
+.kicker::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, var(--line-strong), transparent); }
+.display { font-family: var(--font-display); font-weight: 400; letter-spacing: 0.04em; line-height: 0.95; color: var(--heading); }
+.outline { color: transparent; -webkit-text-stroke: 0.12rem var(--brand-bright); text-shadow: 0 0 3rem rgba(155, 48, 255, 0.45); }
+
+.badges { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.badges span {
+  padding: 0.35rem 0.8rem; font-family: var(--font-mono); font-size: 0.95rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--brand-soft); border: 1px solid var(--line-strong); border-radius: 99rem; background: rgba(25, 18, 48, 0.8);
+}
+.flag {
+  position: absolute; top: 1rem; left: 1rem; z-index: 2; padding: 0.35rem 0.9rem;
+  font-family: var(--font-mono); font-size: 0.95rem; font-weight: 500; letter-spacing: 0.2em; color: #fff;
+  background: var(--brand); border-radius: 0.4rem; box-shadow: 0 0 1.6rem rgba(155, 48, 255, 0.6);
+}
+
+.btn {
+  position: relative; isolation: isolate; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; gap: 0.8rem;
+  padding: 1.1rem 1.8rem; font-family: var(--font-mono); font-size: 1.15rem; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase;
+  color: #fff; background: var(--brand); border: 1px solid var(--brand-bright); border-radius: 0.8rem; transition: box-shadow 0.3s;
+}
+.btn::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--brand-bright); transform: translateX(-101%); transition: transform 0.35s; }
+.btn:hover::before, a:hover .btn::before { transform: none; }
+.btn:hover, a:hover .btn { box-shadow: 0 0 2.4rem rgba(191, 95, 255, 0.55); }
+.btn .arrow { transition: transform 0.3s; }
+.btn:hover .arrow, a:hover .btn .arrow { transform: translateX(0.5rem); }
+
+/* product card (more.html) */
+.card {
+  position: relative; display: flex; flex-direction: column; overflow: hidden;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 1.2rem;
+  transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
+}
+.card:hover { transform: translateY(-0.4rem); border-color: var(--brand-bright); box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.5), 0 0 2.4rem rgba(155, 48, 255, 0.35); }
+.card .cover { position: relative; aspect-ratio: 2 / 1; overflow: hidden; border-bottom: 1px solid var(--line); }
+.card .cover img { transition: transform 0.6s; }
+.card:hover .cover img { transform: scale(1.06); }
+.card .body { flex: 1; display: flex; flex-direction: column; gap: 0.3rem; padding: 1.1rem 1.4rem 1.2rem; }
+.card .cat { font-size: 0.95rem; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card .name { font-size: 2.6rem; }
+.card .tag { font-size: 1.25rem; color: var(--brand-bright); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card .view { position: absolute; right: 1.2rem; bottom: 1.2rem; font-family: var(--font-mono); font-size: 1rem; letter-spacing: 0.18em; color: var(--brand-bright); opacity: 0; transform: translateX(-0.6rem); transition: opacity 0.3s, transform 0.3s; }
+.card:hover .view { opacity: 1; transform: none; }
+
+/* scan line, as on voydeprocedural.com */
+.scan { position: absolute; left: 0; right: 0; height: 2px; pointer-events: none; background: linear-gradient(90deg, transparent, rgba(191, 95, 255, 0.8), transparent); animation: scan 4.5s linear infinite; }
+@keyframes scan { 0% { top: -2px; opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { top: 100%; opacity: 0; } }
+.pulse { animation: pulse 2.2s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: 0.25; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

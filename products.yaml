@@ -1,0 +1,267 @@
+# Single source of truth for every Voyde Procedural product on Superhive.
+#
+# The card widgets (site/widget/) read the JSON built from this file, so a change here reaches every
+# Superhive description after a push, without touching Superhive. The long description of each product
+# lives in content/<id>.yaml and is rendered to descriptions/<id>.html for pasting into Superhive.
+#
+# Products are listed newest first. Only `status: published` products appear in other products' cards.
+
+store:
+  name: Voyde Procedural
+  tagline: Procedural tools & terrains for Blender
+  superhive: https://superhivemarket.com/creators/toprak-tatveren
+  website: https://voydeprocedural.com
+  pages: https://voydeprocedural.github.io/superhive-descriptions/
+  socials:
+    x: https://x.com/voydeprocedural
+    instagram: https://instagram.com/voydeprocedural
+    # youtube: https://www.youtube.com/@...   # add the channel URL to show the button
+
+# Superhive bundles, promoted in the "More from the studio" card of every description.
+# image: 1200x600 cover in site/img/. includes: product ids in the bundle (the card says "Also in ..." on those).
+bundles:
+  - id: nexus
+    name: Voyde Nexus Bundle
+    tagline: 16-in-1 Blender Creation Suite
+    url: https://superhivemarket.com/bundles/voyde-nexus-bundle---16-in-1-blender-creation-suite
+    image: img/bundle-nexus.webp
+    includes: [depthforge, blendbuddy, weave-it, skyflow, gobolab, ultimate-terrain-addon, smart-scatter-kit,
+      procedural-generator-bundle, arc-forge, surface-forge, ultimate-terrain-pack, freezing-effect,
+      instant-terrain-importer, trash-scatter, terrain-materials-pack, nature-starter-pack]
+
+# How products of one category recommend the others, in order of preference.
+categories:
+  terrain: { label: Terrain, related: [scatter, light, gn] }
+  gn: { label: Geometry Nodes, related: [gn, scatter, terrain] }
+  scatter: { label: Scatter & Assets, related: [terrain, scatter, gn] }
+  light: { label: Lighting & Sky, related: [light, terrain, scatter] }
+  tools: { label: Tools & Helpers, related: [tools, gn, light] }
+
+# Fields
+#   id            short key: content/<id>.yaml, descriptions/<id>.html, site/img/<id>.webp
+#   superhive     product slug on superhivemarket.com/products/<slug>
+#   kind          Add-on | Geometry Nodes | Asset Pack | Material Pack | Bundle
+#   blender       supported Blender versions as shown on the cards
+#   summary       one or two sentences, shown on cards in other descriptions
+#   badges        2-3 short facts shown on cards
+#   pairs         hand-picked products to recommend first (the "Pairs well with" card rotates through the first three)
+#   flag          optional ribbon on the card cover, e.g. NEW or BESTSELLER
+products:
+  - id: crawlers
+    name: Crawlers
+    tagline: Lifelike Creature Swarms
+    superhive: crawlers
+    category: gn
+    kind: Add-on
+    blender: "5.0–5.2"
+    summary: Real-size earthworms, ants, spiders, cockroaches, centipedes, maggots and snakes. Pick them from a picture catalog, draw their path or lure them with the mouse.
+    badges: [7 creatures, 11 skins, Geometry Nodes]
+    pairs: [nature-starter-pack, smart-scatter-kit, ultimate-terrain-pack]
+    flag: NEW
+    status: published
+
+  - id: cloud-sketch
+    name: Cloud Sketch
+    tagline: Draw Volumetric Clouds
+    superhive: cloud-sketch--draw-volumetric-clouds-in-blender
+    category: light
+    kind: Add-on
+    blender: "5.0–5.2"
+    summary: Draw any shape in the viewport and it becomes a volumetric cloud. Turn models into clouds, pick from 68 procedural clouds or build a whole sky in one click.
+    badges: [68 clouds, No VDBs, Cycles & EEVEE]
+    pairs: [skyflow, gobolab, ultimate-terrain-addon]
+    flag: NEW
+    status: published
+
+  - id: depthforge
+    name: DepthForge
+    tagline: AI Image & Video to 3D
+    superhive: depthforge
+    category: tools
+    kind: Add-on
+    blender: "4.2–5.2"
+    summary: Turn images and videos into animated, editable 3D reliefs with local AI depth and live Geometry Nodes. 100% offline.
+    badges: [AI depth, Image & video, Offline]
+    pairs: [instant-terrain-importer, blendbuddy, surface-forge]
+    status: published
+
+  - id: blendbuddy
+    name: BlendBuddy
+    tagline: Your Pixel Companion for Blender
+    superhive: blendbuddy
+    category: tools
+    kind: Add-on
+    blender: "4.2–5.2"
+    summary: Adopt one of 30 pixel characters who fixes common scene issues, shares tips and sends render alerts to your desktop or phone.
+    badges: [30 characters, Render alerts, Scene fixes]
+    pairs: [depthforge, gobolab, skyflow]
+    status: published
+
+  - id: weave-it
+    name: Weave It
+    tagline: Procedural Fabric & Weaving
+    superhive: weaveit
+    category: gn
+    kind: Geometry Nodes
+    blender: "5.1–5.2"
+    summary: Procedural fabric, wire and wicker generator with 8 weave patterns, 6 material presets and built-in animation.
+    badges: [8 patterns, 6 materials, Animated]
+    pairs: [surface-forge, procedural-generator-bundle, freezing-effect]
+    status: published
+
+  - id: skyflow
+    name: SkyFlow
+    tagline: Procedural Sky & Animated Clouds
+    superhive: skyflow
+    category: light
+    kind: Add-on
+    blender: "5.2"
+    summary: Animated procedural skies with a synced sun, three cloud layers and 8 presets. Cycles & EEVEE, no HDRIs needed.
+    badges: [Animated clouds, 8 presets, No HDRIs]
+    pairs: [cloud-sketch, gobolab, ultimate-terrain-addon]
+    status: published
+
+  - id: gobolab
+    name: GoboLab
+    tagline: 70 Gobo Light Presets
+    superhive: gobolab--70-gobo-light-presets-for-blender
+    category: light
+    kind: Add-on
+    blender: "5.0–5.2"
+    summary: 70 ready-to-use gobo lights (window, foliage, stained glass, cloud and abstract patterns), previewed from a sidebar panel.
+    badges: [70 presets, Sidebar preview, Lighting]
+    pairs: [skyflow, cloud-sketch, blendbuddy]
+    status: published
+
+  - id: ultimate-terrain-addon
+    name: Ultimate Terrain Addon
+    tagline: 100+ Extreme Terrains
+    superhive: ultimate-terrain-addon
+    category: terrain
+    kind: Add-on
+    blender: "4.0–5.2"
+    summary: Browse, preview and import 100+ extreme terrains across 10 biomes, with adjustable resolution and automatic materials.
+    badges: [100+ terrains, 10 biomes, Auto materials]
+    pairs: [terrain-materials-pack, smart-scatter-kit, skyflow]
+    status: published
+
+  - id: smart-scatter-kit
+    name: Smart Scatter Kit
+    tagline: Smart Environment Scattering
+    superhive: smart-scatter-kit
+    category: scatter
+    kind: Geometry Nodes
+    blender: "4.0–5.2"
+    summary: Scatter environment assets by surface normals or proximity zones to build forest, industrial and urban scenes fast.
+    badges: [Normal & zone based, Assets included]
+    pairs: [nature-starter-pack, trash-scatter, ultimate-terrain-pack]
+    status: published
+
+  - id: procedural-generator-bundle
+    name: Procedural Generator Bundle
+    tagline: 10 Geometry Nodes Generators
+    superhive: procedural-generator-bundle-pack
+    category: gn
+    kind: Bundle
+    blender: "4.0–5.2"
+    summary: Ten drag-and-apply generators in one pack - liquid, fur, crystals, freezing, chains, droplets, bricks, trash scatter and more.
+    badges: [10 generators, Asset Library]
+    pairs: [surface-forge, arc-forge, weave-it]
+    status: published
+
+  - id: arc-forge
+    name: Arc Forge
+    tagline: Procedural Electric Arc Generator
+    superhive: arc-forge-procedural-electric-arc-generator
+    category: gn
+    kind: Geometry Nodes
+    blender: "4.0–5.2"
+    summary: One-click animated electric arcs around any object for lightning, plasma and sci-fi energy effects.
+    badges: [VFX, Animated, Any mesh]
+    pairs: [freezing-effect, surface-forge, procedural-generator-bundle]
+    status: published
+
+  - id: surface-forge
+    name: Surface Forge
+    tagline: 40+ Geometry Nodes Surface Presets
+    superhive: surface-forge--40-geometry-nodes-surface-presets
+    category: gn
+    kind: Geometry Nodes
+    blender: "4.0–5.1"
+    summary: Turn simple geometry into detailed surface structures with 40+ procedural Geometry Nodes presets.
+    badges: [40+ presets, Non-destructive]
+    pairs: [freezing-effect, weave-it, arc-forge]
+    status: published
+
+  - id: ultimate-terrain-pack
+    name: Ultimate Terrain Pack
+    tagline: 100+ 4K Landscapes
+    superhive: ultimate-terrain-pack
+    category: terrain
+    kind: Asset Pack
+    blender: "4.0–5.1"
+    summary: 100 4K terrain assets - mountains, valleys, islands, deserts and canyons - with meshes, materials and textures ready to use.
+    badges: [100 terrains, 4K, Game ready]
+    pairs: [terrain-materials-pack, nature-starter-pack, skyflow]
+    status: published
+
+  - id: trash-scatter
+    name: Trash Scatter
+    tagline: Procedural Scatter System
+    superhive: trash-scatter-blender
+    category: scatter
+    kind: Geometry Nodes
+    blender: "3.6–5.1"
+    summary: Drop in any collection and scatter realistic debris with full control. Includes 30+ ready-to-use assets.
+    badges: [30+ assets, No add-ons]
+    pairs: [smart-scatter-kit, procedural-generator-bundle, nature-starter-pack]
+    status: published
+
+  - id: terrain-materials-pack
+    name: Procedural Terrain Materials Pack
+    tagline: 14 Seamless Materials
+    superhive: voyde-procedural-terrain-materials-pack
+    category: terrain
+    kind: Material Pack
+    blender: "4.0–5.0"
+    summary: 14 seamless procedural materials (snow, ice, soil, sand, moss, asphalt, concrete and more), Asset Browser ready.
+    badges: [14 materials, Asset Browser]
+    pairs: [ultimate-terrain-addon, ultimate-terrain-pack, instant-terrain-importer]
+    status: published
+
+  - id: freezing-effect
+    name: Freezing Effect
+    tagline: Procedural Ice & Frost Modifier
+    superhive: voyde-freezing-effect--procedural-ice--frost-modifier
+    category: gn
+    kind: Geometry Nodes
+    blender: "4.3–5.1"
+    summary: A distance-based modifier that grows ice, frost, crystals and icicles on any mesh.
+    badges: [Modifier, Icicles, No textures]
+    pairs: [arc-forge, surface-forge, procedural-generator-bundle]
+    flag: BESTSELLER
+    status: published
+
+  - id: instant-terrain-importer
+    name: Instant Terrain Importer
+    tagline: One-Click Gaea Terrains
+    superhive: instant-terrain-importer
+    category: terrain
+    kind: Add-on
+    blender: "3.6–5.1"
+    summary: Bring Gaea terrains into Blender instantly with auto shaders and displacement setup. 20 ready terrains included.
+    badges: [20 terrains, Auto shader]
+    pairs: [terrain-materials-pack, ultimate-terrain-pack, skyflow]
+    status: published
+
+  - id: nature-starter-pack
+    name: Nature Starter Pack
+    tagline: Stylized Nature Assets
+    superhive: voyde-nature-starter-pack
+    category: scatter
+    kind: Asset Pack
+    blender: "4.0–5.0"
+    summary: Lightweight stylized trees, bushes, grass, flowers and rocks for quick scene building.
+    badges: [29 assets, Stylized]
+    pairs: [smart-scatter-kit, ultimate-terrain-pack, trash-scatter]
+    status: published

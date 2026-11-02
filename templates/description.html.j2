@@ -1,0 +1,144 @@
+{#- Superhive product description. Superhive drops `class` and <style>, so every element carries inline styles
+    built from design/tokens.yaml. Layouts use flex-wrap so they fold to one column on phones without media queries.
+    Display titles are <div>s, not <h2>/<h3>: Superhive forces font-weight:600 !important on headings, which would
+    fake-bold Bebas Neue (it has one weight). It also forces line-height:1.6 !important on <p>, so only body text uses <p>.
+    c = colors, f = fonts, z = sizes, p = product (products.yaml), d = content (content/<id>.yaml). -#}
+{%- set body_text = "margin:0 0 14px;font-size:15px;line-height:1.75;color:" ~ c.muted ~ ";" -%}
+{%- set section = "padding:" ~ z.section_gap ~ " " ~ z.pad ~ " 0;" -%}
+{%- set h3 = "margin:0 0 18px;padding:0;font-family:" ~ f.display ~ ";font-weight:400;font-size:40px;line-height:1;letter-spacing:0.5px;text-transform:none;color:" ~ c.heading ~ ";" -%}
+{%- set card = "background-color:" ~ c.surface ~ ";border:1px solid " ~ c.line ~ ";border-radius:" ~ z.radius_card ~ ";" -%}
+{%- set img = "display:block;width:100%;max-width:100%;height:auto;border-radius:" ~ z.radius_card ~ ";border:1px solid " ~ c.line ~ ";" -%}
+
+{%- macro diamond() -%}
+<span style="display:inline-block;width:7px;height:7px;margin:0 10px 2px 0;background-color:{{ c.brand_bright }};transform:rotate(45deg);"></span>
+{%- endmacro -%}
+
+{%- macro kicker(n, text) -%}
+<div style="display:flex;align-items:center;gap:14px;margin:0 0 10px;"><span style="font-family:{{ f.mono }};font-size:11px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:{{ c.brand_bright }};white-space:nowrap;">{{ '%02d' % n }} &mdash; {{ text }}</span><span style="flex:1 1 auto;height:1px;background-color:{{ c.line }};background-image:linear-gradient(90deg,{{ c.line_strong }},{{ c.bg }});"></span></div>
+{%- endmacro -%}
+
+{%- macro paragraphs(items) -%}
+{%- for t in items %}
+<p style="{{ body_text }}">{{ t | md }}</p>
+{%- endfor -%}
+{%- endmacro -%}
+
+{%- macro media(m) -%}
+{%- if m.get("youtube") %}
+<div style="position:relative;width:100%;height:0;padding-bottom:56.25%;overflow:hidden;border-radius:{{ z.radius_card }};border:1px solid {{ c.line }};background-color:#000000;"><iframe src="https://www.youtube.com/embed/{{ m.youtube }}?rel=0&amp;playsinline=1" title="{{ m.get("alt") or p.name }}" width="960" height="540" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" allowfullscreen loading="lazy"></iframe></div>
+{%- else %}
+<img src="{{ m.src }}" alt="{{ m.alt }}" loading="lazy" style="{{ img }}">
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro widget(kind, title) -%}
+<iframe src="{{ base }}w/{{ kind }}.html?p={{ p.id }}" title="{{ title }}" width="{{ widgets[kind].width }}" height="{{ widgets[kind].height }}" loading="lazy" style="display:block;width:100%;height:auto;aspect-ratio:{{ widgets[kind].width }} / {{ widgets[kind].height }};border:0;border-radius:14px;overflow:hidden;background-color:{{ c.bg }};"></iframe>
+{%- endmacro -%}
+
+<div style="max-width:880px;margin:0 auto;overflow:hidden;background-color:{{ c.bg }};color:{{ c.text }};font-family:{{ f.body }};font-size:15px;line-height:1.7;text-align:left;border:1px solid {{ c.line }};border-radius:{{ z.radius }};">
+
+<div style="padding:13px {{ z.pad }};background-color:{{ c.strip }};border-bottom:1px solid {{ c.line }};font-family:{{ f.mono }};font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:{{ c.dim }};"><span style="color:{{ c.brand_bright }};">&#9670; Voyde Procedural</span>&nbsp; / &nbsp;{{ p.kind }}&nbsp; / &nbsp;Blender {{ p.blender }}</div>
+
+<div style="padding:44px {{ z.pad }} 6px;background-color:{{ c.bg }};background-image:radial-gradient(circle at 88% 0%,{{ c.glow }},rgba(155,48,255,0) 58%),linear-gradient({{ c.grid }} 1px,rgba(0,0,0,0) 1px),linear-gradient(90deg,{{ c.grid }} 1px,rgba(0,0,0,0) 1px);background-size:auto,44px 44px,44px 44px;">
+<div style="margin:0;padding:0;font-family:{{ f.display }};font-weight:400;font-size:72px;line-height:0.9;letter-spacing:1px;text-transform:none;color:{{ c.heading }};">{{ p.name }}</div>
+<div style="margin:8px 0 0;font-family:{{ f.display }};font-size:34px;line-height:1;letter-spacing:1px;color:{{ c.brand_bright }};">{{ p.tagline }}</div>
+<p style="margin:26px 0 14px;font-size:19px;line-height:1.5;font-weight:600;color:{{ c.heading }};">{{ d.headline | md }}</p>
+{{- paragraphs(d.intro) }}
+{%- if d.get("chips") %}
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0;">
+{%- for chip in d.chips %}<span style="display:inline-block;padding:6px 12px;font-family:{{ f.mono }};font-size:11px;letter-spacing:1px;text-transform:uppercase;color:{{ c.brand_soft }};background-color:{{ c.surface2 }};border:1px solid {{ c.line_strong }};border-radius:999px;">{{ chip }}</span>{% endfor %}
+</div>
+{%- endif %}
+</div>
+{%- if d.get("hero") %}
+
+<div style="padding:28px {{ z.pad }} 0;">{{ media(d.hero) }}</div>
+{%- endif %}
+{%- if d.get("video") %}
+
+<div style="padding:16px {{ z.pad }} 0;">{{ media({"youtube": d.video, "alt": p.name ~ " video"}) }}</div>
+{%- endif %}
+{%- if d.get("stats") %}
+
+<div style="display:flex;flex-wrap:wrap;margin:24px {{ z.pad }} 0;{{ card }}">
+{%- for value, label in d.stats %}
+<div style="flex:1 1 150px;padding:16px 20px;{% if not loop.first %}border-left:1px solid {{ c.line }};{% endif %}"><div style="font-family:{{ f.display }};font-size:44px;line-height:1;color:{{ c.brand_bright }};">{{ value }}</div><div style="margin-top:4px;font-family:{{ f.mono }};font-size:11px;letter-spacing:2px;text-transform:uppercase;color:{{ c.dim }};">{{ label }}</div></div>
+{%- endfor %}
+</div>
+{%- endif %}
+
+{%- set ns = namespace(n=0) %}
+{%- for s in sections %}
+{%- if s.type == "pair" %}
+
+<div style="{{ section }}">{{ widget("pair", "Pairs well with " ~ p.name ~ ": another Voyde Procedural tool") }}</div>
+{%- elif s.type == "more" %}
+
+<div style="{{ section }}">{{ widget("more", "More Blender tools from Voyde Procedural") }}</div>
+{%- else %}
+{%- set ns.n = ns.n + 1 %}
+
+<div style="{{ section }}">
+{{ kicker(ns.n, s.kicker) }}
+<div style="{{ h3 }}">{{ s.title }}</div>
+{%- if s.get("text") %}{{ paragraphs(s.text) }}{% endif %}
+{%- if s.type == "features" %}
+<div style="display:flex;flex-wrap:wrap;gap:10px;">
+{%- for name, desc in s["items"] %}
+<div style="flex:1 1 260px;padding:15px 18px;{{ card }}"><div style="font-size:15px;font-weight:600;line-height:1.4;color:{{ c.heading }};">{{ diamond() }}{{ name }}</div><div style="margin-top:4px;font-size:14px;line-height:1.6;color:{{ c.muted }};">{{ desc | md }}</div></div>
+{%- endfor %}
+</div>
+{%- elif s.type == "specs" %}
+{%- if s.get("media") %}
+<div style="margin:0 0 18px;">{{ media(s.media) }}</div>
+{%- endif %}
+<div style="padding:4px 20px;{{ card }}">
+{%- for name, desc in s["items"] %}
+<div style="display:flex;flex-wrap:wrap;gap:4px 18px;padding:11px 0;{% if not loop.last %}border-bottom:1px solid {{ c.line }};{% endif %}"><div style="flex:0 0 170px;font-family:{{ f.mono }};font-size:12px;letter-spacing:0.5px;line-height:1.9;color:{{ c.brand_soft }};">{{ name }}</div><div style="flex:1 1 260px;font-size:14px;line-height:1.7;color:{{ c.muted }};">{{ desc | md }}</div></div>
+{%- endfor %}
+</div>
+{%- elif s.type == "chips" %}
+<div style="display:flex;flex-wrap:wrap;gap:8px;">
+{%- for chip in s["items"] %}<span style="display:inline-block;padding:9px 15px;font-size:14px;color:{{ c.text }};{{ card }}border-radius:999px;">{{ diamond() }}{{ chip }}</span>{% endfor %}
+</div>
+{%- elif s.type == "steps" %}
+<div style="{{ card }}padding:6px 20px;">
+{%- for step in s["items"] %}
+<div style="display:flex;gap:16px;align-items:flex-start;padding:13px 0;{% if not loop.last %}border-bottom:1px solid {{ c.line }};{% endif %}"><span style="flex:0 0 34px;height:34px;font-family:{{ f.display }};font-size:20px;line-height:34px;text-align:center;color:{{ c.heading }};background-color:{{ c.brand }};border-radius:50%;">{{ loop.index }}</span><span style="flex:1 1 auto;font-size:14px;line-height:1.7;padding-top:6px;color:{{ c.muted }};">{{ step | md }}</span></div>
+{%- endfor %}
+</div>
+{%- elif s.type == "faq" %}
+<div style="{{ card }}padding:4px 20px;">
+{%- for q, a in s["items"] %}
+<div style="padding:15px 0;{% if not loop.last %}border-bottom:1px solid {{ c.line }};{% endif %}"><div style="font-size:15px;font-weight:600;color:{{ c.heading }};">{{ q }}</div><div style="margin-top:4px;font-size:14px;line-height:1.7;color:{{ c.muted }};">{{ a | md }}</div></div>
+{%- endfor %}
+</div>
+{%- elif s.type == "facts" %}
+<div style="display:flex;flex-wrap:wrap;gap:12px;">
+{%- for box in s.cards %}
+<div style="flex:1 1 280px;padding:20px 22px;{{ card }}{% if loop.first %}border-top:3px solid {{ c.brand }};{% endif %}"><div style="margin:0 0 10px;font-family:{{ f.display }};font-size:26px;line-height:1;letter-spacing:0.5px;color:{{ c.heading }};">{{ box.title }}</div>
+{%- for item in box["items"] %}<div style="padding:5px 0;font-size:14px;line-height:1.6;color:{{ c.muted }};">{{ diamond() }}{{ item | md }}</div>{% endfor %}</div>
+{%- endfor %}
+</div>
+{%- elif s.type == "gallery" %}
+<div style="display:flex;flex-wrap:wrap;gap:14px;">
+{%- for m in s["items"] %}
+<div style="flex:1 1 300px;">{{ media(m) }}{% if m.get("caption") %}<div style="margin-top:8px;font-size:14px;line-height:1.6;color:{{ c.muted }};">{{ m.caption | md }}</div>{% endif %}</div>
+{%- endfor %}
+</div>
+{%- endif %}
+{%- if s.get("media") and s.type != "specs" %}
+<div style="margin:6px 0 0;">{{ media(s.media) }}</div>
+{%- endif %}
+</div>
+{%- endif %}
+{%- endfor %}
+
+<div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin:{{ z.section_gap }} 0 0;padding:20px {{ z.pad }};background-color:{{ c.strip }};border-top:1px solid {{ c.line }};">
+<span style="display:inline-flex;align-items:center;gap:10px;font-family:{{ f.display }};font-size:22px;letter-spacing:3px;line-height:1;color:{{ c.heading }};"><img src="{{ base }}brand/logo-64.png" alt="" width="24" height="24" style="display:inline-block;width:24px;height:24px;border:0;"><span>VOYDE<span style="color:{{ c.brand_bright }};">.</span>PROCEDURAL</span></span>
+<span style="font-family:{{ f.mono }};font-size:11px;letter-spacing:2px;text-transform:uppercase;">
+{%- for label, url in footer_links %}{% if not loop.first %}<span style="color:{{ c.line_strong }};">&nbsp; / &nbsp;</span>{% endif %}<a href="{{ url }}" target="_blank" rel="noopener" style="color:{{ c.dim }};text-decoration:none;">{{ label }}</a>{% endfor -%}
+</span>
+</div>
+
+</div>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ p.name }} · description preview</title>
+<meta name="robots" content="noindex">
+{#- Superhive loads Inter and Adobe Fonts' Bebas Neue / IBM Plex Mono; Google Fonts stand in for them here. #}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  body { margin: 0; background: #f4f2f8; font-family: Inter, sans-serif; color: #2a1f42; }
+  .bar { position: sticky; top: 0; z-index: 5; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; padding: 12px 20px; background: #fff; border-bottom: 1px solid #e3def0; font-size: 14px; }
+  .bar b { margin-right: auto; }
+  .bar button, .bar a { padding: 7px 12px; font: 500 13px Inter, sans-serif; color: #2a1f42; background: #fff; border: 1px solid #cfc6e4; border-radius: 6px; cursor: pointer; text-decoration: none; }
+  .bar button.on { color: #fff; background: #6a1fb5; border-color: #6a1fb5; }
+  .bar .copy { color: #fff; background: #9b30ff; border-color: #9b30ff; }
+  .page { max-width: 1140px; margin: 24px auto; padding: 0 20px; }
+  .col { width: 830px; max-width: 100%; margin: 0 auto; padding: 24px; background: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(42, 31, 66, 0.12); font-size: 14px; transition: width 0.3s; }
+  .note { max-width: 830px; margin: 14px auto 40px; font-size: 13px; color: #6b6386; line-height: 1.6; }
+  /* Superhive's own rules for descriptions (.quarantine, read from superhivemarket.com on 2026-11-02),
+     so the preview shows the same overrides. */
+  .quarantine { overflow: hidden; line-height: 1.5; }
+  .quarantine > * { overflow: hidden !important; }
+  .quarantine p { margin: 0 0 1rem; line-height: 1.6 !important; }
+  .quarantine b, .quarantine strong { font-weight: 700; }
+  .quarantine img { max-width: 100%; vertical-align: middle; }
+  .quarantine a { font-weight: 600; }
+  .quarantine li { margin-bottom: 1rem; }
+  .quarantine h1, .quarantine h2, .quarantine h3, .quarantine h4, .quarantine h5, .quarantine h6 {
+    font-family: Inter, sans-serif; letter-spacing: -1px; font-weight: 600 !important; margin-bottom: 1rem !important; }
+</style>
+</head>
+<body>
+<div class="bar">
+  <b>{{ p.name }}</b>
+  <button type="button" data-w="830" class="on">Desktop</button>
+  <button type="button" data-w="609">Laptop</button>
+  <button type="button" data-w="360">Phone</button>
+  <a href="./">All products</a>
+  <button type="button" class="copy" id="copy">Copy HTML for Superhive</button>
+</div>
+<div class="page">
+  <div class="col quarantine" id="col">
+{{ description }}
+  </div>
+  <p class="note">Superhive: <i>Edit product → Product Page → Product Description</i>, switch to code view (<code>&lt;/&gt;</code>), select all, paste, then save.
+  The two card areas are iframes from {{ store.pages }} and update from <code>products.yaml</code> without editing Superhive again.</p>
+</div>
+<textarea id="html" hidden>{{ paste }}</textarea>
+<script>
+  document.querySelectorAll('[data-w]').forEach(b => b.addEventListener('click', () => {
+    document.getElementById('col').style.width = b.dataset.w + 'px';
+    document.querySelectorAll('[data-w]').forEach(x => x.classList.toggle('on', x === b));
+  }));
+  document.getElementById('copy').addEventListener('click', async e => {
+    await navigator.clipboard.writeText(document.getElementById('html').value);
+    e.target.textContent = 'Copied';
+    setTimeout(() => (e.target.textContent = 'Copy HTML for Superhive'), 1600);
+  });
+</script>
+</body>
+</html>
