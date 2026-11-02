@@ -1,0 +1,74 @@
+# Long description of Surface Forge. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/surface-forge.html), restructured into the shared layout.
+
+headline: Transform simple meshes into complex procedural structures without manual modeling.
+intro:
+  - "**Surface Forge** is a procedural Geometry Nodes asset library that instantly adds detailed surface designs to your Blender objects."
+  - It features **40+ customizable surface presets**, ready to browse in the Asset Browser and adjust from the modifier panel.
+chips: [40+ presets, Geometry Nodes, Works on any mesh, Asset Browser ready, Non-destructive]
+hero:
+  src: https://assets.superhivemarket.com/cache/d466dca86a9266e3db3bce0d4a5c9cfa.gif
+  alt: Applying Surface Forge presets from the Asset Browser to a cube and a monkey head in Blender
+
+sections:
+  - type: features
+    kicker: Key features
+    title: Detailed surfaces in a few clicks
+    items:
+      - 40+ surface presets: Unique, customizable procedural surface designs in one organized library.
+      - Works on any mesh: Hard-surface models, props, characters, primitives and custom geometry.
+      - Customizable controls: Easy parameters in the modifier panel, no node editing needed.
+      - Material friendly: Use metal, ceramic, glass, plastic, emissive, procedural or custom PBR materials.
+      - Asset Browser ready: Every preset comes with a custom preview thumbnail.
+      - Non-destructive: Change presets, parameters and materials at any time.
+
+  - type: feature
+    kicker: Works on any mesh
+    title: One preset, many results
+    text:
+      - Surface Forge is designed to work on virtually any mesh or object in Blender. Apply the presets to hard-surface models, props, abstract objects, sci-fi assets, product renders, motion graphics elements, characters, primitives and custom geometry.
+      - The same preset can create completely different results depending on the shape of the mesh, giving you a flexible procedural workflow for many different projects.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1269947/image/xlarge_og-cd284870e871daa55051db36948730e5.png
+      alt: A monkey head covered in a purple Surface Forge pattern
+
+  - type: gallery
+    kicker: Customizable controls
+    title: Switch presets, tweak the look
+    text:
+      - Each preset includes easy-to-use parameters directly in the modifier panel, so you can adjust the look quickly without editing the node tree.
+    items:
+      - src: https://assets.superhivemarket.com/cache/5e2c97c79443fdc3a5a82f0ddaec53bf.gif
+        alt: Switching between Surface Forge presets on a torus from the Asset Browser
+      - src: https://assets.superhivemarket.com/store/productimage/1269948/image/xlarge_og-748546618367183fc3ab9bc8c5d579cb.png
+        alt: Three tori, each with a different purple procedural surface preset
+
+  - type: feature
+    kicker: Asset Browser ready
+    title: Browse, apply, refine
+    text:
+      - All presets are prepared for Blender's Asset Browser with custom thumbnails. Browse the library, select a preset and apply it to your objects in a few clicks.
+      - Surface Forge works with Blender's material system. Apply your own materials directly to the object and create completely different looks with metal, ceramic, glass, plastic, emissive, procedural or custom PBR materials.
+      - The workflow stays procedural and editable. Change presets, adjust parameters, modify materials and keep refining the result at any time.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1269946/image/xlarge_og-a0346b8377f61b3e610c634d2a2064fc.png
+      alt: The Surface Forge preset library in Blender's Asset Browser next to a patterned torus and its modifier settings
+
+  - type: chips
+    kicker: Best for
+    title: Where it fits
+    items: [Hard-surface modeling, Sci-fi assets, Motion graphics, Abstract 3D art, Product visualization, Procedural design exploration, Surface detailing, Experimental geometry workflows]
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - 40+ unique Geometry Nodes surface presets
+          - Procedural surface detailing workflow
+          - Asset Browser ready setup
+          - Custom preview thumbnails
+          - Fully editable Geometry Nodes modifiers
+          - Organized preset library
+          - Ready-to-use Blender file

@@ -2,8 +2,8 @@
 
     uv run scripts/serve.py [port]
 
-Sends CORS and no-cache headers, so a Superhive product page open in the browser can fetch a preview and show the
-new description in place (see README, "Check on the real Superhive page"), and edits show up on reload.
+Sends no-cache headers, so edits show up on reload. To see a description on the real Superhive page, push and
+follow "Check on the real Superhive page" in the README (browsers don't let superhivemarket.com read localhost).
 """
 
 import functools
@@ -16,17 +16,8 @@ SITE = pathlib.Path(__file__).resolve().parent.parent / "site"
 
 class Handler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
-        self.send_header("Access-Control-Allow-Origin", "*")
-        # Chrome asks before a public page (superhivemarket.com) may read from localhost.
-        self.send_header("Access-Control-Allow-Private-Network", "true")
         self.send_header("Cache-Control", "no-cache")
         super().end_headers()
-
-    def do_OPTIONS(self):
-        self.send_response(204)
-        self.send_header("Access-Control-Allow-Methods", "GET")
-        self.send_header("Access-Control-Allow-Headers", "*")
-        self.end_headers()
 
 
 if __name__ == "__main__":

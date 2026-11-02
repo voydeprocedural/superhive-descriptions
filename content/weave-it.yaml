@@ -1,0 +1,207 @@
+# Long description of Weave It. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/weave-it.html), restructured into the shared layout.
+
+headline: Real fabric, from interlaced yarns down to individual fibers.
+intro:
+  - "**Weave It** creates woven textiles, knitted fabric, reflective wire mesh and natural wicker with real geometry in Blender. Shape the yarns, wrap fabric onto an object, and animate it coming off a loom or growing over the surface."
+  - Most fabric in 3D is a texture on a plane. Weave It builds the yarns, their crossings and their fibers, and version 1.3 adds new ways to build, animate and inspect that structure.
+chips: [9 patterns, 6 presets, Grow & Loom, Fiber-level detail, Non-destructive]
+hero:
+  src: https://assets.superhivemarket.com/cache/e48839a94076a78815bfecf8c060680e.gif
+  alt: Grow animation covering a black egg with knitted fabric as tendrils spread, settle and form the cloth
+video: G-HHwabW7Bo
+
+stats:
+  - 9: weave patterns
+  - 6: material presets
+  - 4: animation tools
+
+sections:
+  - type: gallery
+    kicker: New in 1.3
+    title: Grow over a surface
+    text:
+      - Start at an origin and watch the cloth spread over an object. Tendrils reach ahead of a ragged edge, writhe, then settle onto the surface and knot into the fabric. Adjust **Origin** and **Tendrils** to shape the effect.
+    items:
+      - src: https://assets.superhivemarket.com/cache/ac3b874556496dcdcfc42fa22fb5540f.jpg
+        alt: Grow animation spreading knit fabric across a black egg
+        caption: Fabric spreading over the surface.
+      - src: https://assets.superhivemarket.com/cache/f444834585e50b1e302239262668be35.jpg
+        alt: Egg completely covered by knitted fabric after Grow
+        caption: The fully covered result.
+
+  - type: gallery
+    kicker: New in 1.3
+    title: Watch every pick on the Loom
+    text:
+      - Cloth flows from a weaving line at a steady speed. The warp opens into a shed, a shuttle carries each pick across from alternating sides, and the weft is beaten in. Add the optional satin-black **Loom Head**, adjust Head Size, or turn the head off to see the weaving itself.
+      - Combine Loom with **Wrap Onto Surface** to weave over your target row by row. The machine head becomes a band that follows the surface, leaving fabric behind it as it moves.
+    items:
+      - src: https://assets.superhivemarket.com/cache/4d0e11715135bd957bff08df292a3aeb.jpg
+        alt: Woven fabric emerging from a satin-black Loom Head
+        caption: Loom Head, a machine housing for the weaving animation.
+      - src: https://assets.superhivemarket.com/cache/d7c2302fca6fb08a0f9ccf7ee5003302.jpg
+        alt: Loom band weaving fabric onto a vase
+        caption: Surface weaving, with cloth building directly over the target object.
+
+  - type: feature
+    kicker: New in 1.3
+    title: Knit (Jersey) with real interlocking loops
+    text:
+      - One yarn per course loops through the next to form the familiar V stitch. Build knitted bands, sleeves and machine-knit looks, with plies, fibers, fuzz, color, wrapping and Loom animation. Fringe and knots apply to woven patterns.
+    media:
+      src: https://assets.superhivemarket.com/cache/790572dc5c7f2117264b37aa45c3ba31.jpg
+      alt: Jersey knit fabric flowing out of a black knitting machine
+
+  - type: gallery
+    kicker: New in 1.3
+    title: Get closer with Fibers
+    text:
+      - Split every ply into fine fibers with loose flyaway loops for close-ups and macro shots. Ply twist and fibers stay attached to the yarn as the cloth moves, wrapped cloth rests above the surface, and fuzz is smoother.
+    items:
+      - src: https://assets.superhivemarket.com/cache/3f35694471e16047d58a7e4019572591.gif
+        alt: Animated macro view of yarn plies and individual fibers
+        caption: Fine strands and flyaway loops in motion.
+      - src: https://assets.superhivemarket.com/cache/d06af3c01a769c2b540c2528fae292d2.jpg
+        alt: Macro still showing fine fibers within a yarn
+        caption: Fiber-level detail for close-ups and macro renders.
+
+  # Kept after the four "New in 1.3" sections so the card does not split them.
+  - type: pair
+
+  - type: gallery
+    kicker: Patterns
+    title: Eight weave structures. Plus Knit.
+    text:
+      - Choose from eight woven structures plus the new Knit (Jersey) pattern, nine patterns in total. Each woven structure below builds from the first strands into a complete swatch, and the navy and cream yarns make the over-under arrangement easy to follow.
+      - Choose a pattern, then customize its density, yarns and materials for your scene. Reverse the twill direction, adjust strand counts and change the look without rebuilding your setup.
+    items:
+      - src: https://assets.superhivemarket.com/cache/f7a30d8a5da18ce38dbbca426e9838ea.gif
+        alt: Plain weave swatch building strand by strand in navy and cream yarns
+        caption: "**Plain.** A clean over-under structure for a versatile woven foundation."
+      - src: https://assets.superhivemarket.com/cache/07915f533732c3e366aa173b97976a0b.gif
+        alt: Twill 2/1 swatch building strand by strand in navy and cream yarns
+        caption: "**Twill 2/1.** A distinct diagonal rhythm with a compact woven appearance."
+      - src: https://assets.superhivemarket.com/cache/745adf2880d60fd06a19cceb81b18cc4.gif
+        alt: Twill 2/2 swatch building strand by strand in navy and cream yarns
+        caption: "**Twill 2/2.** A balanced twill with clearly defined diagonal lines."
+      - src: https://assets.superhivemarket.com/cache/2fb980077298096edbf21cef322cc770.gif
+        alt: Twill 3/1 swatch building strand by strand in navy and cream yarns
+        caption: "**Twill 3/1.** Longer visible floats give the diagonal a stronger presence."
+      - src: https://assets.superhivemarket.com/cache/96b3321199b90a21778573acf06379ff.gif
+        alt: Herringbone swatch building strand by strand in navy and cream yarns
+        caption: "**Herringbone.** Reversing diagonal directions create a recognizable chevron pattern."
+      - src: https://assets.superhivemarket.com/cache/c8644db27a5692312b590a13a8030594.gif
+        alt: Satin swatch building strand by strand in navy and cream yarns
+        caption: "**Satin.** Longer floats create a smoother, more continuous woven appearance."
+      - src: https://assets.superhivemarket.com/cache/d584c0169a048cac6e8263739250a879.gif
+        alt: Basket 2x2 swatch building strand by strand in navy and cream yarns
+        caption: "**Basket 2×2.** Grouped strands create a bold basket-like structure."
+      - src: https://assets.superhivemarket.com/cache/708b4d2731ba5b1d75d321fff33826c1.gif
+        alt: Rib weave swatch building strand by strand in navy and cream yarns
+        caption: "**Rib.** A directional woven structure with a clear linear rhythm."
+
+  - type: gallery
+    kicker: Presets
+    title: Six starting points
+    text:
+      - Watch each preset build, then choose a starting point for your scene. Explore soft fibers, smooth synthetic strands, reflective wire, flat natural strips and open net structures, then customize the weave, density, colors and materials to make the result your own.
+    items:
+      - src: https://assets.superhivemarket.com/cache/ce63d27a02b62cceb11745d5d05053dc.gif
+        alt: Wool preset building into a light grey swatch of soft twisted yarns
+        caption: "**Wool.** Soft, twisted yarns with fine surface fibers."
+      - src: https://assets.superhivemarket.com/cache/717a9c5d6a642eec6280507ef1542579.gif
+        alt: Nylon preset building into a tight purple synthetic weave
+        caption: "**Nylon.** A tighter synthetic weave with smooth strands and a subtle sheen."
+      - src: https://assets.superhivemarket.com/cache/71bc90ac334d85504cfc78b396c1212d.gif
+        alt: Metal Mesh preset building into an open grid of reflective silver wires
+        caption: "**Metal Mesh.** Open interlaced wires with a reflective metal finish."
+      - src: https://assets.superhivemarket.com/cache/436ecbcb0f93c430d8dcb81acc146728.gif
+        alt: Straw preset building into a basket-like weave of broad, flat tan strips
+        caption: "**Straw.** Broad, flat strips for wicker, rattan and basket-like surfaces."
+      - src: https://assets.superhivemarket.com/cache/d5e5309678dc54dd89b369d18346f776.gif
+        alt: Open Weave preset building into a spaced weave of teal and white yarns
+        caption: "**Open Weave.** An airy yarn structure with clearly visible spacing."
+      - src: https://assets.superhivemarket.com/cache/e3dfd6f93008ef06abe68e8fc5547c73.gif
+        alt: Knotted Net preset building into a sparse cream rope net with knotted crossings
+        caption: "**Knotted Net.** A sparse net structure with knotted connections and generous openings."
+
+  - type: chips
+    kicker: Perfect for
+    title: Where it fits
+    items: [Cushions, Upholstery, Garments, Decorative vessels, Screens, Product details, Nets and macramé, Close-ups and macro shots]
+
+  - type: feature
+    kicker: Wrapping
+    title: From flat weave to 3D form
+    text:
+      - Wrap your weave onto shaped objects with **UV-based, Spherical and Cylindrical wrapping**. Follow a cushion, curved surface or rounded form while keeping the weaving controls editable.
+      - Automatic surface-size matching adapts the overall weave dimensions to your target. Wrap by UVs on complex meshes, where yarns stop at UV seams instead of bridging through the object, or use Spherical and Cylindrical projection for rounded forms without UVs. For UV-based wrapping, a continuous island with even scale gives the most consistent strand placement.
+      - Surface wrapping follows your target geometry. It does not calculate cloth physics or collisions.
+    media:
+      src: https://assets.superhivemarket.com/cache/00731af5f38f22fc8b1e8a8e913ffe2a.gif
+      alt: A flat blue and red plaid weave morphing onto a 3D surface with Wrap Morph
+
+  - type: features
+    kicker: Strand controls
+    title: Control the character of every strand
+    items:
+      - Twisted yarns: Use 1-8 plies per yarn and adjust twist amount, direction and flattening.
+      - Round yarns or flat strips: Change Profile Shape to move between thread, wire, ribbon and straw-like profiles.
+      - Fiber-level detail: Split plies into fine fibers with count, twist, thickness, flyaway and core controls, and add fuzz with density, length, thickness and frizz.
+      - Frayed edges: Use edge selection and Add Fringe, then tune length, variation, droop, unraveling and tip fibers.
+      - Color, stripes and plaid: Control warp and weft colors independently, add stripes in either direction and introduce per-strand variation.
+      - Matching fiber color: Fuzz follows its parent yarn, including its stripes and color variation.
+      - Real knots: Tie knots at every crossing or every Nth crossing for nets and macramé.
+      - Openness: Space the yarns apart.
+
+  - type: specs
+    kicker: Animation
+    title: Make the weave move
+    text:
+      - Four built-in animation tools build, wrap and animate your material.
+    items:
+      - Weave Build: Three styles. Grow spreads cloth from an origin with animated tendrils, Loom weaves with a shed, shuttle and optional machine head, and Reveal keeps the original row-by-row animation.
+      - Wrap Morph: Transitions a flat weave onto an assigned surface.
+      - Wind: Adds movement to fringe and fibers.
+      - Ply Spin: Rotates plies around the yarn.
+      - Keyframes: Settings support keyframes. Use the diamonds beside values, or record the setup with **Keyframe All Settings**.
+
+  - type: features
+    kicker: Workflow
+    title: A flexible Blender workflow
+    items:
+      - Single modifier: The procedural setup runs through a single Geometry Nodes modifier, with controls in the Weave It panel.
+      - Keep editing: Add a preset, refine the weave and change settings at any time in a fully procedural, non-destructive workflow.
+      - Simplify Viewport: Reduces editing detail while keeping full detail for rendering.
+      - Shader attributes: Yarn color, random values, strand indices, fringe factors and yarn coordinates are exposed for custom materials.
+
+  - type: faq
+    kicker: FAQ
+    title: Good to know
+    items:
+      - "Updating from 1.2?": Existing files keep working. Use **Update Fabrics** in the panel to upgrade them while keeping their settings. The original build animation remains available as Reveal.
+      - "How do I render fuzz and fringe fibers?": Use the add-on's preset creation tools to create the correct Hair Curves object for rendering them.
+      - "How heavy is it to render?": High strand counts, multiple plies and dense fibers increase geometry and render cost. Keep Simplify Viewport enabled while editing, and choose a detail level appropriate for your camera distance.
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - "`WeaveIt_Extension_v1.3.0.zip`, the installable add-on including demo scenes. Install the ZIP directly without extracting it."
+          - Six presets (Wool, Nylon, Metal Mesh, Straw, Open Weave and Knotted Net)
+          - Eight woven patterns plus Knit (Jersey), and four built-in animation tools
+          - "`WeaveIt_Demo_Scenes_v1.3.zip`, the demo file as a separate download, with the studio swatch, draped fabric, six presets, Reveal animation and five new scenes (Loom Demo, Fiber Close-up, Surface Weave Demo, Knit Machine Demo and Cinematic Wrap). Open them from the sidebar with **Open Demo Scenes**."
+          - Documentation and a sidebar panel with every setting, Add Fringe, per-edge fringe controls and keyframe buttons
+      - title: Requirements
+        items:
+          - Blender 5.1 or newer
+          - Tested in Blender 5.1.2, 5.2.0 LTS and 5.2.2 LTS
+          - Cycles recommended. Yarn geometry and hair-based fibers also support EEVEE.
+      - title: License
+        items:
+          - Add-on code under GPL-3.0-or-later
+          - Demo scenes and assets may be used in personal and commercial renders, animations and games
+          - Developed with assistance from an AI coding assistant

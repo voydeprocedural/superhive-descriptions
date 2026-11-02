@@ -1,0 +1,71 @@
+# Long description of Trash Scatter. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/trash-scatter.html), restructured into the shared layout.
+
+headline: Create detailed trash-filled environments in seconds.
+intro:
+  - "**Trash Scatter** is a fast, flexible Geometry Nodes scattering system that quickly populates any surface with realistic trash assets."
+  - Assign your collection and instantly generate detailed, natural-looking distributions with full control over density, variation and placement. No add-ons required, everything works directly inside Blender with Geometry Nodes.
+chips: [Geometry Nodes, No add-ons required, 30+ trash assets, Cycles & EEVEE]
+hero:
+  src: https://assets.superhivemarket.com/cache/7284892935dba3906fc356443a46ec3e.gif
+  alt: Assigning the trash collection in the Trash Scatter modifier and debris instantly covering a Suzanne mesh
+
+stats:
+  - 30+: optimized trash assets
+  - 0: add-ons required
+
+sections:
+  - type: features
+    kicker: Key features
+    title: Built for speed, simplicity and control
+    items:
+      - Collection-based scattering: Assign any asset collection and scatter it over your surface.
+      - Plug & play workflow: Add the modifier, pick your collection and the surface is populated.
+      - Adjustable scatter amount: Go from subtle surface detail to heavy trash coverage.
+      - Random seed variation: Generate new distributions without rebuilding your setup.
+      - Scale variation control: Break repetition for a more natural, believable look.
+      - Clean, optimized node setup: A lightweight Geometry Nodes workflow.
+
+  - type: gallery
+    kicker: Controls
+    title: Seed, amount and scale
+    items:
+      - src: https://assets.superhivemarket.com/cache/9e4b9f5a79bdee8aca0585e7676216b0.gif
+        alt: Changing the Random Seed to redistribute trash across a Suzanne mesh
+        caption: "**Random Seed** generates quick new variations without rebuilding your setup, so you can explore different distributions and find the best result for your scene."
+      - src: https://assets.superhivemarket.com/cache/89f81f92c872c4022f887691dd594c98.gif
+        alt: Raising Scatter Amount from a bare mesh to dense trash coverage
+        caption: "**Scatter Amount** gives you direct control over how dense or sparse the result is, from subtle surface detail to heavy trash coverage."
+      - src: https://assets.superhivemarket.com/cache/a47f311c12b241f9473e1c265d94cced.gif
+        alt: Adjusting Scale Variation so the scattered trash assets change size
+        caption: "**Scale Variation** breaks repetition. Small changes in scale make the distribution feel more organic and visually rich."
+
+  - type: steps
+    kicker: How to use
+    title: Four steps to a populated surface
+    items:
+      - Select any mesh.
+      - Add a Geometry Nodes modifier.
+      - Choose **Trash Scatter**.
+      - Assign your asset collection. Done, your surface is now populated.
+
+  - type: chips
+    kicker: Perfect for
+    title: Where it fits
+    items: [Environment design, Urban scenes, Background detailing, Fast scene population]
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - 30+ optimized trash assets
+          - Ready-to-use trash collection
+          - Fully procedural scatter system
+      - title: Technical info
+        items:
+          - No add-ons required
+          - Works with Cycles and EEVEE
+          - Geometry Nodes based workflow
+          - Lightweight and optimized

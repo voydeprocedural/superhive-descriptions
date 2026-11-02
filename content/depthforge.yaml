@@ -1,0 +1,114 @@
+# Long description of DepthForge. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/depthforge.html), restructured into the shared layout.
+
+headline: Transform images and videos into animated, fully editable 3D reliefs using locally powered AI and Blender Geometry Nodes.
+intro:
+  - "**DepthForge** gives your images a new dimension. A photograph becomes a sculptural surface, and a video becomes moving geometry."
+  - It combines AI depth estimation with procedural Geometry Nodes, unlocking creative 2.5D workflows without complicated setup or cloud processing. Everything runs locally on your computer, with no API keys and no cloud.
+chips: [100% offline, No API keys, Image & video to 3D, Live Geometry Nodes, No GPU required]
+hero:
+  src: https://assets.superhivemarket.com/cache/ab5f38f8bfc0e2983e8838003a703de5.gif
+  alt: A photo of a lion sculpture becoming an AI depth map, then a rotating 3D relief
+video: uabvUFJiijw
+
+stats:
+  - 4: creative presets
+  - 16-bit: depth output
+  - 100%: offline
+
+sections:
+  - type: specs
+    kicker: Image to 3D
+    title: One image, real geometry
+    text:
+      - Import a photo, illustration or artwork. DepthForge analyzes its visual structure and creates a depth-driven 3D relief that you can shape directly inside Blender. Three depth modes are available.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1375380/image/xlarge_og-7e2dbb000032353f35574f83408647c6.png
+      alt: A rocky landscape, a portrait bust and a lion sculpture, each split between the original image and its depth map
+    items:
+      - AI Quality: Detailed depth estimation using Depth Anything V2 Small.
+      - AI Fast: A lightweight model for faster processing.
+      - Luminance: Converts brightness into height without AI inference.
+
+  - type: features
+    kicker: Video to animated 3D
+    title: Your footage, in motion, in 3D
+    text:
+      - Why stop at a single frame? DepthForge transforms video footage into animated depth geometry, so your relief evolves with the original motion.
+      - "**Pro workflow:** process a video once, then adjust its animated relief with live Geometry Nodes controls."
+    items:
+      - Video Depth Anything: AI video depth with temporal modeling.
+      - Per-frame mode: Alternative per-frame AI processing with temporal smoothing.
+      - Asynchronous processing: Runs with a progress display and can be cancelled.
+      - 16-bit depth sequences: Animated 16-bit depth image sequences.
+      - Video on the relief: The original video is mapped onto the resulting geometry.
+      - Clip control: Custom clip ranges and optional scene FPS matching.
+    media:
+      src: https://assets.superhivemarket.com/cache/ce9efccfe13546cf7990d86aab39981f.gif
+      alt: Footage of sea stacks at sunset turning into an animated 3D relief in the Blender viewport
+
+  - type: specs
+    kicker: Non-destructive workflow
+    title: Every detail under your control
+    text:
+      - DepthForge isn't a one-click conversion with a fixed result. Every relief has a procedural Geometry Nodes modifier, giving you control over its shape and appearance.
+    items:
+      - Modifier controls: Height, Size, Resolution, Black / White Point, Gamma, Smooth, Invert, Cutoff, Stretch Cut and Thickness.
+      - Creative presets: Photo 2.5D, Bas-Relief, Cutout and Terrain.
+
+  - type: chips
+    kicker: No cloud, no compromise
+    title: Powerful AI, completely offline
+    text:
+      - All required AI models and runtime components are bundled with your installation package. Everything runs locally on your computer.
+    items: [No internet required, No API keys or accounts, No subscription fees, No dependency installation, No dedicated GPU required, Your source files stay on your machine]
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1375381/image/xlarge_og-c7a3bac8ac45cd5ebb72593a9ab5a7a7.png
+      alt: A marble bust turned into a 3D relief on a backplate, with its AI depth map shown in an inset
+
+  - type: features
+    kicker: Workflow tools
+    title: Built for Blender artists
+    items:
+      - Export Depth: Save image-based depth results as 16-bit PNG heightmaps.
+      - Convert to Mesh: Convert procedural reliefs into standard Blender meshes.
+      - Update Source: Replace an image and update its depth without rebuilding the entire workflow.
+      - Custom Models: Configure an external model directory or a compatible ONNX depth model.
+
+  - type: chips
+    kicker: Perfect for
+    title: What can you create?
+    items: [Motion graphics, 2.5D compositions, Sculptural portraits, Animated depth surfaces, Terrain concepts, Digital art, Relief designs, Experimental visual effects]
+
+  - type: steps
+    kicker: Getting started
+    title: Install, import, create
+    items:
+      - Download the package matching your OS and Blender version.
+      - In Blender, go to **Preferences > Get Extensions > Install from Disk**.
+      - Open the 3D Viewport sidebar (**N**) and the **DepthForge** tab.
+      - Select an image or video and generate your relief.
+      - Customize the result with live Geometry Nodes controls.
+
+  - type: facts
+    kicker: Details
+    title: Compatibility & requirements
+    cards:
+      - title: Requirements
+        items:
+          - Blender 4.2 and newer, installed with Install from Disk
+          - Windows x64, macOS (Apple Silicon or Intel) and Linux x64
+          - CPU inference with a local ONNX Runtime
+          - Select the package for your operating system and Blender version
+          - About 4-5 GB of free memory for high-resolution video depth estimation
+          - macOS 14+ for direct video decoding on Apple Silicon; image sequences work on older versions
+      - title: Good to know
+        items:
+          - AI depth estimation produces relative depth, not metric-accurate geometry.
+          - Results vary with image content, motion, lighting and depth ambiguity.
+          - The video model prioritizes temporal consistency but can't guarantee flicker-free output for every scene.
+          - Processing speed depends on your CPU, available memory, input resolution and clip length.
+      - title: License
+        items:
+          - Uses the Depth Anything V2 Small and Video Depth Anything Small models under Apache-2.0 licenses
+          - Third-party attribution and license notices are included in the product package

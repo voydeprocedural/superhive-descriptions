@@ -1,0 +1,108 @@
+# Long description of Instant Terrain Importer. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/instant-terrain-importer.html), restructured into the shared layout.
+
+headline: Import, set up and render terrains in seconds.
+intro:
+  - Stop wasting hours on manual terrain setup. **Instant Terrain Importer** handles import, shading, displacement and texturing in a single click.
+  - It is built for Blender artists who want to go from raw heightmap to render-ready scene without touching a single node.
+chips: [20 terrains, Auto PBR shaders, Cycles & EEVEE, Non-destructive, N-panel workflow]
+hero:
+  src: https://assets.superhivemarket.com/cache/91e63a513216c472c67a0f2ebbc3116b.gif
+  alt: Picking a terrain preset in the Terrain Importer panel and importing it into the viewport with one click
+
+stats:
+  - 20: terrains included
+  - 4: terrain types
+
+sections:
+  - type: features
+    kicker: Key features
+    title: One click, full terrain
+    items:
+      - One-click import: Bring a terrain into your scene with a single click.
+      - Automatic PBR shaders: A procedural shader system for Snow, Rock, Desert and Volcano terrains.
+      - 20 terrains included: High-quality terrains ready to import.
+      - Non-destructive displacement: Displacement runs through a Subdivision modifier.
+      - Live control sliders: Adjust Subdivision, Strength and Mid Level live.
+      - Texture Override: Swap in your own custom textures.
+      - Emissive lava: A glowing lava system on Volcano terrains.
+      - Zero setup: Automatic path detection, nothing to configure.
+    media:
+      src: https://assets.superhivemarket.com/cache/63987758d46ca723f38a8149d3610e86.gif
+      alt: Swapping the textures of an imported rock terrain with Texture Override, turning it into sandy ground
+
+  - type: steps
+    kicker: How it works
+    title: From preset to render-ready
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1234177/image/xlarge_og-c8906945d96fdc5eca64c996d3ecfbed.png
+      alt: The Terrain Importer panel with each part labelled, from preset selection and import settings to texture override and modifier controls
+    items:
+      - "**Pick a terrain** from the built-in preset library."
+      - "**Hit Import** - displacement and subdivision are set automatically."
+      - "**The shader applies itself** - no node setup, no manual linking."
+      - "**Tweak or override** - adjust the sliders or swap in your own textures at any time."
+
+  - type: gallery
+    kicker: Included terrain types
+    title: 20 terrains in four types
+    items:
+      - src: https://assets.superhivemarket.com/cache/a5c93b3d1638795aee3be56e63aaf0dc.gif
+        alt: A snow terrain being imported and its displacement adjusted in the Blender viewport
+        caption: "**Snow** - Glacial Peak, Frozen Tundra, Ice Shelf, Blizzard Carved, Avalanche Scar"
+      - src: https://assets.superhivemarket.com/cache/98cb132c98c53cd43f1750607ba78d6b.gif
+        alt: A rock terrain being imported and textured in the Blender viewport
+        caption: "**Rock** - Canyon Walls, Cracked Badlands, Boulder Field, Coastal Cliffs, Shattered Peaks"
+      - src: https://assets.superhivemarket.com/cache/e2e3579dc03be3e3dbff7d6fde512013.gif
+        alt: A sand dune terrain being imported and textured in the Blender viewport
+        caption: "**Desert** - Dune Sea, Sandstorm Ripple, Eroded Mesa, Desert Cracked, Wadi Carved"
+      - src: https://assets.superhivemarket.com/cache/416e2d56e34d17e82b8d85c5b8cdd5f9.gif
+        alt: A volcano terrain being imported, ending with glowing lava cracks on its slopes
+        caption: "**Volcano** - Caldera, Lava Flow Field, Cinder Cone, Eruption Peak, Pyroclastic Surge"
+
+  - type: specs
+    kicker: Technical details
+    title: Under the hood
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1234182/image/xlarge_og-6fd4eb242c96bb121e8753a84e8fa889.png
+      alt: The Ice Shelf snow terrain in the viewport with the Terrain Importer panel showing grid size, texture override and modifier controls
+    items:
+      - Displacement: Through a Subdivision modifier, non-destructive.
+      - Textures: 4K PBR textures included (Diffuse, Normal, Roughness, Displacement).
+      - Base grid: 32x32 quads, fully scalable.
+      - Grid size: 100 m by default, adjustable.
+      - Setup: Automatic path detection, zero manual setup.
+      - Dependencies: No external dependencies.
+      - Interface: A single panel in the N-panel sidebar.
+
+  - type: gallery
+    kicker: In the viewport
+    title: Snow, rock and volcanic terrains
+    items:
+      - src: https://assets.superhivemarket.com/store/productimage/1234181/image/xlarge_og-3149bb69acb0ccaaa7517d0aaa05dcda.png
+        alt: The Frozen Tundra snow terrain with gentle snowy hills and the Terrain Importer panel
+      - src: https://assets.superhivemarket.com/store/productimage/1234178/image/xlarge_og-4ebe71185a7773f44350dd55efc0bcf5.png
+        alt: The Eruption Peak volcano terrain with a lava texture override applied
+      - src: https://assets.superhivemarket.com/store/productimage/1234180/image/xlarge_og-968667b5297131245750916c56ceab1f.png
+        alt: The Boulder Field rock terrain with jagged peaks and a rock texture override
+      - src: https://assets.superhivemarket.com/store/productimage/1234179/image/xlarge_og-88742c4068fa9fff270c0a0a6ba57744.png
+        alt: The Shattered Peaks rock terrain with an orange-brown rock face texture
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - 20 terrains in four types (Snow, Rock, Desert, Volcano)
+          - Procedural PBR shader system
+          - 4K PBR textures
+          - Emissive lava system for Volcano terrains
+      - title: Compatibility
+        items:
+          - Blender 3.6 and newer
+          - Works with Cycles and EEVEE
+      - title: AI disclosure
+        items:
+          - AI tools assisted the development of this product, mainly for code structuring and optimization
+          - All terrain assets, textures and creative decisions were created and directed by the author

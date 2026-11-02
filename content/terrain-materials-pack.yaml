@@ -1,0 +1,76 @@
+# Long description of Procedural Terrain Materials Pack. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/terrain-materials-pack.html), restructured into the shared layout. The description has no
+# images, so the images come from the product's Superhive gallery.
+
+headline: 14 fully procedural terrain and hard-surface materials, built for fast look-dev and reliable renders.
+intro:
+  - "**Procedural Terrain Materials Pack** is a focused collection of snow, ice, soil, sand, moss and hard-surface materials. Each one comes with a clean, one-click **UI control panel** (a node group), so you can art-direct the look without digging into the shader."
+chips: [100% procedural, Seamless / tileable, 4K-ready detail, Cycles optimized]
+hero:
+  src: https://assets.superhivemarket.com/store/product/251465/image/xlarge_og-ab63384a9615c73d57575a43146c71fa.png
+  alt: All 14 procedural terrain materials rendered on spheres, from asphalt and stone to moss, snow and ice
+
+stats:
+  - 14: procedural materials
+  - 0: image textures
+
+sections:
+  - type: features
+    kicker: Key features
+    title: Procedural, seamless and adjustable
+    items:
+      - 100% procedural: No image textures needed.
+      - Seamless and tileable: Every material tiles without visible seams.
+      - 4K-ready detail: Scale up for close-ups.
+      - Artist-friendly controls: Scale, roughness, breakup, bumps, coverage and more.
+      - Cycles optimized: Clean results and predictable performance.
+      - Versatile: Works great for environments, terrains, props and scene dressing.
+
+  - type: feature
+    kicker: Control panels
+    title: Art-direct without opening the shader
+    text:
+      - Every material is wrapped in a node group with its own UI control panel. Adjust its parameters right there instead of digging into the node tree.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1194109/image/xlarge_og-9925e6212f2c968e110676601b26348f.png
+      alt: The control panels of all 14 materials, each node group showing its adjustable parameters
+
+  - type: gallery
+    kicker: What's included
+    title: 14 materials in four groups
+    items:
+      - src: https://assets.superhivemarket.com/store/productimage/1194108/image/xlarge_og-157f2408fe2e47447c2d76d0fd2840f0.png
+        alt: Asphalt, Cast Concrete, Stone and Flaked Paint Rusted Metal materials on spheres
+        caption: "**Hard surfaces:** Asphalt, Cast Concrete, Stone, Flaked Paint Rusted Metal"
+      - src: https://assets.superhivemarket.com/store/productimage/1194110/image/xlarge_og-deb1ccc7e325d2cb8206ed7f472356c8.png
+        alt: Mud, Rich Garden Soil and Organic Soil Surface materials on spheres
+        caption: "**Soils:** Mud, Rich Garden Soil, Organic Soil Surface"
+      - src: https://assets.superhivemarket.com/store/productimage/1194111/image/xlarge_og-5cc5e702cc6d2b3d6a9fbf81db4c4341.png
+        alt: Compact Sand, Velvet Moss and Patchy Moss Ground materials on spheres
+        caption: "**Sand and moss:** Compact Sand, Velvet Moss, Patchy Moss Ground"
+      - src: https://assets.superhivemarket.com/store/productimage/1194112/image/xlarge_og-b2bc3dea7a0d4df195f0a60237f46bcc.png
+        alt: Powder Snow, Packed Snow, Icy Snow Blend and Frosted Ice materials on spheres
+        caption: "**Snow and ice:** Powder Snow, Packed Snow, Icy Snow Blend, Frosted Ice"
+
+  - type: steps
+    kicker: Quick start
+    title: From the Asset Browser to your scene
+    items:
+      - Open the provided `.blend` file.
+      - Use the **Asset Browser** or the material previews.
+      - Apply a material to your object.
+      - Adjust its parameters in the **UI control panel**.
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - 14 procedural materials in four groups - hard surfaces, soils, sand and moss, snow and ice
+          - A UI control panel (node group) for each material
+          - Asset Browser and material previews
+      - title: Compatibility
+        items:
+          - Blender 4.0 to 5.0
+          - "Render engine: Cycles"

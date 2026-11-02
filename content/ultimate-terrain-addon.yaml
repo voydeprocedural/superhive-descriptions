@@ -1,0 +1,85 @@
+# Long description of Ultimate Terrain Addon. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/ultimate-terrain-addon.html), restructured into the shared layout.
+
+headline: 100+ terrains, 10 biomes, one add-on.
+intro:
+  - "**Ultimate Terrain Addon** is a curated terrain library and fast import system for Blender artists who want to build large-scale environments without searching through folders, loading assets by hand or setting up the same terrain files again and again."
+  - Open the add-on, browse the visual terrain library, preview the terrain you want and bring it straight into your scene. The collection includes more than 100 distinct terrain variations across 10 extreme biome categories, giving you a broad range of geological shapes for cinematics, game environments, concept art, visualization and world building.
+chips: [100+ terrains, 10 biomes, Visual terrain browser, One-click import]
+hero:
+  src: https://assets.superhivemarket.com/cache/758a7611cb4fcf23e2c7bd05371e5875.gif
+  alt: Browsing the terrain thumbnail library from the Blender sidebar and importing terrains into the viewport
+
+stats:
+  - 100+: terrains
+  - 10: biome categories
+
+sections:
+  - type: features
+    kicker: Main features
+    title: A terrain library, not a folder of files
+    items:
+      - 100+ unique terrain assets: Different silhouettes, elevation patterns, erosion structures, ridges, basins, cliffs, plateaus and geological formations.
+      - 10 distinct biome categories: From frozen glacial landscapes and volcanic terrain to impact craters, dunes, karst formations, mesas and painted hills.
+      - Built-in visual browser: Browse terrain thumbnails inside Blender and compare them visually instead of opening files one by one.
+      - Quick terrain preview: Preview the selected terrain before importing it into the scene.
+      - One-click import: Press Import Terrain to bring the terrain straight into your project.
+      - Made for large libraries: A big collection stays organized and easy to navigate during production.
+
+  - type: feature
+    kicker: Why it exists
+    title: Build environments faster
+    text:
+      - "Terrain work often becomes repetitive: searching through files, checking previews, loading the correct asset, setting up the scene and repeating the same process for every landscape. Ultimate Terrain Addon is built to reduce that friction."
+      - Instead of treating the collection like a folder full of files, the add-on turns it into a visual library inside Blender. Compare terrain silhouettes quickly, choose the environment that fits your scene and import it without interrupting your workflow.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1327887/image/xlarge_og-cbf4533e525f667720d2e2e8b3e1033b.png
+      alt: An imported volcanic terrain in the Blender viewport with the Ultimate Terrain Addon panel open in the sidebar
+
+  - type: specs
+    kicker: 10 extreme biomes
+    title: From glacial ice to volcanic rock
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1327884/image/xlarge_og-b4a635665bf073388596242912f78ce0.png
+      alt: A grid of 100 terrain thumbnails covering badlands, glacial, crater, karst, mesa, painted hills, salt flat, dune, tundra and volcanic biomes
+    items:
+      - Badlands: Deeply eroded ridges and rugged dry terrain.
+      - Glacial: Frozen landscapes, icy mountains and cold formations.
+      - Impact Crater: Dramatic circular crater environments and basin structures.
+      - Karst: Sharp vertical rock formations and unusual limestone-inspired terrain.
+      - Mesa: Elevated plateaus, cliffs and desert rock formations.
+      - Painted Hills: Colorful mineral-style ridges and layered terrain.
+      - Salt Flat: Cracked surfaces, dry basins and flat geological landscapes.
+      - Sand Dunes: Sculpted desert dunes and flowing sand formations.
+      - Tundra: Cold, rugged and exposed terrain forms.
+      - Volcanic: Dark volcanic landscapes, craters and dramatic rocky surfaces.
+
+  - type: gallery
+    kicker: Curated library
+    title: Not a random terrain generator
+    text:
+      - Ultimate Terrain Addon gives you fast access to a curated collection of pre-designed terrains. Each asset was created as a deliberate terrain variation rather than generated randomly inside Blender, so you browse known results and quickly pick the landscape that fits your project.
+    items:
+      - src: https://assets.superhivemarket.com/store/productimage/1327886/image/xlarge_og-db6c7b4ed521bded0571e4f214a01353.png
+        alt: A mesa terrain with eroded ridges imported into the Blender viewport
+      - src: https://assets.superhivemarket.com/store/productimage/1327885/image/xlarge_og-3d025123602266ba22096ac776db6421.png
+        alt: An impact crater terrain with a deep circular basin in the Blender viewport
+      - src: https://assets.superhivemarket.com/store/productimage/1327883/image/xlarge_og-434b1d00782a0fed5f84a8cfb893f0e5.png
+        alt: Wireframe view of an imported impact crater terrain mesh
+
+  - type: steps
+    kicker: Simple workflow
+    title: Explore. Import. Build.
+    items:
+      - "**Open the add-on** from the Blender sidebar."
+      - "**Load the terrain library:** click Load Terrains to open the visual terrain browser."
+      - "**Browse and compare** terrain thumbnails across biome types and silhouettes."
+      - "**Select your terrain:** choose the one that best fits your environment or shot."
+      - "**Import:** click Import Terrain and continue building your scene."
+
+  - type: chips
+    kicker: Ideal for
+    title: Where it fits
+    text:
+      - Useful for both realistic and stylized environment projects.
+    items: [Environment design, Game environments, Cinematic landscapes, Concept art, World building, Matte painting base scenes, Animation backgrounds, Architectural visualization, Product and automotive backdrops, Sci-fi and fantasy world design, Large-scale outdoor rendering]

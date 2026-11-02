@@ -1,0 +1,90 @@
+# Long description of Smart Scatter Kit. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/smart-scatter-kit.html), restructured into the shared layout.
+
+headline: Build detailed environments faster.
+intro:
+  - "**Smart Scatter Kit** is a Geometry Nodes scattering system for fast, flexible and controlled environment creation."
+  - Distribute complete asset collections across any mesh with surface-based controls, or concentrate assets in specific areas with a proximity controller.
+  - From natural forest floors to abandoned industrial areas and urban waste scenes, the kit provides both the scattering system and ready-to-use environment assets.
+chips: [Geometry Nodes, Two distribution modes, Three asset collections, Use your own assets, Non-destructive]
+hero:
+  src: https://assets.superhivemarket.com/cache/e00c154d635287cf35b4ab324ddc570d.gif
+  alt: Debris assets clustering around an Empty controller as it moves across a cracked-concrete monkey head
+
+stats:
+  - 3: asset collections
+  - 2: distribution modes
+
+sections:
+  - type: features
+    kicker: Main features
+    title: Scatter smarter, build faster
+    items:
+      - Geometry Nodes system: The whole scattering setup is built with Geometry Nodes.
+      - Collection-based distribution: Scatter a complete asset collection across any mesh.
+      - Surface normal control: Place assets by the direction and angle of the target surface.
+      - Proximity zones: Use an Empty to concentrate assets in a specific area.
+      - Adjustable falloff: Tune how the proximity falloff spreads around the Empty.
+      - Random seed: Get a new arrangement from a single value.
+      - Scale variation: Vary the size of the scattered assets.
+      - Three asset collections: Forest floor clutter, industrial debris and urban trash included.
+      - Non-destructive and reusable: Keep the setup editable and reuse it across scenes.
+      - Any kind of environment: Suited to natural, industrial, urban and abandoned scenes.
+
+  - type: feature
+    kicker: How it works
+    title: Two flexible distribution modes
+    text:
+      - "**Surface Normal Distribution** controls where assets appear according to the direction and angle of the target surface, so you can scatter across upward-facing, vertical or angled areas with greater precision."
+      - "**Proximity Falloff** uses an Empty object as a controller. Position it anywhere in the scene and assets are distributed around that area, so you can art-direct localized clusters without editing the target mesh."
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1304810/image/xlarge_og-3041dca21b0255d736070655bfb52f4d.png
+      alt: Monkey heads covered with scattered assets, comparing proximity control and surface normal control
+
+  - type: specs
+    kicker: Included assets
+    title: Three collections, or your own
+    text:
+      - Three ready-to-use environment collections are included, but the system is not limited to them. Assign your own Blender collection and use Smart Scatter Kit as a reusable scattering tool for rocks, plants, debris, props, foliage or other environment assets.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1304812/image/xlarge_og-bec7bfd26ab63d2ed6c9ce3dbd20191a.png
+      alt: Three monkey heads, each scattered with a different included collection, from construction debris to forest plants
+    items:
+      - Forest Floor Clutter: Plants, flowers, branches, organic debris, rocks, weeds and natural ground details for forests and overgrown environments.
+      - Industrial Construction Debris: Brick ruins, construction materials, pipes, valves, pallets, containers, tools and industrial site clutter.
+      - Urban Trash & Litter: Garbage, discarded packaging, street waste, damaged objects and urban debris for abandoned or polluted scenes.
+
+  - type: steps
+    kicker: Simple workflow
+    title: From modifier to scene
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1304813/image/xlarge_og-b4c1713e3da6527d12285c93d707c583.png
+      alt: The Smart Scatter Kit modifier panel set to each of the three collections, with Asset Collection, Random Seed, Scale Variation and Falloff Mode settings
+    items:
+      - Add the Smart Scatter Kit modifier to your target mesh.
+      - Select one of the included asset collections or use your own collection.
+      - Choose the distribution mode.
+      - Adjust the random seed and scale variation.
+      - For proximity scattering, assign an Empty and move it to the area you want.
+
+  - type: chips
+    kicker: Ideal for
+    title: Where it fits
+    items: [Forest and woodland environments, Overgrown and abandoned scenes, Industrial and construction sites, Urban streets and polluted environments, Post-apocalyptic scenes, Environment concept art, Background and set dressing]
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - Smart Scatter Kit Geometry Nodes scattering system
+          - Forest Floor Clutter collection
+          - Industrial Construction Debris collection
+          - Urban Trash & Litter collection
+      - title: Good to know
+        items:
+          - Requires basic familiarity with Blender modifiers and collections
+          - Final performance depends on the number and complexity of the scattered assets
+          - For dense scenes, use optimized assets and suitable viewport settings
+          - Results may vary with the scale and topology of the target mesh

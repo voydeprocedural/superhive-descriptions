@@ -1,0 +1,72 @@
+# Long description of Nature Starter Pack. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/nature-starter-pack.html), restructured into the shared layout. The description has no
+# images, so the pictures are the product's Superhive gallery images.
+
+headline: A lightweight, easy-to-use collection of stylized natural assets, designed for fast scene building.
+intro:
+  - "**Nature Starter Pack** includes a variety of trees, bushes, grass, flowers and rocks that work well for stylized environments, game scenes and background setups."
+  - All assets are organized into a simple, clean panel for quick access inside Blender.
+chips: [Stylized assets, Lightweight geometry, Organized asset panel, Cycles & EEVEE]
+hero:
+  src: https://assets.superhivemarket.com/store/product/250875/image/xlarge_og-9a311d5386618f52b13c6056c4a310b8.png
+  alt: Sunlit forest scene with stylized trees, bushes, grass and mossy rocks from the pack
+
+stats:
+  - 9: stylized trees
+  - 6: bush variations
+  - 7: mossy rocks
+
+sections:
+  - type: specs
+    kicker: In the pack
+    title: Trees, bushes, grass, flowers and rocks
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1186413/image/xlarge_og-5e41c8df069cd2a6281b1d6a02180f30.png
+      alt: Every asset in the pack lined up on a dark background, with trees at the back and bushes, grass, flowers and rocks in front
+    items:
+      - Trees: 9 stylized trees
+      - Bushes: 6 bush variations
+      - Grass: 4 grass assets
+      - Flowers: 3 flower models
+      - Rocks: 7 mossy rock variations
+
+  - type: gallery
+    kicker: Gallery
+    title: A closer look
+    items:
+      - src: https://assets.superhivemarket.com/store/productimage/1186416/image/xlarge_og-b14b8b367b5a7488b52c86b6834d29af.png
+        alt: The stylized trees in a row, from pale birch-like trees to dark green, yellow and orange autumn trees
+      - src: https://assets.superhivemarket.com/store/productimage/1186414/image/xlarge_og-f50bef7728578305c0b79cac9600f41c.png
+        alt: The bushes in the back row with grass and flower models in front
+      - src: https://assets.superhivemarket.com/store/productimage/1186415/image/xlarge_og-1bb46b0d418e47cb17494a068f70af4c.png
+        alt: A small arrangement of trees, bushes, grass, flowers and rocks from the pack
+
+  - type: features
+    kicker: Key features
+    title: Light, clean and ready to use
+    items:
+      - Lightweight geometry: Light assets for fast scene building.
+      - Clean topology: Tidy meshes in every asset.
+      - Organized asset panel: Every asset sits in one simple panel for quick access inside Blender.
+      - Ready-to-use materials: Assets come with their materials set up.
+      - Real-time ready: Optimized for real-time and game scenes.
+      - Cycles and EEVEE: Works with both render engines.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1186417/image/xlarge_og-88f387929332e652ab893097157e5a94.png
+      alt: All assets of the pack in the Blender viewport with the wireframe overlay, showing their geometry
+
+  - type: chips
+    kicker: Ideal for
+    title: Where it fits
+    items: [Stylized scenes, Game scenes, Background set dressing, Quick prototyping]
+
+  - type: facts
+    kicker: Details
+    title: Requirements
+    cards:
+      - title: Software
+        items:
+          - Blender 4.0 and above
+      - title: Render engines
+        items:
+          - Cycles and EEVEE

@@ -1,0 +1,106 @@
+# Long description of SkyFlow. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/skyflow.html), restructured into the shared layout. The presets grid and the
+# panel screenshot come from the Superhive product gallery.
+
+headline: Create a complete animated sky in one click.
+intro:
+  - "**SkyFlow** combines a physical sky, a synchronized Sun lamp and three layers of procedural clouds that drift and evolve with your timeline. Shape your sky, set the mood."
+  - Everything is procedural, with no HDRIs or image textures required, and every control can be keyframed.
+chips: [Cycles & EEVEE, No HDRIs or textures, Every control keyframable, Renders without the add-on]
+hero:
+  src: https://assets.superhivemarket.com/cache/fbba3b1216f6b22e872d6038ab64f34f.gif
+  alt: A lighthouse scene with the SkyFlow panel open as the sun goes from midday through sunset and dusk and back
+
+stats:
+  - 8: editable presets
+  - 3: procedural cloud layers
+  - 0: HDRIs needed
+
+sections:
+  - type: steps
+    kicker: One-click setup
+    title: Start with a preset, make it your own
+    items:
+      - Choose a preset.
+      - Press **Setup SkyFlow**. The add-on creates the World, the Sun lamp and the drivers that connect them. Your previous World stays available in the file.
+      - "Make it your own: control sunlight, atmospheric haze, cloud shapes and motion from one sidebar panel."
+
+  - type: feature
+    kicker: Connected sun & sky
+    title: One slider moves the sun, the sky and the light
+    text:
+      - Change **Sun Elevation** to adjust the sky colors, the sun position and the synchronized lamp lighting together.
+      - Customize sun direction, color, disc size and brightness, with optional automatic lamp fading at sunset.
+    media:
+      src: https://assets.superhivemarket.com/cache/6f430e7434e0527b2f60076c9b167668.gif
+      alt: Sea stacks on calm water as the sun sets and the sky shifts from bright daylight to dusk
+
+  - type: gallery
+    kicker: Cloud layers
+    title: Three layers that drift and evolve
+    text:
+      - Build depth with three independently controlled cloud layers at different relative altitudes. Adjust each layer's color, coverage, softness, size and stretch, from scattered clouds to thin cirrus streaks.
+      - Cloud drift and shape morphing run directly from the timeline. Adjust wind and morph speed for gentle movement or faster time-lapse sequences, and use the seed, rotation and position controls to refine your composition.
+    items:
+      - src: https://assets.superhivemarket.com/cache/2f4e50571c73a145922b6946ce64142e.gif
+        alt: Large, soft low-level cumulus clouds drifting over a white sphere on a reflective floor
+        caption: Low-level cumulus
+      - src: https://assets.superhivemarket.com/cache/e4b60ef5dc70190baa8bc9ed3ec8dbb6.gif
+        alt: Small, scattered mid-level clouds drifting over a white sphere on a reflective floor
+        caption: Mid-level clouds
+      - src: https://assets.superhivemarket.com/cache/7b978d981270e6d925872dab16768315.gif
+        alt: Thin, streaky high-level cirrus moving across a pale blue sky above a white sphere
+        caption: High-level cirrus
+
+  - type: feature
+    kicker: Light, haze & shading
+    title: Refine the atmosphere and the clouds
+    text:
+      - Shape the atmosphere with dust, air density and horizon haze.
+      - Fine-tune cloud light and shadow colors, self-shadowing, dense-core darkening, silver lining and aerial haze.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1368074/image/xlarge_og-99bdd58480049cc205e2d2f4fbce707a.png
+      alt: The SkyFlow cloud, sun, sky and atmosphere controls next to a stormy sky over a shipwreck on calm water
+
+  - type: chips
+    kicker: Presets
+    title: Eight editable presets
+    text:
+      - Preview looks in the thumbnail gallery. Enable **Keep Sun Direction** to preserve the sun direction, cloud rotation and cloud offset when switching presets.
+    items: [Fair Weather, Clear Noon, Cirrus Morning, Golden Hour, Sunset Drama, Overcast, Storm, Blue Hour]
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1368072/image/xlarge_og-1265106c46d1600aa0b80484bfb73c08.png
+      alt: Thumbnails of the eight SkyFlow presets, from clear daylight and sunsets to overcast, storm and blue hour
+
+  - type: feature
+    kicker: Portable
+    title: Save your scene, take your sky with you
+    text:
+      - SkyFlow builds nodes and standard drivers stored inside your .blend file. Once created, the sky keeps animating and rendering on compatible Blender installations and render farms without the add-on installed.
+      - Python auto-run is not required.
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - SkyFlow 0.1.0 Blender extension
+          - Eight presets with preview thumbnails
+          - Coastal sunset showcase scene with a 30-second time-lapse animation
+          - Bonus render script and launchers for the showcase scene
+      - title: Requirements
+        items:
+          - Blender 5.2 or newer
+          - Cycles and EEVEE
+      - title: Current limitations
+        items:
+          - Clouds use projected shader layers and are not volumetric
+          - Cloud layers do not provide positional parallax for large camera movements and cannot be flown through
+          - Moving cloud shadows on the ground are not supported in version 0.1
+          - Night skies and stars are not included; Blue Hour is the darkest preset
+      - title: Credits
+        items:
+          - Developed by Voyde Procedural
+          - Code written with AI assistance
+          - No AI-generated images are included in the product

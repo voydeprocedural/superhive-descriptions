@@ -128,6 +128,7 @@ def product_json(p, catalog):
         "summary": p["summary"],
         "badges": p.get("badges", []),
         "flag": p.get("flag", ""),
+        "status": p["status"],
         "related": related(p, catalog),
     }
 
@@ -140,7 +141,9 @@ def build(catalog):
     data = {
         "store": {k: store[k] for k in ("name", "tagline", "superhive", "website")} | {"socials": store["socials"]},
         "count": len(published),
-        "products": {p["id"]: product_json(p, catalog) for p in published},
+        # Drafts are listed so their own description's cards work before launch, but only published products
+        # are ever recommended (`related` and `order` hold published ids only).
+        "products": {p["id"]: product_json(p, catalog) for p in catalog["products"]},
         "order": [p["id"] for p in published],
         "bundles": catalog.get("bundles", []),
     }

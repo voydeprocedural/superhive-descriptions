@@ -1,0 +1,163 @@
+# Long description of Crawlers. The Superhive description of 2026-11-02 (archive/2026-11-02/crawlers.html) is only
+# an iframe, so the text is kept from its GitHub Pages source (voydeprocedural.github.io/crawlers: README.md and
+# embed.html), restructured into the shared layout.
+
+headline: Fill your Blender scenes with real-size swarms that move the way the real animals do.
+intro:
+  - "**Crawlers** turns one Geometry Nodes modifier into a living swarm of earthworms, maggots, centipedes, cockroaches, wolf spiders, ants or snakes. Pick them from a picture catalog, draw their path or lure them with the mouse."
+  - In 1.2 every creature was rebuilt from reference photographs for close-up renders, and snakes joined the swarm.
+chips: [Real size, Natural behaviour, One modifier, Pure Geometry Nodes, Version 1.2]
+hero:
+  src: https://voydeprocedural.github.io/crawlers/assets/crawlers_worms.gif
+  alt: Earthworms crawling over each other around a red berry
+video: T4sI0QxJfns
+
+stats:
+  - 7: creatures
+  - 11: skins
+  - 4: grounds
+  - 2: demo scenes
+
+sections:
+  - type: features
+    kicker: Key features
+    title: A living swarm from one modifier
+    items:
+      - Real size: Every creature at its true size and speed, from a 1.2 cm ant to a 90 cm snake.
+      - Natural behaviour: Planted feet and real gaits, worms that pile up, snakes in S-curves.
+      - They climb over anything: Logs, rocks, walls and each other, overhangs included.
+      - One modifier: Pure Geometry Nodes with one simulation zone, fully editable, and every mode an ordinary modifier input you can keyframe.
+      - One-click bake: Bake the swarm in the background before rendering an animation.
+      - Fast viewport: Lighter geometry while you work, full detail in renders.
+
+  - type: gallery
+    kicker: Creatures
+    title: Rebuilt from photographs
+    text:
+      - "Every creature was rebuilt from reference photographs: furred wolf spiders, spiny cockroach legs, golden hairs on ants, jointed legs that swell between the joints, and wet, ringed earthworms. Insects walk on planted feet with a proper gait, and worms crawl along their own track and pile up."
+    items:
+      - src: https://voydeprocedural.github.io/crawlers/assets/crawlers_cockroaches.gif
+        alt: American cockroaches running over leaf litter
+        caption: "**Cockroaches**, 3.5 cm. Spiny legs, glossy veined wings and the pale-rimmed pronotum. Feet stay planted in a tripod gait as they dart and freeze."
+      - src: https://voydeprocedural.github.io/crawlers/assets/crawlers_spiders.gif
+        alt: Furred wolf spiders on the forest floor
+        caption: "**Wolf spiders**, 1.8 cm body. Furred all over, with pale rings at the joints and eight legs in alternating tetrapods. They wait in ambush, then dash."
+      - src: https://voydeprocedural.github.io/crawlers/assets/crawlers_ants.gif
+        alt: A file of ants following a trail
+        caption: "**Ants**, 1.2 cm. Fine golden hairs and an iridescent gaster. They march in single file, keep their spacing and follow the trail you draw."
+
+  - type: specs
+    kicker: Seven creatures
+    title: One menu, real sizes
+    text:
+      - Pick a creature, and its size, behaviour and skin follow.
+    items:
+      - Earthworms: 18 cm. Peristaltic crawl, pile up on whatever they follow. Wet, translucent and ringed.
+      - Maggots: 1.4 cm. Squirming.
+      - Centipedes: 14 cm. Fluid, a rippling wave through 21 pairs of legs.
+      - Cockroaches: 3.5 cm. Dart and freeze, run along walls.
+      - Wolf spiders: 1.8 cm body. Ambush, then dash.
+      - Ants: 1.2 cm. Single file, steady spacing.
+      - Snakes: 90 cm. S-curve glide, tongue flicks.
+
+  - type: gallery
+    kicker: New in 1.2
+    title: Now with snakes
+    text:
+      - 90 cm snakes glide in wide S-curves, with the body keeping to the head's track, and flick their forked tongues. They keep a little room around their bodies and check every neighbour for contact, so they don't pass through each other.
+      - Two skins, **Brown Snake** and **Banded Snake**, with overlapping scales and wide belly plates.
+    items:
+      - src: https://voydeprocedural.github.io/crawlers/assets/key_art/02_now_with_snakes.jpg
+        alt: "Now with snakes key art: slithering in S-curves, brown and banded skins"
+      - src: https://voydeprocedural.github.io/crawlers/assets/crawlers_snakes.gif
+        alt: Three brown snakes slithering side by side in S-curves
+
+  - type: gallery
+    kicker: Climbing
+    title: They climb over anything
+    text:
+      - Every creature walks up and over the logs, rocks and walls in its way, overhangs included, and steps down the far side. Select the meshes they should climb, and the swarm treats them as terrain.
+      - Worms climb each other into writhing piles, and even the snakes cross a log side by side without passing through each other.
+    items:
+      - src: https://voydeprocedural.github.io/crawlers/assets/key_art/03_they_climb.jpg
+        alt: "They climb over anything key art: cockroaches climbing over a mossy log"
+      - src: https://voydeprocedural.github.io/crawlers/assets/crawlers_banded_log.gif
+        alt: Two banded snakes slither up and over a mossy log
+
+  - type: gallery
+    kicker: Creature Catalog
+    title: Pick them by their picture
+    text:
+      - "Every creature has a picture card in the sidebar. Click **+** on a card to add that kind alone, or pick several cards and click **Add Together**: one swarm per kind, side by side, all heading for one shared target. Here cockroaches, wolf spiders and ants go together, over the branch."
+    items:
+      - src: https://voydeprocedural.github.io/crawlers/assets/key_art/05_creature_catalog.jpg
+        alt: "The Creature Catalog key art: pick them by their picture, add one kind or several together"
+      - src: https://voydeprocedural.github.io/crawlers/assets/crawlers_catalog.gif
+        alt: Picking the cockroach, wolf spider and ant cards in the Creature Catalog, clicking Add Together and pressing Play
+
+  - type: gallery
+    kicker: Draw Path
+    title: Draw their path
+    text:
+      - Click **Draw Path** and drag over anything in your scene. The stroke becomes the swarm's route. End it near the start and they walk it round and round. With ants, you get a living ant trail in seconds.
+    items:
+      - src: https://voydeprocedural.github.io/crawlers/assets/key_art/04_draw_their_path.jpg
+        alt: "Draw their path key art: drag over your scene, the swarm walks your stroke"
+      - src: https://voydeprocedural.github.io/crawlers/assets/crawlers_draw_path.gif
+        alt: Drawing a loop over the ground with the mouse while the ants walk it round and round
+
+  - type: feature
+    kicker: Lure with Mouse
+    title: Lead the swarm with your cursor
+    text:
+      - Play the simulation and lead the swarm with your cursor. The worms follow it over every surface and pile up where it stops. Hold the left mouse button to blast them apart.
+      - The creature loops on this page are EEVEE renders. The viewport clips (Creature Catalog, Draw Path, Lure with Mouse) were recorded frame by frame, partly at double speed. Live playback speed depends on the creature count and your hardware.
+    media:
+      src: https://voydeprocedural.github.io/crawlers/assets/crawlers_lure.gif
+      alt: Earthworms following the mouse cursor and piling up where it stops
+
+  - type: specs
+    kicker: And more
+    title: Modes, grounds, skins and moods
+    items:
+      - Hunt: Go for any object, such as an empty, a berry, a lantern or a character's hand. Insects spread around it; worms pile on it.
+      - Infest: Creatures climb onto any mesh and cover it. Animate Infest Amount to send them in and call them off.
+      - Emerge: Creatures come out of an object, such as a burrow, a drain or a crack, one after another.
+      - Flee: The swarm runs from the target, for example when a light comes on.
+      - Burst: One keyframe and the swarm erupts.
+      - Add Ground: One click puts a detailed procedural floor with real relief under the swarm. Choose Forest Floor, Wet Concrete, Old Planks or Stone Tiles.
+      - Skins: Eleven skins matched to photographs, from the cockroach's glossy wings to Abyss Glow, Toxic and Leech.
+      - Moods: Natural, Frenzy, Lazy and Tower Builder.
+
+  - type: steps
+    kicker: Quick start
+    title: Unleash the swarm
+    text:
+      - Sizes are real, so a swarm of ants is only a few centimetres across. Zoom in, or scale up Worm Length for stylised giants.
+    items:
+      - "In Blender, go to Edit > Preferences > Get Extensions, open the drop-down menu, choose **Install from Disk** and pick `crawlers-1.2.0.zip`. You can also drag the zip into Blender."
+      - A **Crawlers** tab appears in the 3D Viewport sidebar (press N).
+      - Select the meshes the creatures should climb on (rocks, logs, walls). The floor is built in.
+      - Click **+** on a card in the **Creature Catalog**, or pick several cards and click **Add Together**.
+      - Click **Add Ground** and pick a style.
+      - "Press Play. The swarm goes for `CR_Target`: move it, click **Lure with Mouse**, or click **Draw Path** and drag over the scene."
+      - Before rendering an animation, click **Bake**.
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - "**Crawlers add-on**, a Blender extension (`crawlers-1.2.0.zip`) with the node groups, 11 skins, the ground generator and the catalog pictures"
+          - "**Forest Floor** demo scene. Earthworms crawl out of a burrow and pile onto a rolling berry, while an ant trail crosses a mossy branch to an apple."
+          - "**The Undercroft** demo scene. Stylised giant glowing worms emerge from a drain, hunt a lantern, bury a statue and flee when the lantern flares."
+          - Documentation for every mode and setting
+      - title: Requirements
+        items:
+          - Blender 5.0 or newer
+          - Tested on Blender 5.0.1 and 5.2.0 LTS
+          - Version 1.2.0
+      - title: License
+        items:
+          - GPL-3.0-or-later, covering the add-on code, the .blend assets and the demo scenes

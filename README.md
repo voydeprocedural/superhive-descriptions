@@ -39,6 +39,25 @@ live page and check it. The editor autosaves, so only open it to publish.
 
 **Roll back**: paste `archive/<date>/<id>.html` the same way.
 
+**Drafts**: a product with `status: draft` gets its description and cards, but no other product recommends it until it
+is `published`.
+
+## Check on the real Superhive page
+
+After a push, open any Voyde product page on Superhive and run this in the browser console. It swaps the description
+box for the new one in your tab only; nothing is saved, and a reload brings the live version back.
+
+```js
+const id = 'freezing-effect';
+const page = await (await fetch(`https://voydeprocedural.github.io/superhive-descriptions/preview/${id}.html`, { cache: 'no-store' })).text();
+const html = new DOMParser().parseFromString(page, 'text/html').getElementById('html').value;
+const box = document.querySelector('#tab-content-main');
+box.innerHTML = html;
+box.querySelectorAll('[class]').forEach(e => e.removeAttribute('class'));  // Superhive strips classes too
+```
+
+This shows the description with Superhive's own stylesheet and fonts, and the live card widgets.
+
 ## Publishing
 
 Every push to `main` runs `.github/workflows/pages.yml`, which builds and publishes `site/` to GitHub Pages.

@@ -1,0 +1,150 @@
+# Long description of Cloud Sketch. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/cloud-sketch.html), restructured into the shared layout.
+
+headline: Draw a shape in the 3D viewport and it becomes a volumetric cloud.
+intro:
+  - "**Cloud Sketch** turns the outline you draw into a volumetric cloud. It can also turn any 3D model into a cloud, add one of 68 library clouds, or fill the whole sky in one click."
+  - Puffiness, detail, wisps, softness and density update live in the viewport, and every one of them can be keyframed. No baking, no VDBs.
+chips: [Cycles & EEVEE, No baking or VDBs, Everything keyframable, Live in the viewport]
+hero:
+  src: https://voydeprocedural.github.io/cloud-sketch/gifs/01_featured.gif
+  alt: Volumetric clouds billowing over the ocean, including one shaped like a heart
+video: ZXIEkfSiAE8
+
+stats:
+  - 68: library clouds
+  - 9: sky weather presets
+  - 8: cloud categories
+
+sections:
+  - type: feature
+    kicker: Draw clouds
+    title: If you can draw it, you can render it
+    text:
+      - "Most cloud tools hand you someone else's shapes. Cloud Sketch lets you draw the silhouette you actually want: a heart for a wedding shot, a rabbit for a children's film, a towering cumulus to frame a mountain."
+    media:
+      src: https://voydeprocedural.github.io/cloud-sketch/gifs/02_draw_in_viewport.gif
+      alt: A heart is drawn in the Blender viewport, then renders as a heart-shaped volumetric cloud
+
+  - type: steps
+    kicker: How it works
+    title: Draw, release, tweak
+    items:
+      - "**Draw.** Click Draw Clouds and sketch a closed shape over your scene. Orbit or zoom between strokes and keep drawing."
+      - "**Release.** The outline is inflated into 3D. Wide areas get deep and round, thin parts stay slender, the way real clouds read."
+      - "**Tweak.** Puffiness, detail, wisps, softness and density update live in the viewport, and every one can be keyframed."
+    media:
+      src: https://voydeprocedural.github.io/cloud-sketch/gifs/03_live_in_viewport.gif
+      alt: The heart cloud in the Rendered viewport while Puffiness, Detail, Softness and Grow change live
+
+  - type: feature
+    kicker: Model to cloud
+    title: Turn any 3D model into a cloud
+    text:
+      - Select meshes, text objects or curves and click **Model to Cloud**. Each model is hidden and a cloud of its shape takes its place.
+      - "**Stays linked.** The cloud follows the model when you edit, pose or animate it. **Swell** keeps thin parts from breaking up, and **Resolution** keeps small parts from going missing."
+      - Works for logos and lettering, characters, creatures and props.
+    media:
+      src: https://voydeprocedural.github.io/cloud-sketch/gifs/06_model_to_cloud.gif
+      alt: A dragon model dissolving into a cloud of the same dragon shape
+
+  - type: feature
+    kicker: Sky builder
+    title: Fill the whole sky in one click
+    text:
+      - Pick a weather, set Coverage and click **Build Sky**. Clouds, sun, atmosphere and haze are set up around your active camera.
+      - Nine weather presets - Fair Weather, Cumulus Field, Towering Afternoon, Golden Hour, Mackerel Sunset, Pastel Dusk, Broken Layer, High Wisps and Building Storm.
+    media:
+      src: https://voydeprocedural.github.io/cloud-sketch/gifs/05_sky_builder.gif
+      alt: One Build Sky click for each of the nine weather presets
+
+  - type: chips
+    kicker: Cloud library
+    title: 68 ready-made clouds
+    text:
+      - Choose a category, click a preview and press **Add**. The cloud appears at the 3D cursor, facing the view, at a real-world size you can change.
+    items: [12 Cumulus, 12 Towering, 10 Clusters, 8 Scattered, 8 Wisps, 6 Storm, 6 Plumes, 6 Trails]
+    media:
+      src: https://voydeprocedural.github.io/cloud-sketch/gifs/04_cloud_library.gif
+      alt: The cloud library stepping through its eight categories, from cumulus to contrails
+
+  - type: feature
+    kicker: Any shape
+    title: Your silhouette, kept
+    text:
+      - Concave, spiky or round, the cloud keeps the outline you drew. Shapes are inflated with a Poisson solve instead of a flat extrusion, so a circle becomes a sphere and a long limb becomes a tube.
+    media:
+      src: https://voydeprocedural.github.io/cloud-sketch/gifs/07_any_shape.gif
+      alt: Clouds shaped like a cumulus, a heart, a star and a moon forming one after another
+
+  - type: specs
+    kicker: Live controls
+    title: Art-direct every cloud
+    text:
+      - The shader reads each value straight away, so nothing needs rebaking.
+    media:
+      src: https://voydeprocedural.github.io/cloud-sketch/gifs/08_live_controls.gif
+      alt: One cloud as Puffiness, Detail and Wisps sweep through their range
+    items:
+      - Shape: Puffiness, Detail, Wisps, Billow Size, Streak, Height Shaping.
+      - Look: Density, Softness, Seed.
+      - Motion: Grow and Evolve, keyframable like everything else.
+
+  - type: features
+    kicker: Animation
+    title: Clouds that form, boil and drift
+    items:
+      - Animate Formation: Keyframes selected clouds growing out of thin air, with an optional stagger.
+      - Evolve: Makes the billows slowly boil.
+      - Drift: Slides the high cloud layers with the wind.
+      - Animate Day: Moves the sun from sunrise to sunset over the frame range.
+    media:
+      src: https://voydeprocedural.github.io/cloud-sketch/gifs/09_animate_formation.gif
+      alt: A cloud growing out of thin air
+
+  - type: specs
+    kicker: Sun & atmosphere
+    title: Light the sky live
+    text:
+      - Everything updates live in the Rendered viewport. Your own HDRI and lights work too.
+    media:
+      src: https://voydeprocedural.github.io/cloud-sketch/gifs/10_time_of_day.gif
+      alt: The sun moving through the day, from morning to sunset, with the sky and clouds following
+    items:
+      - Time of Day: Moves the sun along its daily path.
+      - Point Sun: Click it and the sun follows your mouse.
+      - Atmosphere presets: Clear, Deep Blue, Hazy, Fiery and Pastel, with Air, Dust, Ozone and colour tint controls.
+      - High Clouds: Fibrous cirrus and small cloudlets high above the rest.
+      - Haze: Fades distant clouds into the horizon, with an automatic colour.
+
+  - type: features
+    kicker: Built for production
+    title: Light on your scene
+    items:
+      - Fast to render: Each cloud sits in a tight bounding mesh, so Cycles only marches where the cloud can be.
+      - Nothing to cache: No VDB files or bakes to keep track of. The shader calculates everything at render time.
+      - Any scale: Draw a 5 m cloud for a tabletop shot or a 2 km one for a landscape. Density adapts to the size.
+      - Readable in Solid mode: Each cloud shows as a soft white pillow, so you can lay out a sky without rendering.
+      - Cycles and EEVEE: Cycles gives the softest light; EEVEE works for previews and stylised shots.
+      - One-click setup: Set Up Sky adds a physical sky and sun, and sets volume bounces and EEVEE volume quality for you.
+
+  - type: steps
+    kicker: Install
+    title: Install from disk
+    items:
+      - "In Blender, go to **Edit > Preferences > Get Extensions > Install from Disk** and pick `cloud_sketch-0.3.0.zip`. No need to unzip it."
+      - Press **N** in the 3D viewport and open the **Cloud Sketch** tab.
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - "`cloud_sketch-0.3.0.zip` - the extension, with the cloud library"
+          - "`Cloud_Sketch_0.3.0_Demo_and_Docs.zip` - the scene from the featured image (packed and ready to render), a quick-start guide and the license"
+      - title: Requirements
+        items:
+          - Blender 5.0 or newer (tested on 5.0, 5.1 and 5.2 LTS)
+          - Cycles is recommended for final renders
+          - A GPU (OptiX, CUDA, HIP or Metal) makes volumes much faster

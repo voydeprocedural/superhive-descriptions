@@ -1,0 +1,79 @@
+# Long description of Procedural Generator Bundle. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/procedural-generator-bundle.html), restructured into the shared layout. The
+# generator overview, controls and Asset Browser screenshots come from the Superhive product gallery.
+
+headline: Expand your Blender workflow with ten ready-to-use procedural Geometry Nodes generators.
+intro:
+  - "**Procedural Generator Bundle Pack** combines ten versatile Geometry Nodes systems designed to speed up procedural modeling, surface detailing, object transformation and environment creation."
+  - Every generator is prepared as a Blender Asset Library asset. Browse the collection, drag a generator into your scene, apply it to a compatible object and customize the exposed controls directly from the modifier panel.
+chips: [Asset Library, Drag & apply, Non-destructive, Cycles & EEVEE]
+hero:
+  src: https://assets.superhivemarket.com/cache/43ae285720d26005ef2af2528338280c.gif
+  alt: Generators dragged from the Asset Browser onto a monkey head in Blender - fur, trash scatter, crystals, electric arcs, liquid and bubble wrap
+
+stats:
+  - 10: Geometry Nodes generators
+  - 1: Asset Library
+
+sections:
+  - type: features
+    kicker: Included generators
+    title: Ten creative systems in one library
+    items:
+      - Arc Generator: Create procedural arc-shaped forms and adjustable curved structures.
+      - Bubble Wrap Generator: Cover surfaces with customizable bubble-wrap-style procedural geometry.
+      - Chain Wrap Generator: Wrap procedural chain elements around objects and curved surfaces.
+      - Crystal Generator: Generate and distribute customizable crystal formations across your objects.
+      - Droplet Generator: Add procedural droplets and rounded liquid details to object surfaces.
+      - Freezing Effect Generator: Create procedural ice, frost, crystals and frozen surface formations.
+      - Fur Generator: Generate adjustable procedural fur with customizable direction and variation.
+      - Lego Generator: Transform surfaces into stylized toy-brick-inspired procedural structures.
+      - Liquid Generator: Create stylized liquid forms and organic procedural surface effects.
+      - Trash Scatter Generator: Scatter debris and trash assets across streets, environments and surfaces.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1295312/image/xlarge_og-450a0df9712fdbcfce0fe9c27f75c2f6.png
+      alt: Ten monkey heads, one per generator - electric arcs, ice, fur, toy bricks, droplets, bubble wrap, chains, crystals, liquid and trash scatter
+
+  - type: steps
+    kicker: Drag & apply
+    title: Drag, apply, create
+    items:
+      - "**Browse.** Open the Asset Browser and choose one of the ten included procedural generators."
+      - "**Drag & apply.** Drag the selected asset into your scene and apply the generator to your object."
+      - "**Customize.** Adjust the available Geometry Nodes parameters directly from the modifier panel."
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1295314/image/xlarge_og-2cb44f0e720aa03ed604019a86ae3abc.png
+      alt: The ten generators in Blender's Asset Browser next to a monkey head covered in pink fur, with the Fur Gen modifier controls open
+
+  - type: feature
+    kicker: Bundle highlights
+    title: Fine-tune every generator
+    text:
+      - Each generator exposes adjustable controls in the modifier panel, and every system is non-destructive.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1295313/image/xlarge_og-150d6106d8eb705fe3dd819628f1f194.png
+      alt: The modifier panels of the ten generators, showing settings such as size, density, seed, length and material
+
+  - type: chips
+    kicker: Ideal for
+    title: Who it is for
+    text:
+      - For creators who want flexible procedural effects without manually rebuilding complex Geometry Nodes systems for every project. Useful for environments, animation, motion design and product visualization.
+    items: [Blender artists, Motion designers, Environment artists, Product visualizers, Game artists]
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - Ten procedural Geometry Nodes generators
+          - Delivered as a ready-to-use Blender Asset Library
+      - title: Compatibility
+        items:
+          - Works with Cycles and EEVEE
+          - Designed to work with your own compatible meshes
+      - title: Good to know
+        items:
+          - Results may vary depending on object scale, topology, dimensions, mesh density and surface direction
+          - Applying object scale with **Ctrl + A > Scale** before using certain generators is recommended for more consistent results

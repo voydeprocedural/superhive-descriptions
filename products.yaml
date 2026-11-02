@@ -102,10 +102,10 @@ products:
     tagline: Procedural Fabric & Weaving
     superhive: weaveit
     category: gn
-    kind: Geometry Nodes
+    kind: Add-on
     blender: "5.1–5.2"
-    summary: Procedural fabric, wire and wicker generator with 8 weave patterns, 6 material presets and built-in animation.
-    badges: [8 patterns, 6 materials, Animated]
+    summary: Procedural fabric, wire and wicker generator with 8 weave patterns plus knit, 6 presets and built-in animation.
+    badges: [8 weaves + knit, 6 presets, Animated]
     pairs: [surface-forge, procedural-generator-bundle, freezing-effect]
     status: published
 

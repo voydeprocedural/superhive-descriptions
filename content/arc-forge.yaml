@@ -1,0 +1,77 @@
+# Long description of Arc Forge. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/arc-forge.html), restructured into the shared layout.
+
+headline: Generate animated electric arcs around any mesh object in seconds.
+intro:
+  - "**Arc Forge** is a procedural Geometry Nodes generator for Blender that creates dynamic electric arc effects directly around your objects."
+  - It is designed for sci-fi renders, energy shields, magical effects, product visuals, motion graphics and VFX scenes. The system adapts to mesh surfaces automatically and gives you simple controls for arc size, thickness, flicker speed, movement range, material and random seed variation.
+chips: [Geometry Nodes, Animated arcs, Any mesh, Asset Browser ready, Non-destructive]
+hero:
+  src: https://assets.superhivemarket.com/cache/d8262749da00f72024adb2d8faabc78e.gif
+  alt: Blue, green and pink electric arcs flickering around a sphere, a monkey head and a torus
+
+sections:
+  - type: features
+    kicker: Key features
+    title: Lightning around any mesh
+    items:
+      - Fully procedural: The whole effect is a Geometry Nodes setup.
+      - Animated arcs: The electric arcs are generated already animated.
+      - Works with any mesh: Apply it to any mesh object and the arcs adapt to its surface.
+      - Thickness and size: Adjust the arc thickness and the overall scale.
+      - Flicker speed: Set how fast the arcs flicker and refresh.
+      - Arc speed range: Minimum and maximum controls for arc movement speed.
+      - Material slot: Assign the material used by the arcs.
+      - Seed variations: Generate different random arc patterns.
+      - Non-destructive: The effect never changes your original mesh.
+      - Asset Browser ready: Ready to use from Blender's Asset Browser.
+
+  - type: specs
+    kicker: Included controls
+    title: Simple controls, unlimited variations
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1277030/image/xlarge_og-9699d60f78f54c9210e286f4acbe8028.png
+      alt: The Arc Forge modifier panel with Size, Arc Thickness, Material, Flicker Speed, Arc Speed Min, Arc Speed Max and Seed
+    items:
+      - Size: Controls the overall scale of the arc system.
+      - Arc Thickness: Adjusts the thickness of the electric arcs.
+      - Material: Assigns the material used by the arcs.
+      - Flicker Speed: Controls how fast the arcs flicker and refresh.
+      - Arc Speed Min: Sets the minimum arc movement speed.
+      - Arc Speed Max: Sets the maximum arc movement speed.
+      - Seed: Generates different random arc patterns.
+
+  - type: gallery
+    kicker: Any mesh
+    title: Arcs that follow the surface
+    text:
+      - Apply Arc Forge to any mesh object and it generates electric arcs around it, adapting to the shape of the surface automatically.
+    items:
+      - src: https://assets.superhivemarket.com/cache/6d8d1fcd23a51ee82317e00ab3ea5744.gif
+        alt: Arcs flickering around a metal sphere, a monkey head and a torus in the Blender viewport with the modifier panel open
+      - src: https://assets.superhivemarket.com/store/productimage/1277033/image/xlarge_og-c89fcdbabc1ecd26702080620579a5ec.png
+        alt: Arc Forge applied to a sphere, a monkey head and a torus in the Blender viewport
+      - src: https://assets.superhivemarket.com/store/productimage/1277031/image/xlarge_og-39a1499ffc40ef683e9ae4d3982d8c16.png
+        alt: Render of a sphere, a monkey head and a torus wrapped in glowing blue, green and pink electric arcs
+      - src: https://assets.superhivemarket.com/store/productimage/1277032/image/xlarge_og-1ca3df78b1c8e28a99745a365140af08.png
+        alt: A purple monkey head wrapped in bright blue electric arcs
+
+  - type: chips
+    kicker: Perfect for
+    title: Where it fits
+    items:
+      - Sci-fi energy effects
+      - Lightning and plasma visuals
+      - Magic and fantasy scenes
+      - Energy shields
+      - Characters, props and product renders
+      - Motion graphics and cinematic VFX
+
+  - type: facts
+    kicker: Details
+    title: What you need
+    cards:
+      - title: Compatibility
+        items:
+          - Recommended for Blender 5.1 and newer
+          - Fully procedural and non-destructive

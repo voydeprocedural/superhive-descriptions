@@ -1,0 +1,103 @@
+# Long description of GoboLab. Text kept from the Superhive description of 2026-11-02
+# (archive/2026-11-02/gobolab.html), restructured into the shared layout. The panel screenshot
+# comes from the Superhive product gallery.
+
+headline: Bring window shadows, sunlit foliage, underwater caustics and colorful stained glass into your scenes.
+intro:
+  - "**GoboLab** includes 70 complete lighting presets, each built from a Spot Light and a dedicated gobo plane. Choose a pattern, import the setup and aim the light at your subject."
+  - Use the Asset Browser or the GoboLab panel to find the look you want and start shaping your scene.
+chips: [Spot Light + gobo plane, Asset Browser library, Sidebar panel, Cycles & EEVEE]
+hero:
+  src: https://assets.superhivemarket.com/cache/bc2500e70f78e70d2b495e59d334fa94.gif
+  alt: A still life of a vase, bowl and plinths lit through different gobos - window frames, leafy branches, soft clouds and colorful stained glass
+
+stats:
+  - 70: gobo light presets
+  - 7: categories
+
+sections:
+  - type: feature
+    kicker: Patterned light
+    title: Light that adds atmosphere
+    text:
+      - Cast sharp window frames across an interior, soften a backdrop with leaf shadows, or add flowing caustic patterns to a stylized composition.
+      - The projected patterns follow the surfaces in your scene, extending naturally across walls, floors, furniture and characters. Explore lighting ideas for architectural visualization, product renders, environment art and cinematic shots.
+
+  - type: features
+    kicker: Everything included
+    title: Lights, library, panel and textures
+    items:
+      - 70 complete gobo light setups: Each preset includes a Spot Light and its own gobo plane.
+      - An Asset Browser library: Browse the collection with a rendered preview for every preset.
+      - The GoboLab add-on panel: Preview and import presets from the 3D Viewport sidebar, then adjust Power, Color, Blend, Angle and Radius.
+      - 70 gobo textures: Included as 1024 x 1024 PNG files.
+
+  - type: specs
+    kicker: Categories
+    title: Seven categories to explore
+    media:
+      src: https://assets.superhivemarket.com/cache/a5241ec881b4b9f39712198f9db34678.png
+      alt: A grid of all 70 gobo patterns, including windows, branches, leaves, clouds, caustics, stripes and colorful stained glass
+    items:
+      - Foliage & Trees: 22 presets
+      - Windows & Architecture: 14 presets
+      - Blinds & Slats: 7 presets
+      - Water & Caustics: 6 presets
+      - Sky & Clouds: 7 presets
+      - Organic & Abstract: 7 presets
+      - Stained Glass: 7 color presets
+
+  - type: features
+    kicker: Alignment
+    title: Built to stay aligned
+    items:
+      - Move the light, keep the pattern: The gobo plane is parented to its Spot Light, so moving or rotating the light keeps the projection setup together.
+      - Change the angle without rebuilding: The gobo plane resizes automatically when you change the spot angle, keeping the light cone covered.
+      - Control the softness: Use a smaller light radius for crisp shadows or a larger radius for softer transitions.
+      - Keep the projector out of the shot: The gobo plane is hidden from the camera and reflections, while remaining part of the lighting setup.
+    media:
+      src: https://assets.superhivemarket.com/cache/3a23430d5376fd330fe1faab8d444db0.png
+      alt: Ten gobo patterns projected as circles on a dark wall above a shelf with a vase, a bowl and a small sphere, two of them in colorful stained glass
+
+  - type: steps
+    kicker: Workflow
+    title: From the GoboLab panel
+    items:
+      - Open the 3D Viewport sidebar with **N** and locate GoboLab.
+      - Click **Load Gobo Light** and choose a preset using the visual preview.
+      - Click **Import Gobo Light** to add the selected setup.
+      - Aim the light and adjust its settings to suit your scene.
+    media:
+      src: https://assets.superhivemarket.com/store/productimage/1362276/image/xlarge_og-823e439eedab68e29ed42b09977180ed.png
+      alt: The GoboLab sidebar panel with the Load Gobo Light and Import Gobo Light buttons, a gobo preview and the Power, Color, Blend, Angle and Radius settings
+
+  - type: steps
+    kicker: Workflow
+    title: From the Asset Browser
+    items:
+      - Add the supplied library folder under **Preferences > File Paths > Asset Libraries**.
+      - Browse the rendered previews and drag a gobo into your scene.
+      - To edit the individual objects, disable **Instance** in the import panel that appears in the bottom-left corner.
+      - Position the light and adjust Power, Angle and Radius.
+
+  - type: specs
+    kicker: Lighting ideas
+    title: A few starting points
+    items:
+      - Sharp window shadows: Start with a radius of around **0.01-0.02 m**, then adjust for your scene scale.
+      - Sunlit look: Try a warm light around **4500 K** at a low angle.
+      - Layered compositions: Combine different gobo lights to build a more layered composition.
+
+  - type: facts
+    kicker: Details
+    title: Requirements
+    cards:
+      - title: Blender
+        items:
+          - Blender 5.0 or newer
+          - Tested in Blender 5.2
+      - title: Cycles & EEVEE
+        items:
+          - Black-and-white gobos project light patterns in both Cycles and EEVEE
+          - Full-color stained-glass projections require Cycles. In EEVEE, these presets project their pattern in grayscale
+          - Soft gradients, including clouds and caustics, may look grainy in EEVEE at low sample counts. Try 128-256 Render Samples to improve the result

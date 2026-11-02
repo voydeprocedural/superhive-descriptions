@@ -27,6 +27,7 @@
     "Geometry Nodes"
    ],
    "flag": "NEW",
+   "status": "published",
    "related": [
     "nature-starter-pack",
     "smart-scatter-kit",
@@ -63,6 +64,7 @@
     "Cycles & EEVEE"
    ],
    "flag": "NEW",
+   "status": "published",
    "related": [
     "skyflow",
     "gobolab",
@@ -99,6 +101,7 @@
     "Offline"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "instant-terrain-importer",
     "blendbuddy",
@@ -135,6 +138,7 @@
     "Scene fixes"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "depthforge",
     "gobolab",
@@ -162,15 +166,16 @@
    "url": "https://superhivemarket.com/products/weaveit",
    "img": "img/weave-it.webp",
    "category": "Geometry Nodes",
-   "kind": "Geometry Nodes",
+   "kind": "Add-on",
    "blender": "5.1–5.2",
-   "summary": "Procedural fabric, wire and wicker generator with 8 weave patterns, 6 material presets and built-in animation.",
+   "summary": "Procedural fabric, wire and wicker generator with 8 weave patterns plus knit, 6 presets and built-in animation.",
    "badges": [
-    "8 patterns",
-    "6 materials",
+    "8 weaves + knit",
+    "6 presets",
     "Animated"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "surface-forge",
     "procedural-generator-bundle",
@@ -207,6 +212,7 @@
     "No HDRIs"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "cloud-sketch",
     "gobolab",
@@ -243,6 +249,7 @@
     "Lighting"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "skyflow",
     "cloud-sketch",
@@ -279,6 +286,7 @@
     "Auto materials"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "terrain-materials-pack",
     "smart-scatter-kit",
@@ -314,6 +322,7 @@
     "Assets included"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "nature-starter-pack",
     "trash-scatter",
@@ -349,6 +358,7 @@
     "Asset Library"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "surface-forge",
     "arc-forge",
@@ -385,6 +395,7 @@
     "Any mesh"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "freezing-effect",
     "surface-forge",
@@ -420,6 +431,7 @@
     "Non-destructive"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "freezing-effect",
     "weave-it",
@@ -456,6 +468,7 @@
     "Game ready"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "terrain-materials-pack",
     "nature-starter-pack",
@@ -491,6 +504,7 @@
     "No add-ons"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "smart-scatter-kit",
     "procedural-generator-bundle",
@@ -526,6 +540,7 @@
     "Asset Browser"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "ultimate-terrain-addon",
     "ultimate-terrain-pack",
@@ -562,6 +577,7 @@
     "No textures"
    ],
    "flag": "BESTSELLER",
+   "status": "published",
    "related": [
     "arc-forge",
     "surface-forge",
@@ -597,6 +613,7 @@
     "Auto shader"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "terrain-materials-pack",
     "ultimate-terrain-pack",
@@ -632,6 +649,7 @@
     "Stylized"
    ],
    "flag": "",
+   "status": "published",
    "related": [
     "smart-scatter-kit",
     "ultimate-terrain-pack",
