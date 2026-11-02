@@ -24,6 +24,9 @@ from markupsafe import Markup
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 
+# CSS properties Superhive's sanitizer removes from inline styles (compared before/after saving, 2026-11-02).
+SUPERHIVE_DROPS = r"(?<![\w-])(text-transform|gap|row-gap|column-gap|transform)\s*:"
+
 # Fixed aspect ratios of the two widgets: the iframe keeps this ratio at every width and the widget scales with it.
 WIDGETS = {"pair": {"width": 960, "height": 320}, "more": {"width": 960, "height": 620}}
 
@@ -181,6 +184,9 @@ def build(catalog):
                    footer_links=footer_links)
         desc = env.get_template("description.html.j2").render(base=store["pages"], **ctx)
         desc = re.sub(r"\n{3,}", "\n\n", desc).strip() + "\n"
+        dropped = sorted(set(re.findall(SUPERHIVE_DROPS, desc)))
+        if dropped:
+            sys.exit(f"descriptions/{p['id']}.html uses CSS that Superhive removes: {', '.join(dropped)}")
         out[f"descriptions/{p['id']}.html"] = desc
         # The preview embeds the widgets from this site, so it also works before a push and on localhost.
         local = env.get_template("description.html.j2").render(base="../", **ctx)

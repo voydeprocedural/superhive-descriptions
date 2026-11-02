@@ -42,6 +42,9 @@ Every description has the same order, so the store reads as one family:
 ## Superhive rules the template works around
 
 - No `class` and no `<style>`: every element has inline styles.
+- The sanitizer also removes `text-transform`, `gap` and `transform` from inline styles (and `rel` from links).
+  Uppercase labels are uppercased in the template, flex rows space their items with margins, and bullets are a `◆`
+  character. `build.py` refuses to write a description that uses these properties.
 - Superhive forces `font-weight:600 !important` on `h1`-`h6` and `line-height:1.6 !important` on `p`.
   Display titles are therefore `<div>`s (Bebas Neue has a single weight and would be faked bold), and `<p>` is used
   only for body text.
