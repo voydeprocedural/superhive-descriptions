@@ -19,6 +19,16 @@ stats:
   - 2: demo scenes
 
 sections:
+  - type: embed
+    kicker: Try it
+    title: A spider is loose in here
+    text:
+      - Move your cursor over the box and the wolf spider comes after you, stepping on planted feet in alternating groups. Click to startle it. (A little browser toy; the creatures in Crawlers are full Geometry Nodes swarms.)
+    src: x/crawlers-spider.html
+    alt: An animated spider that walks toward your cursor
+    width: 960
+    height: 360
+
   - type: features
     kicker: Key features
     title: A living swarm from one modifier

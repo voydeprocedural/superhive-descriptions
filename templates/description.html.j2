@@ -126,6 +126,8 @@
 {%- for item in box["items"] %}<div style="padding:5px 0;font-size:14px;line-height:1.6;color:{{ c.muted }};">{{ diamond() }}{{ item | md }}</div>{% endfor %}</div>
 {%- endfor %}
 </div>
+{%- elif s.type == "embed" %}
+<iframe src="{{ base }}{{ s.src }}" title="{{ s.get('alt') or s.title }}" width="{{ s.get('width', 960) }}" height="{{ s.get('height', 360) }}" loading="lazy" style="display:block;width:100%;height:auto;aspect-ratio:{{ s.get('width', 960) }} / {{ s.get('height', 360) }};border:0;border-radius:14px;overflow:hidden;background-color:{{ c.bg }};"></iframe>
 {%- elif s.type == "gallery" %}
 <div style="{{ grid(14) }}">
 {%- for m in s["items"] %}

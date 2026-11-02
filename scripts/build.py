@@ -175,6 +175,9 @@ def build(catalog):
             continue
         d = normalize(yaml.safe_load(content_file.read_text(encoding="utf-8")))
         sections = list(d["sections"])
+        for s in sections:
+            if s["type"] == "embed" and not (ROOT / "site" / s["src"].split("?")[0]).exists():
+                sys.exit(f"content/{p['id']}.yaml: embed page site/{s['src']} does not exist")
         types = [s["type"] for s in sections]
         if "pair" not in types:
             sections.insert(min(2, len(sections)), {"type": "pair"})

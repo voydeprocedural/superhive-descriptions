@@ -56,6 +56,14 @@ sections:                                            # numbered 01, 02 ... in th
     cards:
       - title: Included
         items: [Item, Item]
+  - type: embed                                      # an interactive page of this repo in an iframe
+    kicker: Try it
+    title: ...
+    text: [What to do with it]
+    src: x/<id>-<name>.html                          # under site/, scales with its width (see x/crawlers-spider.html)
+    alt: What it is
+    width: 960                                       # aspect ratio of the iframe (default 960 x 360)
+    height: 360
   - type: pair                                       # optional: where the "Pairs well with" card goes
   - type: more                                       # optional: where the "More from the studio" card goes
 ```
