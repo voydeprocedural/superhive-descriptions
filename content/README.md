@@ -14,6 +14,14 @@ video: T4sI0QxJfns                                   # optional, YouTube id, sho
 stats:                                               # optional, 2-4 big numbers
   - 8: modifier controls
 
+# Optional: the whole description as one page on GitHub Pages instead of inline HTML (see DESIGN.md, "Full-page
+# layout"). Needed only for page-wide scripts such as the Crawlers spider.
+layout: frame
+frame_width: 660                                     # layout width; the page is zoomed to the iframe width
+frame_height: 0                                      # written by `uv run scripts/measure.py <id>`
+spider: true                                         # a wolf spider roams the page (site/x/spider.js)
+hint: A line under the chips, e.g. telling people about the spider
+
 sections:                                            # numbered 01, 02 ... in this order
   - type: features                                   # card grid, 4-10 items
     kicker: Key features                             # small violet label

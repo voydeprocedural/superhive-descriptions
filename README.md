@@ -27,6 +27,7 @@ uv run scripts/build.py          # after any change to products.yaml, content/ o
 uv run scripts/serve.py          # previews on http://127.0.0.1:8766/ (index lists every product)
 uv run scripts/fetch_live.py     # save what is live on Superhive now into archive/<date>/
 uv run scripts/cover.py <id> <superhive cover URL or file>   # card cover site/img/<id>.webp
+uv run scripts/measure.py <id>   # frame height of a full-page description (layout: frame), Windows + Edge
 ```
 
 **Add a product**: add it to the top of `products.yaml`, put a 960x480 cover in `site/img/<id>.webp`, write

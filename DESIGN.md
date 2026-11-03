@@ -55,6 +55,17 @@ Every description has the same order, so the store reads as one family:
 - Superhive's content security policy (report-only in November 2026) allows `img-src https:` and `frame-src https:`,
   so images and widgets must stay on HTTPS hosts (GitHub Pages, Superhive's own asset CDN).
 
+## Full-page layout (`layout: frame`)
+
+Superhive runs no scripts in a description, so anything that moves across the whole description (the Crawlers
+spider) needs the description to be one page on GitHub Pages. With `layout: frame` the build renders the same
+design to `site/full/<id>.html`, laid out at `frame_width` (660 px) and zoomed to the iframe width, and Superhive
+gets one lead paragraph plus an iframe of ratio `frame_width : frame_height`. `scripts/measure.py` measures the height
+in Edge; every image carries its pixel size (`design/image-sizes.json`), so the height doesn't change while images load.
+
+Costs: search engines see only the lead paragraph, and on phones the page shrinks as a whole (text about 8-9 px)
+instead of reflowing. Use it only where the interaction is worth that. Re-run `measure.py` after content changes.
+
 ## Card widgets
 
 - **Pairs well with** (`w/pair.html?p=<id>`, 960x320): rotates through the first three related products every 6.5 s,
