@@ -1,10 +1,11 @@
 # Long description of BlendBuddy. Text kept from the Superhive description of 2026-11-02
-# (archive/2026-11-02/blendbuddy.html), restructured into the shared layout.
+# (archive/2026-11-02/blendbuddy.html), restructured into the shared layout. Photo Pet added for 1.7.0.
 
 headline: A tiny pixel pet that lives in your viewport, helps you with Blender and tells you when your render is done, on your desktop and on your phone.
 intro:
   - Blender sessions can be long and lonely. **BlendBuddy** gives you a little friend who walks and hops all over your viewport, plays with its buddies, reacts when you pet it, fixes common scene problems in one click and pops out on your desktop the moment a long render finishes.
-chips: [30 pixel characters, Up to 3 extra buddies, One-click scene fixes, Desktop & phone render alerts]
+  - "**New in 1.7:** turn yourself, a friend or your pet into a buddy with **Photo Pet**."
+chips: [30 pixel characters, Your own buddy from a photo, Up to 3 extra buddies, One-click scene fixes, Desktop & phone render alerts]
 hero:
   src: https://assets.superhivemarket.com/cache/389f4567fc80eb7e55fe0dad96840cef.gif
   alt: Bit, a pixel fox, saying hi in the Blender viewport and doing a trick when petted
@@ -25,6 +26,17 @@ sections:
     media:
       src: https://assets.superhivemarket.com/cache/3a50f8b418aee10e20fc14a8810b4362.png
       alt: All 30 BlendBuddy pixel characters in a grid, from Ember and Droplet to Moon and Pumpkin
+
+  - type: feature
+    kicker: Photo Pet · new in 1.7
+    title: Turn yourself or your pet into a buddy
+    text:
+      - Copy the prompt from the **Photo Pet** panel and paste it into ChatGPT, or any image AI that works from a photo, together with a photo. Pick the picture it draws, and BlendBuddy turns it into a **real pixel character with front, side and back views**, just like the built-in ones.
+      - Your buddy walks, does tricks, changes color, wears accessories and can be a friend too. Keep as many as you like under **My Characters**.
+      - BlendBuddy never sends your photo anywhere. You give it to the AI yourself, and only the finished pixel character is kept.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/blendbuddy/photo-pet-steps.jpg
+      alt: A photo of a woman in a yellow hoodie, the three-view pixel sheet an AI drew from it, the BlendBuddy character made from that sheet, and the character in the Blender viewport next to a corgi buddy
 
   - type: specs
     kicker: Customize
@@ -116,7 +128,7 @@ sections:
     kicker: Installation
     title: How to install
     items:
-      - Download `blendbuddy-1.6.1.zip`, or `blendbuddy-1.6.1-halloween.zip` for the Halloween Edition.
+      - Download `blendbuddy-1.7.0.zip`, or `blendbuddy-1.7.0-halloween.zip` for the Halloween Edition.
       - In Blender, go to **Edit > Preferences > Get Extensions**, open the dropdown menu, choose **Install from Disk…** and pick the zip.
       - Open the 3D Viewport sidebar (**N**) and the **BlendBuddy** tab. Say hi to your new buddy!
 
@@ -129,8 +141,10 @@ sections:
           - Blender 4.2 or newer (installs as a Blender extension)
           - "**Desktop pet:** Windows. Everything else works on Windows, macOS and Linux."
           - "**Phone notifications:** a free Discord account, with **Allow Online Access** turned on in Preferences > System > Network"
+          - "**Photo Pet:** an image AI that can draw from a photo, such as ChatGPT"
       - title: Good to know
         items:
+          - Your Photo Pet characters stay when you install an update over the old version. Removing BlendBuddy deletes them; the folder button in My Characters lets you back them up.
           - Your webhook link is saved only in Blender's preferences on your computer. It's never sent anywhere except your own Discord channel.
           - Phone notifications use Discord, a third-party service. If you're active in Discord on your PC, Discord may hold the phone alert until you're away. The built-in guide shows how to change that.
           - BlendBuddy never blocks Blender. If the internet or Discord is down, your render isn't affected, and the panel tells you what went wrong.
