@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ p.name }}: {{ p.tagline }}</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="../w/tokens.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  /* The whole {{ p.name }} description as one page (content/{{ p.id }}.yaml, layout: frame). It is laid out at
+     {{ width }} px and scaled to the iframe width, so the iframe on Superhive keeps one aspect ratio:
+     {{ width }} x frame_height, measured by scripts/measure.py. */
+  html, body { margin: 0; padding: 0; overflow: hidden; background: transparent; }
+  #stage { position: relative; width: {{ width }}px; font-size: 14px; line-height: 1.5; }
+  #stage img { vertical-align: middle; }
+</style>
+</head>
+<body>
+<div id="stage" data-width="{{ width }}">
+{{ description }}
+</div>
+<script>
+  // Scale to the iframe width with CSS zoom (a transform would make one huge layer that browsers stop painting
+  // part-way down). With ?measure the page reports its layout height for scripts/measure.py.
+  const stage = document.getElementById('stage');
+  const fitStage = () => { stage.style.zoom = innerWidth / {{ width }}; };
+  fitStage();
+  addEventListener('resize', fitStage);
+  if (location.search.includes('measure')) {
+    addEventListener('load', () => document.fonts.ready.then(() => {
+      const m = document.createElement('meta');
+      m.name = 'measured-height'; m.content = stage.scrollHeight;
+      document.head.appendChild(m);
+    }));
+  }
+</script>
+{%- if d.get("spider") %}
+<script src="../x/spider.js"></script>
+{%- endif %}
+</body>
+</html>

@@ -13,10 +13,12 @@ Writes:
 
 import argparse
 import html
+import io
 import json
 import pathlib
 import re
 import sys
+import urllib.request
 
 import yaml
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
@@ -55,6 +57,25 @@ def md(text, tokens=None):
 
 
 TOKENS = load("design/tokens.yaml")
+
+# Pixel sizes of the images used in descriptions, so every <img> gets width/height and the browser reserves its
+# space before it loads. Full-page descriptions need this to keep a fixed height. Cached here; new URLs are fetched.
+SIZES_FILE = ROOT / "design" / "image-sizes.json"
+SIZES = json.loads(SIZES_FILE.read_text(encoding="utf-8")) if SIZES_FILE.exists() else {}
+
+
+def image_size(url):
+    if url not in SIZES:
+        from PIL import Image  # only needed when a new image appears
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Range": "bytes=0-131071"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            head = r.read()
+        try:
+            SIZES[url] = list(Image.open(io.BytesIO(head)).size)
+        except Exception:
+            with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"}), timeout=120) as r:
+                SIZES[url] = list(Image.open(io.BytesIO(r.read())).size)
+    return SIZES[url]
 
 
 def pairs(items):
@@ -164,6 +185,7 @@ def build(catalog):
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True, undefined=StrictUndefined,
                       keep_trailing_newline=True)
     env.filters["md"] = md
+    env.globals["image_size"] = image_size
     safe = lambda d: {k: Markup(v) if isinstance(v, str) else v for k, v in d.items()}
     footer_links = [("voydeprocedural.com", store["website"]), ("All products", store["superhive"])]
     footer_links += [(name.upper() if name == "x" else name.capitalize(), url) for name, url in store["socials"].items()]
@@ -185,18 +207,33 @@ def build(catalog):
             sections.append({"type": "more"})
         ctx = dict(c=safe(c), f=safe(f), z=TOKENS["size"], p=p, d=d, sections=sections, widgets=WIDGETS,
                    footer_links=footer_links)
-        desc = env.get_template("description.html.j2").render(base=store["pages"], **ctx)
-        desc = re.sub(r"\n{3,}", "\n\n", desc).strip() + "\n"
+        # The preview and full pages embed the widgets from this site, so they also work before a push and on localhost.
+        local = env.get_template("description.html.j2").render(base="../", **ctx)
+        if d.get("layout") == "frame":
+            # The whole description is one page on GitHub Pages (needed for page-wide scripts such as the spider);
+            # Superhive gets a lead paragraph and an iframe of the measured size.
+            width = d.get("frame_width", 660)
+            out[f"site/full/{p['id']}.html"] = env.get_template("full.html.j2").render(
+                p=p, d=d, width=width, description=Markup(local))
+            if not d.get("frame_height"):
+                print(f"{p['id']}: no frame_height yet, run `uv run scripts/measure.py {p['id']}`")
+                continue
+            lead = re.sub(r"\*\*|`", "", d["intro"][0])
+            frame = lambda base: env.get_template("frame.html.j2").render(
+                base=base, p=p, lead=lead, width=width, height=d["frame_height"])
+            desc, local = frame(store["pages"]).strip() + "\n", frame("../")
+        else:
+            desc = env.get_template("description.html.j2").render(base=store["pages"], **ctx)
+            desc = re.sub(r"\n{3,}", "\n\n", desc).strip() + "\n"
         dropped = sorted(set(re.findall(SUPERHIVE_DROPS, desc)))
         if dropped:
             sys.exit(f"descriptions/{p['id']}.html uses CSS that Superhive removes: {', '.join(dropped)}")
         out[f"descriptions/{p['id']}.html"] = desc
-        # The preview embeds the widgets from this site, so it also works before a push and on localhost.
-        local = env.get_template("description.html.j2").render(base="../", **ctx)
         out[f"site/preview/{p['id']}.html"] = env.get_template("preview.html.j2").render(
             p=p, description=Markup(local), paste=desc, store=store, products=published)
         preview_items.append(p)
 
+    out["design/image-sizes.json"] = json.dumps(dict(sorted(SIZES.items())), indent=1) + "\n"
     out["site/index.html"] = env.get_template("index.html.j2").render(
         store=store, products=catalog["products"], previews={p["id"] for p in preview_items})
     return out

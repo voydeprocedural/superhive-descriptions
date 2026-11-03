@@ -12,6 +12,14 @@ hero:
   alt: Earthworms crawling over each other around a red berry
 video: T4sI0QxJfns
 
+# The whole description is one page on GitHub Pages (site/full/crawlers.html) so a wolf spider can roam all of it;
+# it keeps away from the YouTube player. frame_height is measured by scripts/measure.py.
+layout: frame
+frame_width: 660
+frame_height: 11422
+spider: true
+hint: A wolf spider is loose on this page. It follows your cursor or your tap; click to startle it.
+
 stats:
   - 7: creatures
   - 11: skins
@@ -19,16 +27,6 @@ stats:
   - 2: demo scenes
 
 sections:
-  - type: embed
-    kicker: Try it
-    title: A spider is loose in here
-    text:
-      - Move your cursor over the box and the wolf spider comes after you, stepping on planted feet in alternating groups. Click to startle it. (A little browser toy; the creatures in Crawlers are full Geometry Nodes swarms.)
-    src: x/crawlers-spider.html
-    alt: An animated spider that walks toward your cursor
-    width: 960
-    height: 360
-
   - type: features
     kicker: Key features
     title: A living swarm from one modifier

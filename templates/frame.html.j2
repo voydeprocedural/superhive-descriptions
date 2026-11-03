@@ -1,0 +1,4 @@
+{#- Superhive description for a product with `layout: frame`: one lead paragraph that Superhive and search engines
+    can read, then the whole description as one page from GitHub Pages (site/full/<id>.html). -#}
+<p style="margin:0 0 14px;font-size:15px;line-height:1.6;color:#2a1f42;">{{ lead }}</p>
+<iframe src="{{ base }}full/{{ p.id }}.html" title="{{ p.name }}: {{ p.tagline }}" width="{{ width }}" height="{{ height }}" style="display:block;width:100%;height:auto;aspect-ratio:{{ width }} / {{ height }};border:0;"></iframe>
