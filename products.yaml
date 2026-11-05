@@ -47,6 +47,19 @@ categories:
 #   pairs         hand-picked products to recommend first (the "Pairs well with" card rotates through the first three)
 #   flag          optional ribbon on the card cover, e.g. NEW or BESTSELLER
 products:
+  - id: atmoslab
+    name: AtmosLab
+    tagline: Volumetric Fog & Day-Night Sky
+    superhive: atmoslab-volumetric-fog-and-day-night-sky
+    category: light
+    kind: Add-on
+    blender: "5.0+"
+    summary: Add haze, rolling ground fog, light shafts and a physical sky that runs from noon to a starry, moonlit night, with a sun lamp that always matches the sky.
+    badges: [8 presets, Moon with real phases, Renders without the add-on]
+    pairs: [cloud-sketch, gobolab, ultimate-terrain-pack]
+    flag: NEW
+    status: draft
+
   - id: crawlers
     name: Crawlers
     tagline: Lifelike Creature Swarms

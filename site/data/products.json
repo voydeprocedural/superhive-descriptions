@@ -11,6 +11,44 @@
  },
  "count": 18,
  "products": {
+  "atmoslab": {
+   "id": "atmoslab",
+   "name": "AtmosLab",
+   "tagline": "Volumetric Fog & Day-Night Sky",
+   "url": "https://superhivemarket.com/products/atmoslab-volumetric-fog-and-day-night-sky",
+   "img": "img/atmoslab.webp",
+   "category": "Lighting & Sky",
+   "kind": "Add-on",
+   "blender": "5.0+",
+   "summary": "Add haze, rolling ground fog, light shafts and a physical sky that runs from noon to a starry, moonlit night, with a sun lamp that always matches the sky.",
+   "badges": [
+    "8 presets",
+    "Moon with real phases",
+    "Renders without the add-on"
+   ],
+   "flag": "NEW",
+   "status": "draft",
+   "related": [
+    "cloud-sketch",
+    "gobolab",
+    "ultimate-terrain-pack",
+    "skyflow",
+    "ultimate-terrain-addon",
+    "terrain-materials-pack",
+    "instant-terrain-importer",
+    "smart-scatter-kit",
+    "trash-scatter",
+    "nature-starter-pack",
+    "crawlers",
+    "depthforge",
+    "blendbuddy",
+    "weave-it",
+    "procedural-generator-bundle",
+    "arc-forge",
+    "surface-forge",
+    "freezing-effect"
+   ]
+  },
   "crawlers": {
    "id": "crawlers",
    "name": "Crawlers",
