@@ -10,6 +10,7 @@ chips: [Blender 5.0 to 5.2, Cycles & EEVEE, Geometry Nodes, Renders without the 
 hero:
   src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/flight.gif
   alt: Flying over a river that winds through forested mountains, rendered in Cycles
+video: kGcNUQprNjA
 
 stats:
   - 17: presets with thumbnails
