@@ -1,0 +1,159 @@
+# Long description of TerrainLab (add-on repo: terrain-lab/, customer doc: terrain-lab/docs/documentation.md).
+# GIFs are cut from the 0.4 promo clips (video/terrainlab2/assets/clips), photos from the 0.4.0 release images.
+
+headline: Real terrains in seconds, with eroded mountains, rivers that find their valleys and real skies, inside Blender.
+intro:
+  - "**TerrainLab** builds terrains from landform layers and erodes them with water and wind in seconds, with no timeline to play and no bake folders."
+  - Add a sea, lakes that fill their basins and a whole river network that settles into the valleys the erosion carved, or let it rain and see where the water goes. The ground paints itself, from rock on the cliffs to snow on the peaks, and one click writes everything Unreal, Unity or Godot needs.
+  - Every terrain stays a stack of Geometry Nodes modifiers, so it renders in Cycles and EEVEE, on render farms and on machines without the add-on.
+chips: [Blender 5.0 to 5.2, Cycles & EEVEE, Geometry Nodes, Renders without the add-on, Game-engine export]
+hero:
+  src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/flight.gif
+  alt: Flying over a river that winds through forested mountains, rendered in Cycles
+
+stats:
+  - 17: presets with thumbnails
+  - 9: material themes
+  - 6 s: erosion on a 512 grid (Ryzen 7 3700X)
+  - 13 MB: with skies and textures
+
+sections:
+  - type: features
+    kicker: Key features
+    title: A whole landscape from one panel
+    items:
+      - Landform layers: Mountains, Hills, Dunes, Canyon, Mesa, Island, Volcano, Craters, Noise and your own heightmaps, plus Terraces, Soften, Flatten, Height Curve and Path. Blend them with Add, Subtract, Max, Min or Replace.
+      - Masks and a brush: Height, slope, facing, valley, ridge, noise, curve, radial, border and image masks, or paint directly on the terrain.
+      - Erosion that carves valleys: Drainage-network erosion runs from coarse to fine, so great valleys get side gullies. Droplets add sediment fans, thermal passes add scree, hard rock leaves ledges and benches.
+      - Wind erosion: Dunes grow by themselves, with long backs and steep slip faces.
+      - River networks: One click places main rivers and tributaries along the eroded valleys, in natural bends on the valley floor, wider downstream, with gravel shores and lakes in the basins they pass.
+      - Let it rain: A water simulation finds the streams and lakes for you, in seconds.
+      - Six water styles: From tropical lagoon to frozen lake, with foam over the shallows, caustics on the bed and a sea that deepens in colour.
+      - Fluid simulation ready: One click sets up Blender's liquid simulation for any river stretch.
+      - Real skies: Four CC0 skies with a sharp sun that matches each sky, haze for aerial perspective, and a black sky for airless worlds.
+      - Camera Detail: The render grid gathers around the camera, for several times the detail at the same vertex count.
+      - Diorama blocks: Cut any terrain out as a model with rock walls and a block of water.
+      - Stamp and freeze: Press a sculpted mesh into the terrain, or bake a long layer stack into one image and carry on.
+      - Automatic material: Rock, scree, gravel, grass, snow and wet ground, all from slope, height and the simulated water flow, with grain from CC0 photo textures for close-ups.
+      - Game-engine export: 16-bit PNG and RAW and 32-bit EXR heightmaps, splat and weight maps, normal, flow and slope maps, FBX, glTF and OBJ with LODs, and a README with the import numbers for Unreal, Unity and Godot.
+
+  - type: pair
+
+  - type: feature
+    kicker: Presets
+    title: Seventeen places to start
+    text:
+      - Open the preset browser and click a thumbnail. You get a finished terrain with its layers, erosion and material, and every part of it stays editable.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/presets.gif
+      alt: The TerrainLab preset browser with seventeen thumbnails in the Blender viewport
+
+  - type: feature
+    kicker: Erosion
+    title: One click, and the mountains look worn
+    text:
+      - Press **Simulate Erosion**. Drainage carves the valleys from coarse to fine, droplets leave sediment fans and thermal passes add scree, with no timeline to play.
+      - The result is stored in the .blend file, so it is still there when you reopen the scene.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/erosion.gif
+      alt: Clicking Simulate Erosion turns a smooth mountain into an eroded one in the Blender viewport
+
+  - type: feature
+    kicker: Rivers
+    title: Rivers that find their way
+    text:
+      - "**Rivers from Erosion** follows the drainage the erosion left behind. Main rivers and tributaries settle on the valley floors, bend around the terrain and grow wider downstream, with gravel shores and lakes in the basins they pass."
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/rivers.gif
+      alt: Clicking Rivers from Erosion adds a river along a mountain valley in the Blender viewport
+
+  - type: feature
+    kicker: Sky and sun
+    title: Light that matches the sky
+    text:
+      - Pick one of four CC0 skies and a sharp sun comes with it, matched to that sky. Turn the sky to place the sun and add haze for depth.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/sky.gif
+      alt: Changing the sky and sun of a mountain terrain in the Blender viewport
+
+  - type: feature
+    kicker: Themes
+    title: One click changes the whole look
+    text:
+      - Nine themes repaint the same terrain, from alpine rock to red desert. The material reads slope, height and the simulated water, so rock, scree, gravel, grass and snow land where they belong.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/themes.gif
+      alt: Switching material themes on one terrain, from grey alpine rock to red desert
+
+  - type: gallery
+    kicker: Worlds
+    title: More than mountains
+    items:
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/river-bends.jpg
+        alt: A river bending through forested mountains seen from above
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/lagoon.jpg
+        alt: A tropical island with foam along its shore in a blue lagoon
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/barchan.jpg
+        alt: Crescent barchan dunes in a sand desert
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/lunar.jpg
+        alt: A cratered lunar plain under a black sky
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/diorama.jpg
+        alt: An island cut out as a diorama block with rock walls and a block of water
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/terrain-lab/export-maps.jpg
+        alt: Exported heightmap, splat map, normal map and flow map side by side
+
+  - type: specs
+    kicker: Presets and themes
+    title: Start from a preset, change the whole look at once
+    items:
+      - Presets: Alpine Range, Rolling Hills, Highlands, Sand Sea, Barchan Field, Desert Ridges, Badlands, Red Canyon, Mesa Country, Terraced Hills, Tropical Island, Volcanic Isle, Coastline, Arctic Peaks, Lunar Plain, Martian Basin and Empty.
+      - Themes: Alpine, Temperate, Desert, Red Rock, Tropical, Volcanic, Arctic, Lunar and Martian.
+      - Water styles: Six looks for the sea, lakes and rivers.
+
+  - type: chips
+    kicker: Perfect for
+    title: Made for
+    items: [Environment art, Game levels, Film and animation backdrops, Architectural settings, Product scenes, Maps and dioramas]
+
+  - type: steps
+    kicker: Installation
+    title: Up and running in a minute
+    items:
+      - Download terrain_lab-0.4.0.zip. Do not unzip it.
+      - Drag it into Blender, or use Edit > Preferences > Get Extensions > Install from Disk.
+      - Open the 3D Viewport sidebar (N) and the TerrainLab tab, pick a preset and click New Terrain.
+
+  - type: faq
+    kicker: FAQ
+    title: Good to know
+    items:
+      - "Does it need World Creator, Gaea or another program?": No. Everything happens inside Blender.
+      - "Does erosion have to be baked again when I reopen the file?": No. The result is stored in the .blend file. Simulate again only after changing the shape.
+      - "Can I render on a farm or send the file to someone without the add-on?": Yes. It is plain Geometry Nodes and shader nodes.
+      - "Does it work in EEVEE?": Yes, in the viewport and in final renders.
+      - "Can I use my own heightmaps?": Yes, as a layer (16-bit PNG, EXR, TIFF). Erode, blend and texture them like any other layer.
+      - "Does it scatter trees and rocks?": No, TerrainLab leaves scattering to dedicated tools.
+      - "Can I use it commercially?": Yes. Terrains and exported files are yours for any project.
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items:
+          - TerrainLab 0.4.0 Blender extension
+          - 17 presets with thumbnails, 9 themes, 4 skies
+          - Demo scene
+          - Documentation
+      - title: Compatibility
+        items:
+          - Blender 5.0 or newer
+          - Tested on Blender 5.0, 5.1 and 5.2
+          - Cycles and EEVEE
+          - Pure Python and nodes, no internet access, no extra packages
+      - title: License
+        items:
+          - The add-on code is licensed under GPL-3.0-or-later.
+          - Developed by Voyde Procedural, code written with AI assistance. The store cover is AI-generated art; the images in this description are real TerrainLab renders.
+
+  - type: more
