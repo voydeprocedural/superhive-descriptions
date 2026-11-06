@@ -49,6 +49,44 @@
     "freezing-effect"
    ]
   },
+  "grounded": {
+   "id": "grounded",
+   "name": "Grounded",
+   "tagline": "Smart Scatter for Blender",
+   "url": "https://superhivemarket.com/products/grounded-smart-scatter-for-blender",
+   "img": "img/grounded.webp",
+   "category": "Scatter & Assets",
+   "kind": "Add-on",
+   "blender": "5.0+",
+   "summary": "Scatter grass, plants, rocks and litter with simple rules, five ready-made biomes and a paint brush. Flowers fill the gaps in the grass, leaves gather at walls, and the viewport stays fast.",
+   "badges": [
+    "5 biomes",
+    "Paint brush",
+    "Fast viewport"
+   ],
+   "flag": "NEW",
+   "status": "draft",
+   "related": [
+    "ultimate-terrain-pack",
+    "smart-scatter-kit",
+    "trash-scatter",
+    "ultimate-terrain-addon",
+    "terrain-materials-pack",
+    "instant-terrain-importer",
+    "nature-starter-pack",
+    "crawlers",
+    "weave-it",
+    "procedural-generator-bundle",
+    "arc-forge",
+    "surface-forge",
+    "freezing-effect",
+    "cloud-sketch",
+    "depthforge",
+    "blendbuddy",
+    "skyflow",
+    "gobolab"
+   ]
+  },
   "crawlers": {
    "id": "crawlers",
    "name": "Crawlers",
