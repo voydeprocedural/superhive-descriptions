@@ -9,8 +9,8 @@ intro:
   - Everything is standard Blender nodes and simple drivers saved in your .blend, so scenes render without the add-on and on render farms. Your own materials are never touched.
 chips: [Blender 5.0 to 5.2, Cycles & EEVEE, Real date and place, Live in the viewport, Renders without the add-on]
 hero:
-  src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/valley-mist.jpg
-  alt: A wooden jetty on a lake at sunrise, with white fog over the water and sunbeams through fir trees
+  src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/lake-dawn.gif
+  alt: Time-lapse of a foggy lake from a starry night to the first sun behind the fir trees
 
 stats:
   - 8: ready-made looks
@@ -67,6 +67,16 @@ sections:
         alt: A moonless night where lanterns glow with warm halos in the fog along a wet lane
         caption: Lamp-Lit Night
 
+  - type: feature
+    kicker: One click
+    title: Try a look, keep the one you like
+    text:
+      - Pick a look in the gallery and click **Apply Preset**. The fog, the sky and the light change together in the viewport, while your fog box and the direction of your sun stay where they are.
+      - Every value stays yours. Open **Fog** or **Sky & Sun** and drag any field, and the viewport follows.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/presets.gif
+      alt: The AtmosLab panel in Blender switching a lake scene between Golden Dust, Creeping Ground Fog, Dense Horror Fog and Forest Sunbeams
+
   - type: pair
 
   - type: feature
@@ -76,8 +86,8 @@ sections:
       - Move **Sun Elevation** and the sky, the sun disc and the AtmosLab Sun lamp change together. The lamp's colour and strength were measured from Blender's sky model, so shadows and light shafts always match the sky behind them, from midday to the last red light.
       - Keyframe the sun for a time-lapse. Below the horizon the sky fades through twilight to night, and the stars come out.
     media:
-      src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/golden-dust.jpg
-      alt: The last golden sunlight glowing through dust behind a quiver tree on a dry plain
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/sun.gif
+      alt: The Sun Elevation field dragged in the AtmosLab panel while the viewport turns from day to a golden sunset
 
   - type: feature
     kicker: Time & Place
@@ -86,8 +96,8 @@ sections:
       - Turn on **Use Date and Place**, then enter a date, a time, a latitude and a longitude, or press **Now** for this moment. The sun and the moon rise where they really rise, and the stars turn with the Earth.
       - Press **Play** to run the day forward. **Live Preview** lets the sky move in the viewport, so you can scrub through a sunset and watch the moon and stars come out. In a dense scene the shadows set the speed, so hide heavy collections while you set up the sky.
     media:
-      src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/live-sky.jpg
-      alt: The AtmosLab panel in Blender beside a live viewport with the sun over a misty lake between fir trees
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/time.gif
+      alt: Play running in the AtmosLab panel while the viewport goes from afternoon through sunset to a crescent moon over a lake
 
   - type: feature
     kicker: Night
@@ -100,14 +110,23 @@ sections:
       alt: The moon and stars above a misty lake at night
 
   - type: feature
+    kicker: Light shafts
+    title: Sunlight you can see
+    text:
+      - Put the sun behind something and the beams appear on their own, because the fog really scatters the light. **Light Shafts** sets how strongly the fog glows when you look toward a light.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/forest-beams.gif
+      alt: The camera moving slowly through sunbeams between tall fir trees
+
+  - type: feature
     kicker: Ground fog
     title: Fog that hugs the ground
     text:
       - A ground layer with its own density, height and softness sits on top of the haze. Its top edge is broken up by noise and drifts with the wind, so it rolls between trees and around lamp posts.
       - Lamps inside the fog get soft halos on their own; **Light Shafts** controls how strongly the fog glows when you look toward a light.
     media:
-      src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/creeping-fog.jpg
-      alt: Knee-high fog spreading across a wet lane at dusk under lanterns and a rising moon
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/fog-drift.gif
+      alt: Ground fog drifting across a wet lane at dusk under a lantern
 
   - type: specs
     kicker: Fog controls
