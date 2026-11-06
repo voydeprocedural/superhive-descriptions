@@ -75,7 +75,7 @@ sections:
       - Every value stays yours. Open **Fog** or **Sky & Sun** and drag any field, and the viewport follows.
     media:
       src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/presets.gif
-      alt: The AtmosLab panel in Blender switching a lake scene between Golden Dust, Creeping Ground Fog, Dense Horror Fog and Forest Sunbeams
+      alt: The AtmosLab panel in Blender switching a forest road between Forest Sunbeams, Dense Horror Fog and Golden Dust
 
   - type: pair
 
@@ -83,11 +83,11 @@ sections:
     kicker: Sun & sky
     title: A sun that always agrees with the sky
     text:
-      - Move **Sun Elevation** and the sky, the sun disc and the AtmosLab Sun lamp change together. The lamp's colour and strength were measured from Blender's sky model, so shadows and light shafts always match the sky behind them, from midday to the last red light.
+      - Move **Elevation** or **Rotation** and the sky, the sun disc and the AtmosLab Sun lamp change together. The lamp's colour and strength were measured from Blender's sky model, so shadows and light shafts always match the sky behind them, from midday to the last red light.
       - Keyframe the sun for a time-lapse. Below the horizon the sky fades through twilight to night, and the stars come out.
     media:
       src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/sun.gif
-      alt: The Sun Elevation field dragged in the AtmosLab panel while the viewport turns from day to a golden sunset
+      alt: The Sun Rotation field dragged in the AtmosLab panel while golden sunbeams swing through the trees along a forest road
 
   - type: feature
     kicker: Time & Place
@@ -97,7 +97,7 @@ sections:
       - Press **Play** to run the day forward. **Live Preview** lets the sky move in the viewport, so you can scrub through a sunset and watch the moon and stars come out. In a dense scene the shadows set the speed, so hide heavy collections while you set up the sky.
     media:
       src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/time.gif
-      alt: Play running in the AtmosLab panel while the viewport goes from afternoon through sunset to a crescent moon over a lake
+      alt: Play running in the AtmosLab panel while a forest road goes from a golden evening to a starry night
 
   - type: feature
     kicker: Night
