@@ -58,7 +58,7 @@ products:
     badges: [8 presets, Moon with real phases, Renders without the add-on]
     pairs: [cloud-sketch, gobolab, ultimate-terrain-pack]
     flag: NEW
-    status: draft
+    status: published
 
   - id: crawlers
     name: Crawlers
