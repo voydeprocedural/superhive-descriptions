@@ -10,7 +10,7 @@ intro:
 chips: [Blender 5.0 to 5.2, Cycles & EEVEE, Real date and place, Live in the viewport, Renders without the add-on]
 hero:
   src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/valley-mist.jpg
-  alt: A mountain valley at sunrise seen from a high ridge, with white mist flowing along the valley floor
+  alt: A wooden jetty on a lake at sunrise, with white fog over the water and sunbeams through fir trees
 
 stats:
   - 8: ready-made looks
@@ -33,7 +33,7 @@ sections:
       - Live Preview: Press Play and the sun and moon cross the sky in the viewport. A baked copy of the sky keeps it moving, and it switches back for the final render.
       - Night sky: Stars, a Milky Way band in its real place and the faint glow of the night sky, which also lights your scene.
       - A moon that looks like the moon: The near side from NASA's CGI Moon Kit (public domain), with its real phases, and a Moonlight lamp that casts moon shadows and light shafts.
-      - One-click render settings: EEVEE volumetrics that reach the end of the fog, and a volume bounce for Cycles.
+      - One-click render settings: EEVEE volumetrics that reach the end of the fog, and four volume bounces for Cycles.
 
   - type: gallery
     kicker: Presets
@@ -43,7 +43,7 @@ sections:
       - The scenes below are built with free CC0 models from Poly Haven. The fog, sky and light are AtmosLab, with the fog values adapted to the size of each scene. The lamp-lit lane comes with the add-on as a demo file.
     items:
       - src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/valley-mist.jpg
-        alt: Sunrise over a mountain valley with white mist lying on the valley floor and fir trees on the ridges
+        alt: Sunrise over a lake with white fog on the water, a wooden jetty and sunbeams through dark fir trees
         caption: Valley Morning Mist
       - src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/forest-sunbeams.jpg
         alt: Sunbeams slanting through the hazy air between tall fir trees over a forest trail
@@ -58,7 +58,7 @@ sections:
         alt: Blue-hour dusk on a wet lane with a thin fog layer creeping across the asphalt past a lantern, a fence and a covered car
         caption: Creeping Ground Fog
       - src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/moonlit-fog.jpg
-        alt: A moon and stars over a foggy mountain lake with a wooden jetty and the moon's reflection on the water
+        alt: A moon and stars over a foggy lake with fir trees and a wooden jetty
         caption: Moonlit Night Fog
       - src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/dense-fog.jpg
         alt: Thick grey fog swallowing the fir trees along a forest trail
@@ -87,7 +87,7 @@ sections:
       - Press **Play** to run the day forward. **Live Preview** lets the sky move in the viewport, so you can scrub through a sunset and watch the moon and stars come out. In a dense scene the shadows set the speed, so hide heavy collections while you set up the sky.
     media:
       src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/live-sky.jpg
-      alt: The AtmosLab panel in Blender beside a live viewport with a sunset over a mountain lake
+      alt: The AtmosLab panel in Blender beside a live viewport with the sun over a misty lake between fir trees
 
   - type: feature
     kicker: Night
@@ -97,7 +97,7 @@ sections:
       - Stars, a Milky Way band and a faint night glow complete the sky. Turn the star field for star motion.
     media:
       src: https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/moonlit-fog.jpg
-      alt: The moon with a halo and stars above a misty lake at night
+      alt: The moon and stars above a misty lake at night
 
   - type: feature
     kicker: Ground fog
@@ -156,8 +156,8 @@ sections:
       - "Does it work in EEVEE?": Yes, and it is fast for previews and animation. Cycles gives the most accurate fog. EEVEE lights fog mainly with lamps, so fog in the shade looks darker there. Optimize Render Settings sets EEVEE's volumetric range and detail for you.
       - "Will my scene still render on a render farm?": Yes. AtmosLab only uses nodes and simple drivers saved in the .blend, so the fog, sky and lamps work without the add-on and without Python auto-run.
       - "Does it change my materials?": No. The fog is a separate box object and the sky is its own world. Remove Sky brings your previous world back.
-      - "Are the trees and rocks in the images included?": Only those in the demo file, the lamp-lit lane. The add-on adds fog, sky and light to your own scenes. The other images use free CC0 models from Poly Haven.
-      - "Is the sky really real time?": In the viewport, yes. With Live Preview on, the sky and fog follow every change. Our light demo scene runs at about 17 frames a second on an RTX 4060 at 2560 x 1360. How fluid it gets depends on your scene, because the shadows of everything in it are redrawn as the sun moves.
+      - "Are the trees and rocks in the images included?": Only those in the two demo files, the lamp-lit lane and the misty lake. The add-on adds fog, sky and light to your own scenes. All of them are free CC0 models from Poly Haven.
+      - "Is the sky really real time?": In the viewport, yes. With Live Preview on, the sky and fog follow every change. Our light demo scene runs at about 9 frames a second on an RTX 4060 at 2560 x 1360. How fluid it gets depends on your scene, because the shadows of everything in it are redrawn as the sun moves.
       - "How accurate are the sun and the moon?": They use the Astronomical Almanac's low-precision formulas. We checked them against an astronomy library at 2,000 random moments from 2000 to 2050, and the sun was never more than about 0.01 degrees off and the moon less than half a degree, about its own width. That is plenty for a render, but it is not meant for navigation.
       - "Does it work on big landscapes?": Yes. The presets suit scenes up to about a kilometre across; for mountains and valleys, lower the fog density and raise its height as the documentation explains.
       - "Does it make clouds?": No, AtmosLab is about the air in your scene. For volumetric clouds, see Cloud Sketch.
@@ -173,7 +173,7 @@ sections:
           - AtmosLab 0.1.0 Blender extension
           - Eight presets with a thumbnail gallery
           - Demo scene (the lamp-lit lane through a fir forest, three cameras)
-          - Live Demo scene (a light mountain lake made for Live Preview)
+          - Live Demo scene (a misty lake between fir trees, made for Live Preview)
           - Documentation
       - title: Compatibility
         items:
