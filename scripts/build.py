@@ -64,7 +64,15 @@ SIZES_FILE = ROOT / "design" / "image-sizes.json"
 SIZES = json.loads(SIZES_FILE.read_text(encoding="utf-8")) if SIZES_FILE.exists() else {}
 
 
+PAGES_BASE = "https://voydeprocedural.github.io/superhive-descriptions/"
+
+
 def image_size(url):
+    local = ROOT / "site" / url[len(PAGES_BASE):] if url.startswith(PAGES_BASE) else None
+    if local is not None and local.exists():         # this repo's own image, maybe not pushed yet
+        from PIL import Image
+        with Image.open(local) as im:
+            return list(im.size)
     if url not in SIZES:
         from PIL import Image  # only needed when a new image appears
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Range": "bytes=0-131071"})
