@@ -10,6 +10,7 @@ chips: [Blender 5.0 to 5.2, Cycles & EEVEE, Geometry Nodes, Renders without the 
 hero:
   src: https://voydeprocedural.github.io/superhive-descriptions/media/grounded/meadow.jpg
   alt: A grass and wildflower meadow at sunrise, with mist in the valley and dark forest on the far slope
+video: umlmwC3-b04
 
 stats:
   - 12: ready-made biomes
