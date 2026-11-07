@@ -67,8 +67,8 @@ products:
     category: scatter
     kind: Add-on
     blender: "5.0+"
-    summary: Scatter grass, plants, rocks and litter with simple rules, five ready-made biomes and a paint brush. Flowers fill the gaps in the grass, leaves gather at walls, and the viewport stays fast.
-    badges: [5 biomes, Paint brush, Fast viewport]
+    summary: Twelve ready-made biomes, 395 models, live rules, a paint brush, seasons and weather on one slider each, and a viewport that stays fast. Flowers fill the gaps in the grass, leaves pile up at walls, and scenes render without the add-on.
+    badges: [12 biomes, 395 models, Seasons & weather]
     pairs: [ultimate-terrain-pack, smart-scatter-kit, trash-scatter]
     flag: NEW
     status: draft
