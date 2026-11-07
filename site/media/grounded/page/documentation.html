@@ -1,0 +1,906 @@
+<p>Grounded scatters grass, plants, rocks, leaves and props over any surface with simple rules,
+ready-made biomes and a paint brush, and keeps the viewport fast on large scenes.
+Everything runs on Geometry Nodes inside your file, so scenes render without the add-on, on a
+render farm or on a friend's computer.</p>
+<ul>
+<li>Blender 5.0 to 5.2 (Windows, macOS, Linux)</li>
+<li>Works with Cycles and EEVEE</li>
+<li>Fast on big scenes: a 1 km meadow of 5 million instances updates in 0.8 s under the viewport
+  budget, and rules you don't use cost nothing</li>
+<li>12 biomes built from a library of 164 assets in 395 variants (models and scans from Poly Haven,
+  ambientCG, BlendSwap and Smithsonian Open Access, and our own)</li>
+<li>Hand edits of single instances, Physics Drop, terrain tools, seasons and weather</li>
+<li>Save your own scatters as biomes, bake them to real meshes or export them to game engines</li>
+</ul>
+<h2>Installation</h2>
+<ol>
+<li>Download <code>grounded-&lt;version&gt;.zip</code> from your Superhive library. Do not unzip it.</li>
+<li>In Blender: <strong>Edit › Preferences › Get Extensions › ⌄ (top right) › Install from Disk…</strong>
+   and pick the zip.</li>
+<li>Open the sidebar in the 3D viewport (<strong>N</strong>) and click the <strong>Grounded</strong> tab.</li>
+</ol>
+<p>To update, install the new zip the same way. Files made with an older version are upgraded when
+you open them; your settings are kept.</p>
+<h2>Quick start</h2>
+<p><strong>A ready-made biome</strong></p>
+<ol>
+<li>Select your ground (any mesh).</li>
+<li>In the Grounded tab, click the biome picture and choose a biome.</li>
+<li>Click <strong>Add Biome</strong>.</li>
+</ol>
+<p><strong>Your own assets</strong></p>
+<ol>
+<li>Select the objects you want to scatter, then select the ground <strong>last</strong> (it becomes active).</li>
+<li>Click <strong>Scatter Selected</strong> for one layer, or <strong>Auto Ecosystem</strong> to let Grounded sort them.</li>
+</ol>
+<p>The scattered objects move into a hidden <em>Grounded Assets</em> collection, so they don't render at
+their original place. Their own rotation and scale are kept; their origin lands on the surface.</p>
+<h2>Layers</h2>
+<p>Every scatter is a <strong>layer</strong>: an object in the <em>Grounded</em> collection with a Geometry Nodes
+modifier. The list in the sidebar shows all layers of the scene.</p>
+<ul>
+<li>Click a layer to select it and see its settings.</li>
+<li>The eye and camera icons hide a layer in the viewport or in renders.</li>
+<li><strong>–</strong> removes the active layer (its assets stay in <em>Grounded Assets</em>).</li>
+<li><strong>⟳</strong> counts the instances each layer shows in the viewport.</li>
+</ul>
+<p>The gear in the panel header switches between <strong>simple</strong> and <strong>advanced</strong> settings.</p>
+<p><strong>Group</strong> (advanced, end of the Layer panel) gives a layer a group name. The eye next to it shows
+or hides every layer with that name in the viewport, so trees or everything small can go out of
+the way in one click. Renders don't change and the list keeps its order.</p>
+<p><strong>Copying a layer</strong>: select it and press <strong>Shift + D</strong>. The copy starts out with the strokes and
+hand-placed instances of the original. The first paint stroke, placed instance or hand edit on
+either layer gives it its own copy of them, so the other layer doesn't change.</p>
+<h3>Asset mix</h3>
+<p><strong>Layer › Asset Mix</strong> lists the assets of the layer with a <strong>weight</strong> each. Weight 2 is picked
+twice as often as weight 1; weight 0 is never picked. When you add, remove or rename assets later,
+the panel asks you to <strong>Update</strong>. A weight belongs to the asset object, so an asset used in two
+layers has the same weight in both.</p>
+<p><strong>Pick</strong> sets how assets are chosen. <em>Random</em> mixes them evenly. <em>Patches</em> groups them in natural
+patches of one asset, <em>Patch Size</em> wide, for drifts of one flower or stands of one tree. Weights
+still set each asset's share of the ground; the more patches fit on the surface, the closer the
+shares come to the weights. <em>By Scale</em> gives big instances the big assets and small instances the
+small ones, so the largest rocks are never the smallest model scaled up; weights set where the size
+border falls. <em>By ID Map</em> reads the brightness of the layer's Color ID Map (or of an image picked
+here): dark ground gets the first asset of the list, bright ground the last. Both need the assets
+directly in the collection; sub-collections are picked at random.</p>
+<h3>Layer settings</h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Role</td>
+<td>Tree, shrub, ground cover, rock, litter or custom. Used to link layers of an ecosystem</td>
+</tr>
+<tr>
+<td>Surface / Assets</td>
+<td>The object scattered on, and the collection scattered</td>
+</tr>
+<tr>
+<td>Density / m²</td>
+<td>Instances per square meter</td>
+</tr>
+<tr>
+<td>Spacing</td>
+<td>Smallest distance between two instances (advanced)</td>
+</tr>
+<tr>
+<td>Extra Surfaces</td>
+<td>A collection of more objects to scatter on, e.g. terrain tiles (advanced)</td>
+</tr>
+<tr>
+<td>Only Material</td>
+<td>Scatter only on the faces of the surface that use one material (advanced)</td>
+</tr>
+<tr>
+<td>Seed / New Layout</td>
+<td>A different random layout</td>
+</tr>
+<tr>
+<td>Scale Min / Max</td>
+<td>Random size range</td>
+</tr>
+<tr>
+<td>Align to Surface</td>
+<td>0 = grow straight up, 1 = follow the ground</td>
+</tr>
+<tr>
+<td>Random Rotation, Random Tilt</td>
+<td>Turn around the up axis, lean away from upright (advanced)</td>
+</tr>
+<tr>
+<td>Random Height</td>
+<td>Stretches some instances taller, others shorter (advanced)</td>
+</tr>
+<tr>
+<td>Random Flip</td>
+<td>Mirrors half of the instances, so one model looks like two (advanced)</td>
+</tr>
+<tr>
+<td>Rotation Snap</td>
+<td>Instances turn only in steps of this angle around the up axis, for tiles, crates and planks. 0 = off (advanced)</td>
+</tr>
+<tr>
+<td>Random Stretch</td>
+<td>Each axis gets its own random size, from half to double at 1. Comes on top of Random Height (advanced)</td>
+</tr>
+<tr>
+<td>Edge Shrink</td>
+<td>Instances get smaller where rules fade out, for natural borders (advanced)</td>
+</tr>
+<tr>
+<td>Dryness</td>
+<td>How many plants turn yellow and dry, in patches of <em>Patch Size</em>. Only green parts change, so flowers and bark keep their colour; every plant is a little lighter or darker than its neighbour and the undersides of leaves come out paler. Library plants have this built in; for your own plants click <strong>Add Dryness to Materials</strong> once (advanced)</td>
+</tr>
+<tr>
+<td>Wind</td>
+<td>The layer moves with the scene's wind over the timeline. <em>Bend</em> (how far it leans) and <em>Flutter</em> (quick trembling of leaves and thin stems)</td>
+</tr>
+</tbody>
+</table>
+<h2>Where it grows (rules)</h2>
+<p>Rules multiply: an instance appears where every active rule allows it. Each rule has a soft edge.</p>
+<ul>
+<li><strong>Slope</strong>: only between two slope angles (0° flat, 90° vertical).</li>
+<li><strong>Height</strong>: only between two heights in world space.</li>
+<li><strong>Facing</strong>: only on slopes that face one compass direction (<em>Direction</em> 0° = +Y, 90° = −X)
+  within a <em>Spread</em>. Moss on the shady side, snow on the north faces, flowers on sunny slopes.</li>
+<li><strong>Patches</strong>: breaks the layer into natural clumps. <em>Size</em>, <em>Coverage</em> and <em>Softness</em>.</li>
+<li><strong>Bare Ground</strong>: clearings. Unlike patches they sit at the same spots on every layer that
+  uses them, whatever its seed, so grass, ferns and shrubs leave the same ground open.</li>
+<li><strong>Avoid</strong>: select objects (houses, rocks, a car) and click <strong>Use Selected</strong>. The layer keeps
+  the given distance from them.</li>
+<li><strong>Paths</strong>: select curves and click <strong>Use Selected</strong>. A lane of the given width stays clear.
+  Tick <strong>Follow</strong> and the layer does the opposite: it grows only inside the lane, for tree lines,
+  hedges, river rocks and flower beds. Distance is measured in 3D, so keep the curves close to the
+  ground.</li>
+<li><strong>Mask</strong> (advanced): a vertex group or an attribute of the surface, and/or an <strong>image</strong> through
+  a UV map (bright grows, dark stays empty); optionally inverted. Paint a mask in any image editor.</li>
+<li><strong>Color ID Map</strong> (advanced): one painted image, or a color attribute of the surface, drives
+  several layers. Paint a map with one flat color per kind of ground, pick it on each layer and
+  give each layer its <em>Color</em> and a <em>Tolerance</em>. Rock grows on the gray parts, grass on the green
+  parts, and repainting the map moves them all. Use <em>Copy Settings to Selected</em> to share the map:
+  each layer keeps its color.</li>
+<li><strong>Grow With Another Layer</strong> (advanced): a soft pull towards a layer (<em>Amount</em> up to 1, only
+  within <em>Reach</em> of it) or a soft push away from it (<em>Amount</em> down to -1). Nettles among the
+  ferns, flowers in the gaps of the grass. Keep Away is a hard limit around each instance;
+  this shapes where a whole layer prefers to grow. Pick a layer made before this one.</li>
+<li><strong>Ridges</strong> (advanced): keeps the layer on convex ground such as crests and rock edges, the
+  opposite of <em>Hollows and Corners</em> in Gathering. <em>Min</em> is how far a crest must stand above its
+  surroundings, <em>Blend</em> the soft edge, <em>Size</em> how wide an area is compared. <em>Invert</em> keeps the
+  layer off the crests instead. A denser surface gives a finer result.</li>
+<li><strong>Open Sky</strong> (advanced): select roofs, tables or tree crowns and click <strong>Use Selected</strong>. The
+  layer stays out from under them, so nothing grows indoors or on a covered terrace. Every
+  candidate sends one ray upwards, so this rule costs more than the others: use objects with few
+  faces and try it on a small area first. Objects below the ground don't count.</li>
+<li><strong>Keep Away From Layers</strong> (advanced): stay clear of the instances of up to four other layers,
+  measured from each of their instances and scaled with them. Auto Ecosystem and the biomes set
+  this up for you (grass keeps clear of tree trunks and rocks). Long thin assets such as logs
+  count along their whole length, so nothing grows through them.</li>
+</ul>
+<h2>Gathering</h2>
+<p>Gathering makes a layer denser in certain places, the way leaves, litter and pebbles collect in
+nature and in cities. Set <strong>Strength</strong> (how much denser) and pick where:</p>
+<ul>
+<li><strong>Base of Objects</strong>: select walls, trunks or rocks and click <strong>Use Selected</strong>. The layer piles
+  up within <em>Reach</em> of them.</li>
+<li><strong>Hollows and Corners</strong>: concave spots of the surface, such as curbs, ditches and the foot of a
+  slope. <em>Depth</em> sets how deep a hollow must be to count fully; <em>Size</em> how wide an area is
+  compared (higher for large ditches, lower for fine cracks).</li>
+<li><strong>Under Another Layer</strong>: around the instances of up to two layers, e.g. leaves around trunks
+  and along fallen logs.</li>
+<li><strong>Along Path Edges</strong>: on both sides of the lanes cleared by <em>Paths</em>.</li>
+</ul>
+<p><strong>Only in Gather Zones</strong> scatters nothing outside those places (weeds only in cracks, leaves only
+at walls).</p>
+<h2>Brush</h2>
+<p>Open <strong>Layer › Brush</strong> and pick a mode. In the viewport:</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Left mouse</td>
+<td>Paint / erase / place</td>
+</tr>
+<tr>
+<td>Ctrl + left mouse</td>
+<td>The opposite (erase while painting)</td>
+</tr>
+<tr>
+<td>[ and ] or Shift + wheel</td>
+<td>Brush radius</td>
+</tr>
+<tr>
+<td>P, E, D</td>
+<td>Switch to paint, erase, place</td>
+</tr>
+<tr>
+<td>G, R, S, X</td>
+<td>Switch to move, rotate, scale, remove one</td>
+</tr>
+<tr>
+<td>Right mouse, Esc, Enter</td>
+<td>Done (during a drag: calls off that drag)</td>
+</tr>
+<tr>
+<td>Middle mouse, wheel, numpad</td>
+<td>Navigate as usual</td>
+</tr>
+<tr>
+<td>Ctrl + S</td>
+<td>Save the file; the brush stays on</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Paint</strong> makes the layer grow where you paint. The first stroke switches the layer to
+  <em>Painted Only</em>; switch it off to scatter on the whole surface again.</li>
+<li><strong>Erase</strong> removes the layer where you paint, on any layer.</li>
+<li><strong>Place</strong> puts single instances under the cursor, <em>Place Spacing</em> apart. Rules don't apply to
+  them.</li>
+<li><strong>Clear Strokes</strong> and <strong>Clear Placed</strong> remove all strokes or placed instances of the layer.</li>
+</ul>
+<p>Strokes are stored in hidden helper objects (<em>Grounded Data</em> collection), never in your surface,
+so painting works on any mesh resolution and never changes your model.</p>
+<h3>Changing single instances</h3>
+<p>The second row of buttons under <strong>Layer › Brush</strong> works on one instance at a time: the one nearest
+the cursor within the brush circle, marked with a small ring.</p>
+<ul>
+<li><strong>Move</strong>: drag it along the surface.</li>
+<li><strong>Rotate</strong>: drag sideways to twist it around its own up axis. Hold <strong>Ctrl</strong> to tilt it instead.</li>
+<li><strong>Scale</strong>: drag right to make it larger, left to make it smaller.</li>
+<li><strong>Remove One</strong>: click to take it away. <strong>Ctrl + click</strong> brings back what you removed under the
+  brush circle.</li>
+</ul>
+<p>An outline shows the result during a drag; the layer updates when you let go, so this stays fast
+on huge layers.</p>
+<p>You pick from what the viewport shows, and the edit holds in renders too. Under the Viewport
+Budget or a viewport limit a layer with <em>Spacing</em> can show an instance that a render doesn't have,
+with a close neighbour in its place: Grounded looks that up when you let go and hides the neighbour
+as well, so the spot you cleared is clear in the render. That look takes one full update of the
+layer, a moment on very dense layers.</p>
+<p><strong>What happens to an edited instance:</strong> it becomes a hand-placed instance that remembers its
+place, rotation, size and asset, and the scattered original is hidden. A new seed, density, rule
+or look setting leaves it exactly as you left it, and the layer changes around it. Its colour
+variation (brightness, Dryness) still follows the seed. Go back to the old seed and the original
+stays hidden, so nothing shows up twice. <strong>Clear Placed</strong> undoes every edit of the layer and
+brings all originals back.</p>
+<h2>Physics Drop</h2>
+<p><strong>Physics Drop</strong> (folded panel at the end of the Grounded tab) lets instances fall and settle like
+real objects: rocks roll into hollows and rest against each other, bricks pile up, planks lie flat.</p>
+<ol>
+<li>Make a layer active and pick <strong>Around 3D Cursor</strong> (with a <em>Radius</em>) or <strong>Whole Layer</strong>.</li>
+<li>Click <strong>Drop</strong>. The status bar counts the steps; <strong>Esc</strong> cancels and changes nothing.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limit</td>
+<td>Most instances that fall at once; those nearest the 3D cursor go first</td>
+</tr>
+<tr>
+<td>Drop Height</td>
+<td>How far above their place instances start</td>
+</tr>
+<tr>
+<td>Spread</td>
+<td>How far sideways they may start from their place</td>
+</tr>
+<tr>
+<td>Steps</td>
+<td>Length of the simulation. Raise it if Grounded reports that some need more</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td><em>Convex Hull</em> follows the model, <em>Box</em> is its bounding box</td>
+</tr>
+</tbody>
+</table>
+<p>Settled instances become hand-placed instances of the same layer, so they survive a new seed, can
+be changed with the brush, and <strong>Clear Placed</strong> undoes the drop. The simulation runs in a temporary
+scene that is removed afterwards: your own rigid body world and frame are not touched, the file
+keeps no simulation data, and it renders without the add-on. Instances collide with the layer's
+surfaces and with each other, not with other layers. Any that fall off the surface or are still
+in the air at the last step stay where they were, and Grounded tells you how many.</p>
+<h2>Biomes</h2>
+<table>
+<thead>
+<tr>
+<th>Biome</th>
+<th>Layers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wildflower Meadow</td>
+<td>Stones, grass, low grass, wildflowers, clover</td>
+</tr>
+<tr>
+<td>Forest Floor</td>
+<td>Fir trunks, fallen logs, mossy rocks and stumps, young conifers, bushes, ferns and undergrowth that clump against the logs, roots, bark, dead oak and beech leaves that pile up around trunks and logs, twigs, fallen branches. The trunks have no crowns: frame them so their tops stay out of the picture, or hide the layer and use your own trees</td>
+</tr>
+<tr>
+<td>Rocky Slope</td>
+<td>Boulders and round boulders on steep parts, rocks, dry grass, weeds, field stones, pebbles in hollows</td>
+</tr>
+<tr>
+<td>Desert Bloom</td>
+<td>Quiver trees, boulders, rooibos bushes, cacti, flowers, succulents, debris under the trees</td>
+</tr>
+<tr>
+<td>Autumn Street</td>
+<td>Maple and oak leaves piling up in gutters and at walls, litter (cans, bottles, cigarette packs), weeds in cracks. Use <em>Gathering › Base of Objects</em> on your walls</td>
+</tr>
+<tr>
+<td>Pine Forest</td>
+<td>Tall pines, young trees, mossy rocks, fallen trunks, stumps and roots, ferns, mushrooms, needles and bark</td>
+</tr>
+<tr>
+<td>Woodland Glade</td>
+<td>Leafy trees and bushes around a soft clearing: rocks, logs, stumps, grass, low plants, flowers, mushrooms</td>
+</tr>
+<tr>
+<td>Dry Savanna</td>
+<td>Bush trees, boulders, shrubs, dead wood, burnt stumps, gravel, dry grass and straw, spring flowers, succulents</td>
+</tr>
+<tr>
+<td>Tropical Shore</td>
+<td>Island trees, shore rocks, beach shrubs, tree ferns, stones, broad leaves, beach grass, shells and pebbles, coco de mer</td>
+</tr>
+<tr>
+<td>Moon Surface</td>
+<td>Scanned lunar boulders, rocks and fine gravel gathered around craters</td>
+</tr>
+<tr>
+<td>Wetland</td>
+<td>Wet mossy rocks, logs, bushes, cattails in the shallows, wet grass on soft banks, water plants, flowers, driftwood</td>
+</tr>
+<tr>
+<td>Coral Reef</td>
+<td>Reef rocks, massive, table, branching and plate corals, sponges, sea fans, shells and rubble, scanned from real museum specimens</td>
+</tr>
+</tbody>
+</table>
+<p>Biomes are ordinary layers: change anything you like. <strong>Density</strong> in the redo panel (bottom left
+after <em>Add Biome</em>) scales the whole biome. Biome assets are appended to your file once and
+reused.</p>
+<h3>Your own biomes</h3>
+<p>Set up layers on a surface the way you like them, make one of them active and click
+<strong>Bake and Share › Save as Biome</strong>. Grounded saves the settings of every layer on that surface,
+the asset mix and the assets themselves. The biome then shows up in the biome picker (after the
+built-in ones) in every file. Rules that point at objects of one scene (<em>Avoid</em>, <em>Paths</em>,
+<em>Base of Objects</em>) and vertex group masks are not saved; layer links are rebuilt by role.</p>
+<p>Saved biomes live in Grounded's user folder (<strong>Open Biome Folder</strong>): one <code>.json</code> recipe and one
+<code>.blend</code> with the assets and their textures (packed) each. Copy both files to share a biome with
+another computer. Saving under an existing name replaces that biome; the dialog warns you. To delete
+a saved biome, pick it and click the trash icon next to it.</p>
+<h2>Auto Ecosystem</h2>
+<p>Auto Ecosystem sorts the selected objects by name and size into trees, shrubs, ground cover,
+rocks and litter, and builds one layer per kind:</p>
+<ul>
+<li>Density and spacing follow the size of the assets.</li>
+<li>Smaller layers keep clear of larger ones (grass around trunks and rocks, bushes around trees).</li>
+<li>Litter gathers under trees and in hollows.</li>
+<li>Very large surfaces get a lower density, so a layer stays under about two million instances.</li>
+</ul>
+<p>Names help: <em>oak</em>, <em>pine</em>, <em>bush</em>, <em>grass</em>, <em>fern</em>, <em>rock</em>, <em>stump</em>, <em>leaf</em>, <em>twig</em>, <em>pebble</em> and
+similar words are recognized. Change a layer's <strong>Role</strong> any time.</p>
+<h2>Terrain Maps</h2>
+<p>The folded <strong>Terrain Maps</strong> panel reads the real shape of your ground, so a scatter can follow the
+land. Everything here works on the active mesh, or on the surface of the active layer.</p>
+<p>All three tools are a <strong>bake</strong>: they measure the surface once and write vertex groups, and the
+layers read those through their normal <strong>Mask</strong> rule. So scenes render without the add-on, but
+nothing follows along: <strong>run the tool again after editing the terrain</strong>. Modifiers that keep the
+vertex count (Displace, Wave) are measured; ones that change it (Subdivision) can't be, so apply
+those first. Grounded warns you when it had to measure the mesh without them. The vertices must be
+in the mesh itself: a TerrainLab terrain makes its whole mesh in modifiers, so these tools stay off
+until you turn a copy of it into a mesh (<strong>Object › Apply › Visual Geometry to Mesh</strong>).</p>
+<h3>Bake Terrain Maps</h3>
+<p>Writes five vertex groups from the surface, in world space. It takes a few seconds on a terrain
+of a million vertices.</p>
+<table>
+<thead>
+<tr>
+<th>Vertex group</th>
+<th>What it holds</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Terrain Water</td>
+<td>Where rain would collect. Each vertex hands its water to its lower neighbours; what flows through it, on a log scale, becomes the weight, so 1 is the biggest river. Hollows fill up and spill over, so a line doesn't end at a dip, and ponds count as wet; a crater too deep to fill keeps its water at the bottom</td>
+</tr>
+<tr>
+<td>Terrain Curvature Convex</td>
+<td>Crests: how far the ground stands above the land around it</td>
+</tr>
+<tr>
+<td>Terrain Curvature Concave</td>
+<td>Hollows and valley floors</td>
+</tr>
+<tr>
+<td>Terrain Slope</td>
+<td>0 is level, 1 is vertical</td>
+</tr>
+<tr>
+<td>Terrain Height</td>
+<td>0 at the lowest point, 1 at the highest</td>
+</tr>
+</tbody>
+</table>
+<p>Pick one under <strong>Where It Grows › Mask › Vertex Group</strong> of any layer, with <em>Invert</em> for the
+opposite. Baking again replaces the groups and every layer that reads them follows; paint you added
+to these groups is replaced too.</p>
+<h3>Smart Terrain</h3>
+<p>One click: bakes the maps and adds library layers that follow the land.</p>
+<ul>
+<li><strong>Water</strong>: reeds, tall grass and flowers along the water lines, on gentle ground.</li>
+<li><strong>Slopes</strong>: forest with ferns.</li>
+<li><strong>Flats</strong>: grass.</li>
+<li><strong>Rocks</strong>: boulders and stones on sharp crests and steep ground. A broad, rounded hilltop stays
+  green, and a slope rule keeps rocks off flat ground even on a coarse mesh.</li>
+</ul>
+<p>Set <strong>Density</strong> and switch zones on or off before you click. A zone the land doesn't have gets no
+layers. Each zone is a vertex group of its own (<em>Terrain Zone Water</em> and so on) that its layers use
+as their mask; the zones fade into each other and don't overlap. The result is plain layers, so
+tune or delete them as usual. Clicking again adds another set of layers.</p>
+<p>Density follows the size of the surface: the layers of one role (say, all the grass, reeds and
+ferns) share that role's instance limit, so a 2 km terrain stays under about two million ground
+plants, 20,000 trees and 100,000 rocks however high you set Density.</p>
+<h3>Biome Blend</h3>
+<p>Lets two biomes or two sets of layers thin into each other, so a forest fades into a meadow
+instead of stopping at a line.</p>
+<ol>
+<li><strong>Biomes</strong> adds the two biomes you pick as <em>Side A</em> and <em>Side B</em>. <strong>Layers</strong> uses layers of this
+   surface: mark each one <strong>A</strong> or <strong>B</strong> in the list.</li>
+<li>Choose what the edge follows: a <strong>Direction</strong> across the surface (which way side A moves into
+   side B, with <em>Position</em> to shift it), a <strong>Curve</strong> (seen from above; side A is on its left, or
+   inside a closed curve, and open ends carry on past the surface), or a <strong>Painted</strong> vertex group
+   (side A where you painted).</li>
+<li><strong>Soft Edge</strong> is the width of the fading zone, <strong>Noise</strong> how far the edge wanders. Click <strong>Blend</strong>.</li>
+</ol>
+<p>After a blend of biomes the panel moves to <strong>Layers</strong> with the new layers marked, so you can change
+the edge and click <strong>Blend</strong> again without adding them twice.</p>
+<p>Grounded writes one vertex group, <em>Terrain Blend</em>: side A's layers read it as their mask, side B's
+read it inverted. A layer that already has a mask keeps it, inverted or not: it gets its own group,
+<em>Terrain Blend: layer name</em>, with the two multiplied, and blending again starts over from its
+original mask. That goes for vertex groups and for attributes, also ones that only modifiers write.
+A mask with no value per vertex of the mesh (on faces, or behind a modifier that changes the vertex
+count) can't be multiplied: that layer stays as it was, without the blend, and Grounded names it in
+a warning. A blend of other layers gets the next name (<em>Terrain Blend 2</em>) and leaves this one
+alone, and a group of your own with one of these names is never written over.</p>
+<h2>Performance</h2>
+<p>Grounded keeps the viewport fast and gives renders everything.</p>
+<ul>
+<li><strong>Viewport Budget</strong> (on by default, 400,000): the most instances the viewport shows, shared
+  between the layers. Renders always get the full density.</li>
+<li><strong>Camera View Only</strong>: skip what the scene camera can't see, with a margin and a zone around the
+  camera kept for shadows. Needs a perspective camera.</li>
+<li><strong>Viewport Distance</strong> (advanced): shows nothing farther than this from the scene camera, with a
+  soft edge, and hands the freed budget to what is close. <em>Keep Near Camera</em> in the fine-tuning box
+  is the least it can be. Viewport only: renders, Make Real and exports always get everything.</li>
+<li><strong>Thin Far Away</strong>: fewer instances far from the camera.</li>
+<li><strong>Show As</strong>: <em>Models</em>, <em>Boxes</em> (each model as its bounding box: fast, and you still see sizes)
+  or <em>Points</em> (fastest). Renders always show the models.</li>
+<li><strong>Also in Renders</strong>: applies culling and thinning to final renders too. Saves memory on huge
+  scenes; objects outside the frame then cast no shadows or reflections.</li>
+<li><strong>Fine-tune</strong> (advanced, for the active layer): <em>Cull Margin</em> is the extra room around the frame,
+  <em>Keep Near Camera</em> the zone that always stays, <em>Thin Start</em> and <em>Thin End</em> the distances where
+  thinning begins and is strongest.</li>
+</ul>
+<p>Camera markers on the timeline work with all of this: layers follow the camera the markers pick,
+in the viewport and in renders. A small helper object, <em>Grounded Camera Follow</em>, reads the active
+camera for such scenes; it is plain Geometry Nodes, and scenes without camera markers don't have
+it.</p>
+<p>Measured on a 1 km × 1 km terrain with the Wildflower Meadow biome (5 layers), Blender 5.2,
+Ryzen 7 3700X, RTX 4060. Times are for updating every layer in the viewport.</p>
+<table>
+<thead>
+<tr>
+<th>Setup</th>
+<th style="text-align: right;">Instances</th>
+<th style="text-align: right;">Update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Everything (what the render gets)</td>
+<td style="text-align: right;">5,030,869</td>
+<td style="text-align: right;">6.9 s</td>
+</tr>
+<tr>
+<td>Viewport budget 400,000 (default)</td>
+<td style="text-align: right;">332,611</td>
+<td style="text-align: right;">0.8 s</td>
+</tr>
+<tr>
+<td>Budget + camera view only</td>
+<td style="text-align: right;">312,618</td>
+<td style="text-align: right;">0.5 s</td>
+</tr>
+<tr>
+<td>Budget + camera view + Points</td>
+<td style="text-align: right;">312,618</td>
+<td style="text-align: right;">0.5 s</td>
+</tr>
+<tr>
+<td>No budget, Thin Far Away 0.8</td>
+<td style="text-align: right;">1,200,417</td>
+<td style="text-align: right;">1.2 s</td>
+</tr>
+</tbody>
+</table>
+<p>Rules that are off cost nothing, so a layer pays only for what it uses. The rest of a viewport
+update is Blender preparing the instances for drawing. In Material Preview at 2400 × 1350, one
+slider takes 1.1 s with 333,000 instances and 0.23 s with a budget of 60,000, and moving the camera
+with Camera View Only on takes 1.3 s. A lower budget is the best help while you tune a scene.</p>
+<p>The first Add Biome of a session, until the full picture stands in Material Preview:</p>
+<table>
+<thead>
+<tr>
+<th>Biome</th>
+<th style="text-align: right;">Instances</th>
+<th style="text-align: right;">Read from disk</th>
+<th style="text-align: right;">Layers and update</th>
+<th style="text-align: right;">First frame</th>
+<th style="text-align: right;">Materials and first samples</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Moon Surface</td>
+<td style="text-align: right;">165,670</td>
+<td style="text-align: right;">0.1 s</td>
+<td style="text-align: right;">0.3 s</td>
+<td style="text-align: right;">0.9 s</td>
+<td style="text-align: right;">2.4 s</td>
+<td style="text-align: right;">4.2 s</td>
+</tr>
+<tr>
+<td>Wildflower Meadow</td>
+<td style="text-align: right;">332,611</td>
+<td style="text-align: right;">0.15 s</td>
+<td style="text-align: right;">0.8 s</td>
+<td style="text-align: right;">1.3 s</td>
+<td style="text-align: right;">5.8 s</td>
+<td style="text-align: right;">9.3 s</td>
+</tr>
+<tr>
+<td>Pine Forest</td>
+<td style="text-align: right;">171,845</td>
+<td style="text-align: right;">0.3 s</td>
+<td style="text-align: right;">0.5 s</td>
+<td style="text-align: right;">4.2 s</td>
+<td style="text-align: right;">19 s</td>
+<td style="text-align: right;">28 s</td>
+</tr>
+</tbody>
+</table>
+<p>Most of that wait is Blender compiling the materials the first time they appear. The asset library
+takes about 800 MB on disk, twice the size of a compressed file, so that Add Biome reads only the
+assets it needs; the download stays under 400 MB.</p>
+<h2>Arrangement</h2>
+<p><strong>Layer › Arrangement</strong> (advanced) changes the way points are laid out.</p>
+<ul>
+<li><strong>Layout</strong>: <em>Scatter</em> is the normal random layout. <em>Rows</em> lays straight rows over the whole
+  surface, for fields, orchards and lawn stripes: <em>Spacing</em> is the distance inside a row, <em>Row
+  Distance</em> the distance between rows and <em>Angle</em> their direction. <em>Along Curves</em> puts rows on
+  selected curves, for fences, vineyards and roadside trees; <em>Rows</em> in the Curves box sets how many
+  run side by side, <em>Row Distance</em> apart, so 2 lines both sides of a road. <em>Jitter</em> shifts instances
+  out of the perfect line, <em>Missing</em> leaves out that share of them. <em>Density</em> doesn't count in
+  these layouts. Instances point along their row with local X, so a fence panel follows its line;
+  lower <em>Random Rotation</em> to 0 for that. Points fall straight down onto the surface and every rule
+  still applies. On a huge surface the grid stops at about 8 million points whatever the spacing.
+  Saved biomes keep the layout but not the curves: pick them again.</li>
+<li><strong>Clumps</strong>: every point becomes a parent with children around it, for tussocks, reeds and
+  mushroom rings. <em>Density</em> keeps counting instances, so a layer keeps its total when you switch
+  clumps on. <em>Count</em> is the number of instances in a clump, <em>Reach</em> its radius, and <em>Falloff</em> pulls
+  the children towards the centre (0 spreads them evenly). <em>Tilt</em> leans the rim outwards, or
+  inwards with a negative angle, and <em>Shrink</em> makes the rim smaller. Children sit on the surface
+  and every rule applies to them one by one. <em>Spacing</em> keeps the parents apart.</li>
+</ul>
+<h2>Direction</h2>
+<p><strong>Layer › Direction</strong> (advanced) sets which way instances point.</p>
+<ul>
+<li><strong>Face Camera</strong>: every instance turns around the up axis so its front looks at the scene camera,
+  for flat cards far away. The front is the side a model shows in the front view (it looks along
+  −Y). Works in renders without the add-on and follows camera switches; the viewport view itself
+  doesn't count, only the camera.</li>
+<li><strong>Flow</strong>: instances turn to follow a direction, with their local X axis (the long axis of a log)
+  along it. <em>Downslope</em> follows the slope downhill, for fallen logs, gravel and debris. <em>Flow Map</em>
+  reads a direction from an image or a color attribute: red is X, green is Y, 0.5 means none, as in
+  the usual flow maps. Set the image to <em>Non-Color</em>. <em>Spread</em> adds a random turn. Flat ground and
+  neutral parts of a map keep the normal random turn. <em>Face Camera</em> goes first when both are on.</li>
+<li><strong>Lean Away</strong>: select objects (a rock, a character) and click <strong>Use Selected</strong>. Instances within
+  <em>Reach</em> tilt away from them, up to <em>Angle</em> right next to the object, and <em>Shrink</em> makes them
+  smaller there. The layer follows when the objects move, so grass parts around a walking
+  character.</li>
+</ul>
+<h2>Wind</h2>
+<p>Biomes and Auto Ecosystem switch wind on for shrubs and ground cover (and dry leaves); play the
+timeline to see it. One wind blows through the whole scene, so every layer moves together. Trunks
+stand still: on library trees only the leaves sway, and the <strong>Wind</strong> switch of the layer turns
+that on and off. Your own trees keep <em>Bend</em> at 0, raise it if you want the whole tree to lean.
+Set the wind under <strong>Wind</strong> in the sidebar:</p>
+<ul>
+<li><strong>Direction</strong>: where the wind blows to (0° = +Y, 90° = −X). Everything leans that way.</li>
+<li><strong>Speed</strong>: how fast the gusts travel across the ground and how quickly leaves flutter.</li>
+<li><strong>Gust Size</strong>: the size of the patches a gust moves at once; you see them sweep over a meadow.</li>
+<li><strong>Gustiness</strong>: 0 = a steady breeze, 1 = strong gusts with calm spells between them.</li>
+</ul>
+<p>Each layer keeps its own <strong>Bend</strong> and <strong>Flutter</strong> (Layer panel), so bushes move less than grass.
+Wind animates through a driver on the layer, which works without the add-on and without
+<em>Auto Run Python Scripts</em>.</p>
+<h2>Season</h2>
+<p><strong>Season and Weather › Season</strong> sets the time of year for the whole scene: 0 spring, 0.33 summer,
+0.66 autumn, 1 winter. Summer leaves plants as they are. Spring brightens greens and freshens
+them. Autumn turns plants yellow, orange and red, in patches of about 10 m with every plant a
+little off its neighbours, and on the way from summer they turn one after the other. Winter turns
+them brown. Only green parts of a texture change, so flowers, bark and rocks stay as they are.
+Materials named after conifers (fir, pine, spruce, cedar, cypress) stay green in autumn and winter;
+for other evergreens set <em>Evergreen</em> to 1 on the <em>Grounded Age</em> node of the material.</p>
+<p>Library plants have this built in. For your own plants click <strong>Add Season to Materials</strong> once; it
+is the same button as <em>Add Dryness to Materials</em>. Winter changes the colour only: plants keep
+their leaves and their density.</p>
+<h2>Snow and wetness</h2>
+<p>Two more sliders in the same panel, for the whole scene:</p>
+<ul>
+<li><strong>Snow</strong> covers what faces up with white, on plants, rocks and the ground, whatever way an
+  instance is turned. A little snow lies in flecks; more covers the flat parts, then climbs steeper
+  faces. Undersides stay clear.</li>
+<li><strong>Wetness</strong> darkens surfaces and makes them glossy, the look after rain. It is strongest near
+  the ground and fades over the first 2.5 m of an asset, so a tree crown stays only a little wet.
+  The ground itself is wet all over.</li>
+</ul>
+<p>Library assets have this built in. For your own assets, make a layer active and click <strong>Add
+Weather to Materials</strong>: it covers the layer's assets and its surface. Run it once per layer, and
+again after adding assets.</p>
+<p>Season, Snow and Wetness are custom properties of the scene (<code>grounded_season</code>, <code>grounded_snow</code>,
+<code>grounded_wetness</code>) that the materials read by themselves, in Cycles and EEVEE. Each scene of a
+file has its own, and at their defaults (0.33, 0, 0) nothing changes. To animate one, move its
+slider once, then hover over it and press <strong>I</strong>. No Python runs at render time, so keyframes render
+without the add-on, on a render farm too. For a scene without the add-on, set the properties under
+<em>Scene › Custom Properties</em>.</p>
+<h2>Grow In</h2>
+<p><strong>Grow In</strong> (advanced, Layer panel) makes instances scale up from zero over the timeline, for
+reveals in films and turntables. Tick it in the panel header.</p>
+<ul>
+<li><strong>Start Frame</strong>: where growing begins.</li>
+<li><strong>Duration</strong>: how many frames one instance takes.</li>
+<li><strong>Random Delay</strong>: each instance waits up to this many frames.</li>
+<li><strong>Wave Frames</strong>: a wave runs outwards and needs this many frames to cross the surface. 0 means
+  no wave.</li>
+<li><strong>Wave Origin</strong>: an object the wave starts from. Empty means the centre of the surface.</li>
+</ul>
+<p>Other layers keep treating a growing layer as full grown, so grass doesn't jump around a tree that
+is still small. A small helper object, <em>Grounded Clock</em>, hands the frame to the growing layers: it
+is plain Geometry Nodes, so scenes render without the add-on, and layers that don't grow never
+recalculate on a frame change. Make Real and Export Transforms take the current frame: go to a
+frame after the growth ends first. Saved biomes leave Grow In off.</p>
+<h2>Bake and share</h2>
+<ul>
+<li><strong>Make Real</strong>: turns the active layer into one real mesh at full render density (the layer is
+  hidden, not deleted). For sculpting, exporting to other apps or freezing a final layout.
+  Large layers make heavy meshes; Grounded asks before baking more than 150,000 instances.</li>
+<li><strong>Export Transforms</strong>: writes every instance (layer, asset name, position, rotation in
+  degrees, scale) to a CSV file, for game engines and custom pipelines. Hidden layers are
+  exported too.</li>
+<li><strong>JSON</strong> (next to Export Transforms): the same data as a JSON file, sorted by layer:
+  <code>{"layers": [{"name": ..., "instances": [{"asset", "location", "rotation", "scale"}]}]}</code>, in
+  meters with Z up and rotation as XYZ Euler angles in degrees.</li>
+<li><strong>Copy Settings to Selected</strong>: select other layers, then the source layer last. Rules, look and
+  gathering are copied; surfaces, assets, seeds and brush strokes stay. Masks and the material
+  filter are copied only between layers on the same surface.</li>
+<li><strong>Blend Ground</strong>: makes the ground react to what lies on it. Grounded counts the Litter layers
+  of the active layer's surface around each vertex and stores that in the mesh attribute
+  <code>grounded_cover</code>; a small node group, <em>Grounded Ground Blend</em>, goes in front of the Principled
+  BSDF of the surface's materials and turns the ground into damp humus under the leaves, with
+  bare soil between the drifts. Change <em>Cover Color</em> and <em>Strength</em> on that node, or plug in a
+  texture. It is a bake: run it again after changing the layers. A denser surface gives a finer
+  result (one vertex every 25 cm works well).</li>
+</ul>
+<h2>Scatter from the Asset Browser</h2>
+<p>Open an Asset Browser in any area and select assets there, objects or collections, from any
+library or from <em>Current File</em>. No dragging: in the sidebar, under <strong>Assets and Game Engines</strong>,
+or by right-clicking the assets:</p>
+<ul>
+<li><strong>New Layer</strong> (<em>Scatter as New Layer</em> in the menu) makes a layer on the active surface: the
+  active mesh, or the surface of the active layer. Density and spacing follow the size of the
+  assets, as with <em>Scatter Selected</em>.</li>
+<li><strong>Add to Layer</strong> (<em>Add to Active Layer</em>) adds them to the active layer's asset mix.</li>
+</ul>
+<p>Assets from a library are appended to your file once and reused after that. A collection asset
+scatters as one model. Assets of the current file stay where they are. Whatever can't be scattered
+(materials, node groups, worlds, lights, an asset whose file is missing) is named in a message;
+the rest is still used.</p>
+<h2>Game engine export</h2>
+<p><strong>Export for Unreal</strong> and <strong>Export for Unity</strong> (under <strong>Assets and Game Engines</strong>) write a folder
+named <em>Grounded_Unreal</em> or <em>Grounded_Unity</em> into the folder you pick, for every layer of the
+scene at full render density, or only the active layer with <em>Active Layer Only</em>. Hidden layers
+count. Export the surface yourself: TerrainLab has its own game export.</p>
+<p>If that folder already holds an export, Grounded asks before it replaces anything. Replacing
+overwrites the table, the script and the meshes, and deletes the meshes the last export wrote that
+this one doesn't need (with Unity's <code>.meta</code> file next to them). Other FBX files in <em>Meshes</em> are
+yours: they stay, and a warning names them.</p>
+<table>
+<thead>
+<tr>
+<th>In the folder</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Meshes/*.fbx</code></td>
+<td>Each asset once, with its modifiers, its own rotation and scale applied, textures embedded</td>
+</tr>
+<tr>
+<td><code>Meshes/*_Mirrored.fbx</code></td>
+<td>With <em>Random Flip</em>: the same asset mirrored, because engines would show a mirrored instance inside out</td>
+</tr>
+<tr>
+<td><code>transforms.csv</code></td>
+<td>One row per instance: layer, mesh, location, rotation, scale in the engine's axes and units</td>
+</tr>
+<tr>
+<td><code>grounded_import.py</code> (Unreal)</td>
+<td>Editor script that imports the meshes and places the instances</td>
+</tr>
+<tr>
+<td><code>Editor/GroundedImporter.cs</code> (Unity)</td>
+<td>Editor script that places the instances</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Blender</th>
+<th>Unreal</th>
+<th>Unity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Axes</td>
+<td>Z up, right-handed</td>
+<td>Z up, left-handed</td>
+<td>Y up, left-handed</td>
+</tr>
+<tr>
+<td>A point (x, y, z)</td>
+<td></td>
+<td>(x, -y, z)</td>
+<td>(-x, z, -y)</td>
+</tr>
+<tr>
+<td>Units</td>
+<td>scene units</td>
+<td>centimeters</td>
+<td>meters</td>
+</tr>
+<tr>
+<td>Rotation in the table</td>
+<td></td>
+<td><code>roll_deg</code>, <code>pitch_deg</code>, <code>yaw_deg</code>, Unreal's FRotator (roll about X first, then pitch about Y, then yaw about Z)</td>
+<td>Quaternion <code>qx</code>, <code>qy</code>, <code>qz</code>, <code>qw</code></td>
+</tr>
+</tbody>
+</table>
+<p>Scene unit scale is respected, so a scene with 1 unit = 1 cm exports at its true size.</p>
+<p><strong>Unreal</strong>: enable the <em>Python Editor Script Plugin</em>, open the level, then
+<strong>Tools › Execute Python Script</strong> and pick <code>grounded_import.py</code>. Meshes go to <code>/Game/Grounded</code>;
+each layer becomes one actor with one Hierarchical Instanced Static Mesh component per mesh.
+Running it again adds new actors.</p>
+<p><strong>Unity</strong>: copy the folder into <code>Assets</code>, select it in the Project window, then
+<strong>Tools › Grounded › Import Scatter</strong>. Unity has no ready instanced component, so each instance
+becomes an object that shares its mesh and materials, with GPU Instancing on. That suits up to
+about 100,000 instances; above 200,000 the script asks first. For denser layers lower the density
+or draw <code>transforms.csv</code> with your own instancer. Keep one copy of the script in a project; it
+works for every export folder.</p>
+<p>The scripts are written for Unreal Engine 5.3 and later and for Unity 2022.3 LTS and Unity 6.
+<strong>They have not been run inside those engines yet.</strong> What has been tested in Blender: the axis,
+unit and rotation math round trip, the FBX settings, and every vertex rebuilt from the written
+files against the real scatter. If a script fails on your engine version, the FBX files and
+<code>transforms.csv</code> are complete on their own.</p>
+<p>Instances are written as they stand on the current frame, wind included. Materials arrive as the
+engine reads them from FBX: expect to rebuild leaf and bark materials there.</p>
+<h2>Voyde add-ons</h2>
+<p>Grounded recognizes Voyde Procedural's other add-ons, by the add-on or by what it left in the
+scene. The <strong>Voyde Add-ons</strong> panel shows up only then. The buttons work on the selected layers,
+or on all layers when none is selected. Nothing is linked for good: the results are ordinary
+Grounded settings, saved in your file, and nothing else is needed to render them.</p>
+<ul>
+<li><strong>TerrainLab</strong>: <strong>Use Terrain</strong> makes the terrain the surface of the layers, on land faces
+  only, and keeps them off water and shores. Without a layer it selects the terrain, ready for a
+  biome. <strong>Near Water</strong>, <strong>Channels</strong> (erosion channels) and <strong>Sediment</strong> do the same with that
+  mask of the terrain instead, above the sea level if the terrain has a sea (they also switch the
+  <em>Height</em> rule on for that). Only the masks your terrain has are offered.</li>
+<li><strong>AtmosLab</strong>: <strong>Match Fog Wind</strong> copies the fog's wind direction, and its speed so gusts travel
+  as fast as the fog patches. Click again after changing the fog. Sky and mood settings have
+  nothing to match in Grounded, so they are left alone.</li>
+<li><strong>Cityform</strong>: <strong>Keep Off Roads and Buildings</strong> adds the road sheet, bridges, Far City and a
+  light copy of the block outlines to the layers' <em>Avoid</em> rule; your own Avoid objects stay. Click
+  again after rebuilding the city. Parks are left open, but on a grid city the road sheet lies
+  under the whole city, so there the Avoid rule clears the parks too: take <em>City Roads</em> out of the
+  <em>Avoid</em> collection to scatter inside. Distances are measured in 3D: raise <em>Avoid Distance</em> if
+  your ground lies far above or below the city.</li>
+</ul>
+<h2>Rendering without the add-on</h2>
+<p>Every setting lives in the layer's Geometry Nodes modifier, and the node group is saved in your
+file. Send the .blend to a render farm or a colleague: it renders the same without Grounded.
+To share hand-made assets, keep them in the file (they are, in <em>Grounded Assets</em>).</p>
+<p>No Python runs during a render, not even with the add-on installed. Camera culling, thinning and
+<em>Face Camera</em> follow camera markers through Geometry Nodes, and wind, Grow In, seasons and weather
+work the same way. Set the markers while Grounded is on, so the layers get their camera helper;
+markers added later on a computer without Grounded switch the camera, but layers don't follow.</p>
+<h2>Known limits</h2>
+<ul>
+<li><strong>Make Real</strong> keeps the shape of a layer, not its per-plant colour: plants come out a little
+  darker and dry patches are lost.</li>
+<li>Camera culling ignores lens shift and skips orthographic and panoramic cameras.</li>
+<li>Asset weights work for objects directly in the asset collection; sub-collections are picked
+  with equal chance.</li>
+<li>Hand-edited instances remember their asset by its place in the asset list. Adding or removing
+  assets of the layer can change which asset they show.</li>
+<li>Hand-edited instances stay where they are when the surface moves or deforms, and the hidden
+  originals come back there.</li>
+<li>When the Viewport Budget thins a very dense layer, the viewport shows a lighter layout than the
+  render, so hand edits can only pick what it shows. Switch the budget off to reach the others.</li>
+<li>With Camera View Only, Viewport Distance or Thin Far Away, the viewport skips <em>Spacing</em> where it
+  would remove under 2.5% of the points. Renders always apply it.</li>
+</ul>
+<h2>Credits and license</h2>
+<p>The add-on code is GPL-3.0-or-later. The library's models and scans are CC0: from
+<a href="https://polyhaven.com">Poly Haven</a>, <a href="https://ambientcg.com">ambientCG</a>,
+<a href="https://blendswap.com">BlendSwap</a> and
+<a href="https://www.si.edu/openaccess">Smithsonian Open Access</a>. BlendSwap licenses are as declared by
+the uploader. The grass tufts, pebbles and twigs are generated by Voyde Procedural and ship under
+the GPL. Every asset, its authors and its source are listed in <code>library/CREDITS.md</code> in the add-on
+folder.</p>
+<p>Support: through your Superhive library or https://voydeprocedural.com.</p>
+<h2>Changelog</h2>
+<p><strong>1.0.0</strong>: first release.</p>
+<ul>
+<li>12 biomes: Wildflower Meadow, Forest Floor, Rocky Slope, Desert Bloom, Autumn Street, Pine
+  Forest, Woodland Glade, Dry Savanna, Tropical Shore, Moon Surface, Wetland and Coral Reef.</li>
+<li>A library of 164 assets in 395 variants, from Poly Haven, ambientCG, BlendSwap, Smithsonian Open
+  Access and our own.</li>
+<li>Scatter Selected, Auto Ecosystem, your own saved biomes, Asset Mix with weights, patches, pick by
+  scale or by ID map, and layer groups.</li>
+<li>Rules: Slope, Height, Facing, Patches, Bare Ground, Avoid, Paths and Follow, Mask, Color ID Map,
+  Grow With Another Layer, Ridges, Open Sky and Keep Away From Layers.</li>
+<li>Gathering: at the base of objects, in hollows and corners, under other layers, along path edges.</li>
+<li>Brush: paint, erase and place.</li>
+<li>Hand edits: move, rotate, scale or remove one instance; edits survive a new seed and hold in
+  renders.</li>
+<li>Physics Drop: instances fall and settle, then stay as hand-placed instances.</li>
+<li>Terrain tools: Bake Terrain Maps, Smart Terrain and Biome Blend.</li>
+<li>Exchange: scatter from the Asset Browser, Export for Unreal, Export for Unity, Export Transforms
+  (CSV and JSON), Make Real and Copy Settings to Selected.</li>
+<li>Season, snow and wetness; Dryness; Blend Ground; live wind; Grow In.</li>
+<li>Arrangement: rows, rows along curves and clumps. Direction: Face Camera, Flow and Lean Away.
+  Look: Rotation Snap, Random Height, Random Stretch, Random Flip and Edge Shrink.</li>
+<li>Performance: Viewport Budget, Camera View Only, Viewport Distance, Thin Far Away, Show As, Also in
+  Renders, and rules that cost nothing while they are off.</li>
+<li>One-click setup with TerrainLab, AtmosLab and Cityform.</li>
+<li>Scenes render without the add-on, camera markers included.</li>
+</ul>
