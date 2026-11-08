@@ -1,14 +1,14 @@
-# Long description of Cityform (called City Builder before 1.0). Images live in site/media/cityform/ on GitHub
+# Long description of Metropol (called City Builder before 1.0). Images live in site/media/metropol/ on GitHub
 # Pages until the Superhive gallery copies exist; swap to assets.superhivemarket.com links after the upload if wanted.
 
 headline: A whole city in one click, from the glass towers to the chimneys on the roofs.
 intro:
-  - "**Cityform** builds a complete procedural city in Blender: towers downtown, mid-rise apartment and office blocks, shopping streets, suburbs with gardens and pools, parks, and a far city that runs on to the horizon. Every street gets kerbs, footways, trees, lamps, signals and furniture."
-  - "The buildings are assembled from a real modular kit, with moulded windows, cornices, tiled and metal roofs, dormers, rear wings and streets that are not ruled with a straight edge. Draw your own roads, curved or at any angle, and Cityform builds the blocks between them. One click switches the whole city to a style, from a glass metropolis to a European old town or a wet night."
+  - "**Metropol** builds a complete procedural city in Blender: towers downtown, mid-rise apartment and office blocks, shopping streets, suburbs with gardens and pools, parks, and a far city that runs on to the horizon. Every street gets kerbs, footways, trees, lamps, signals and furniture."
+  - "The buildings are assembled from a real modular kit, with moulded windows, cornices, tiled and metal roofs, dormers, rear wings and streets that are not ruled with a straight edge. Draw your own roads, curved or at any angle, and Metropol builds the blocks between them. One click switches the whole city to a style, from a glass metropolis to a European old town or a wet night."
 chips: [One click, Your own roads, 5 city styles, 9 real skies, Far city to the horizon]
 hero:
-  src: https://voydeprocedural.github.io/superhive-descriptions/media/cityform/hero.jpg
-  alt: Aerial view of a Cityform city at golden hour, towers in the centre, tiled roofs running to the horizon
+  src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/hero.jpg
+  alt: Aerial view of a Metropol city at golden hour, towers in the centre, tiled roofs running to the horizon
 
 stats:
   - 5: city styles
@@ -40,10 +40,10 @@ sections:
     text:
       - "The same city holds up from a plane and from the pavement. Far away it is a roofscape running into the haze; up close it has shopfronts with goods on the shelves, signs, signals and street furniture."
     items:
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/cityform/roofs.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/roofs.jpg
         alt: Low aerial view of city blocks with tiled, slate and metal roofs, dormers and courtyards
         caption: "Hip, gable and lean-to roofs with dormers, in clay tile, slate and metal."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/cityform/street.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/street.jpg
         alt: Street-level view of a brick building with shops, a crossing and trees
 
   - type: gallery
@@ -52,9 +52,9 @@ sections:
     text:
       - "Draw road centre lines from above as the edges of a mesh or as a curve and click **From Roads**. Crossing roads meet in junctions, loose ends are ignored, and each enclosed area becomes a block in its district."
     items:
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/cityform/roads.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/roads.jpg
         alt: Drawn ring and radial road lines beside the city built from them
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/cityform/river.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/river.jpg
         alt: A river through the city with stone quays and a bridge
 
   - type: gallery
@@ -63,10 +63,10 @@ sections:
     text:
       - "**Style** sets the district mixes, heights and streets of every city object and the sky, haze, age, wetness and lit windows of the scene. Only what a style lists changes, so it is a starting point you can keep tweaking."
     items:
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/cityform/night_street.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/night_street.jpg
         alt: A wet street at night, lit by shop windows and street lamps
         caption: "Night: lit rooms, shop windows and wet streets."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/cityform/european.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/european.jpg
         alt: European Old Town style with stone apartment blocks, mansards and tiled roofs
         caption: "**European Old Town**: stone and plaster blocks, a low centre, tiled roofs."
 
@@ -76,10 +76,10 @@ sections:
     kicker: The panel
     title: One tab for the whole city
     text:
-      - "Everything is in the **Cityform** tab of the sidebar: build a city, pick a style, set the sky and mood and the viewport quality, and find every setting of the selected city object grouped as in its modifier."
+      - "Everything is in the **Metropol** tab of the sidebar: build a city, pick a style, set the sky and mood and the viewport quality, and find every setting of the selected city object grouped as in its modifier."
     media:
-      src: https://voydeprocedural.github.io/superhive-descriptions/media/cityform/panel.jpg
-      alt: The Cityform sidebar panel beside the city in the viewport
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/panel.jpg
+      alt: The Metropol sidebar panel beside the city in the viewport
 
   - type: specs
     kicker: Inside
@@ -97,8 +97,8 @@ sections:
     kicker: Quick start
     title: Your first city
     items:
-      - "In Blender, go to Edit > Preferences > Get Extensions, open the drop-down menu, choose **Install from Disk** and pick `cityform-1.0.0.zip`."
-      - A **Cityform** tab appears in the 3D Viewport sidebar (press N).
+      - "In Blender, go to Edit > Preferences > Get Extensions, open the drop-down menu, choose **Install from Disk** and pick `metropol-1.0.0.zip`."
+      - A **Metropol** tab appears in the 3D Viewport sidebar (press N).
       - Click **Add City**. A city with a river takes about ten seconds on a recent PC.
       - Pick a **Style**, then a **Sky** and click **Set Sky & Light**.
       - Place your camera and render, or click **Real-time Look** and fly around in EEVEE.
@@ -110,7 +110,7 @@ sections:
       - "Are cars and people included?": "Not as part of the look. A new city has empty streets, ready for your own models: give the **Parked Vehicles** input of a district a collection with your cars, one object per car. The sliders also bring in simple built-in stand-ins, which are meant for blocking out, not for close-ups."
       - "Will a whole city slow my viewport down?": "Set **Viewport Quality** to Balanced or Light while you work: Light shows plain boxes. Renders always show everything, and level of detail follows the camera."
       - "Cycles or EEVEE?": "Both. The materials, the haze and the night lighting work in each."
-      - "Which Blender versions?": "Blender 5.2 or newer. Cityform uses modifier features that are new in 5.2."
+      - "Which Blender versions?": "Blender 5.2 or newer. Metropol uses modifier features that are new in 5.2."
       - "Can I change the layout?": "Yes. Each face of a district object is a block that you can move or reshape in Edit Mode, or draw your own roads and use From Roads."
       - "Can I use it in commercial work?": "Yes, your renders and animations are yours. The building kit, textures and skies are CC0."
 
@@ -119,7 +119,7 @@ sections:
     title: What you get
     cards:
       - title: Included
-        items: [Cityform add-on (Blender extension), Two demo scenes with cameras, User manual]
+        items: [Metropol add-on (Blender extension), Two demo scenes with cameras, User manual]
       - title: Compatibility
         items: [Blender 5.2 or newer, Cycles and EEVEE, "Pure Python and Geometry Nodes, no binaries"]
       - title: License

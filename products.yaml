@@ -86,10 +86,10 @@ products:
     flag: NEW
     status: draft
 
-  - id: cityform
-    name: Cityform
+  - id: metropol
+    name: Metropol
     tagline: One-Click Procedural Cities
-    superhive: cityform
+    superhive: metropol
     category: gn
     kind: Add-on
     blender: "5.2"
