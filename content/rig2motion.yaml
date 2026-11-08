@@ -1,0 +1,119 @@
+# Long description of Rig2Motion (add-on repo: rigfit/, customer doc: rigfit/docs/documentation.md).
+# GIFs (site/media/rig2motion/) are cut from Studio captures of the owner's TEST.blend (Maria with a pistol).
+
+headline: Rig any character in seconds, then make it move with 308 ready-made animations.
+intro:
+  - "**Rig2Motion** turns a still character into an animated, game-ready one without leaving Blender. Pick a skeleton type and the joints find their places on your mesh: hips, knees, shoulders, elbows and every finger. One click binds clean weights, even on dressed characters made of many separate pieces."
+  - Then open the motion library, where every animation plays live on its own card. Click one to see it on your character, add the ones you need, put a sword, a shield or a gun in the hands, and export to Unreal, Unity or Godot.
+  - The rig uses only Blender's own constraints and drivers, so your files play on any computer, with or without the add-on.
+chips: [Blender 5.0 or newer, 9 skeleton types, 308 animations, 46 hand props, Unreal · Unity · Godot]
+hero:
+  src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/moves-grid.gif
+  alt: The same rigged character walking, running, jumping, dancing and crouch walking with library clips
+video: C_hc29Tdn6M
+
+stats:
+  - 9: skeleton types
+  - 308: animations
+  - 46: hand props
+  - 24: rig checks before export
+
+sections:
+  - type: features
+    kicker: Key features
+    title: From a still mesh to motion in one panel
+    items:
+      - Joints found for you: The Human skeleton finds the hips, knees, shoulders, elbows, wrists, spine, neck and head from the silhouette, in a T-pose or an A-pose, under coats, skirts and helmets.
+      - Real fingers: Fingertips and the webs between them are found on the hand itself, so every finger gets its own joints, also on mitten and mannequin hands.
+      - Nine skeleton types: Human, Quadruped, Horse, Bird, Dragon, Kaiju, Spider, Snake and Shark. Legged creatures get their legs, head and tail lined up with your model.
+      - Clean weights on messy models: Binding works on a closed stand-in of the body, so holes, overlapping pieces and many separate parts cannot break it. Clothes copy the weights of the skin under them; helmets and eyes follow one bone.
+      - Bone Colors: Every bone paints its own area, so you see at a glance which bone moves which part.
+      - A live motion library: 308 animations as moving cards, with search, tags, Mirror, In Place and several clips added at once.
+      - Hands that hold: 46 swords, axes, shields, bows, pistols, rifles and tools. The fingers close on the prop, measured on the character's own skin, in every clip.
+      - Aim Stance and Both Hands: A rifle stays in the shoulder with its barrel level, and the free hand stays on the fore-end, whatever the clip does with the arms.
+      - Animator controls: IK/FK with snapping, foot roll, finger curl, shoulders that rise with the arm, IK legs for animals and sliders for tails, wings, necks and jaws.
+      - Joints that keep their shape: Helper bones keep elbows, knees, shoulders and hips round, and twist bones stop a turned wrist from wringing the forearm.
+      - Import Animation: Bring Mixamo downloads, other FBX files, BVH motion capture or an animated armature onto your character.
+      - Check and export: 24 checks with one-click fixes, then presets for Unreal Engine 5, Unity (Humanoid), Godot (GLB) and generic FBX.
+
+  - type: gallery
+    kicker: In action
+    title: Rig, bind, hold, pose
+    items:
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/skeleton.gif
+        alt: Picking a skeleton type on animated cards in Rig2Motion Studio
+        caption: Pick a skeleton type; the joints find their places on your mesh.
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/bind.gif
+        alt: Bone Colors switched on and off after binding, each bone painting its own area
+        caption: One click binds the weights. Bone Colors shows which bone moves which part.
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/grip.gif
+        alt: Close-up of the fingers closing around a pistol held in the right hand
+        caption: The fingers close on the prop, in every clip.
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/animate.gif
+        alt: Animator controls raising the left arm with IK while the shoulder follows
+        caption: IK/FK, foot roll, finger curl and shoulders that follow the arm.
+
+  - type: feature
+    kicker: The motion library
+    title: All 308 motions, every skeleton type
+    text:
+      - Humans, fox, horse, bird, dragon, kaiju, spider, snake and shark. Every motion has a live card in the Studio; click one and it plays on your character.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/all-motions.gif
+      alt: Every motion in the Rig2Motion library playing on its card, page by page, humans first and then the creatures
+
+  - type: pair
+
+  - type: feature
+    kicker: Rig2Motion Studio
+    title: Its own interface, inside the 3D View
+    text:
+      - One floating panel next to your character, with every step on a rail on its left. The skeleton types and the game engines are cards, and the whole motion library plays at once, so you can pick a walk by looking at it.
+      - Prefer Blender's sidebar? Everything in the Studio is also in the **N** panel, and the two share their settings.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/motions.gif
+      alt: The Rig2Motion Studio motion library; clicking a card plays the pistol clips on a rigged character
+
+  - type: steps
+    kicker: Quick start
+    title: Rigged and moving in seven clicks
+    items:
+      - Select every mesh of your character in Object Mode (body, clothes, hair, eyes).
+      - In the Rig2Motion tab (or Rig2Motion Studio), click your skeleton type, then **Create Skeleton**.
+      - "Optional: **Edit Skeleton**, drag the coloured joint dots onto the joint centres, then **Finish Editing**."
+      - Click **Bind**. **Show Bone Colors** shows which bone moves which part.
+      - Click a motion card to play it on your character, then **Add** to keep it.
+      - "Optional: put a sword, a gun or a shield in either hand under **Props**."
+      - Pick Unreal, Unity, Godot or FBX and click **Export**.
+
+  - type: steps
+    kicker: Installation
+    title: Install in a minute
+    items:
+      - Download `rig2motion-0.8.0.zip` from your Superhive library. Do not unzip it.
+      - Drag and drop the zip into the Blender window, or go to **Edit → Preferences → Get Extensions**, open the **⌄** menu at the top right and choose **Install from Disk**.
+      - The add-on is enabled at once. Open the sidebar (**N**) and the **Rig2Motion** tab, or click **Rig2Motion Studio** in the 3D View header.
+
+  - type: faq
+    kicker: FAQ
+    title: Good to know
+    items:
+      - "Does my character need to be in a T-pose?": A T-pose or an A-pose works for the Human skeleton. The character can face any of the four horizontal directions; Rig2Motion tells which way from the geometry.
+      - "My character is already rigged. Can I re-rig it?": Yes. Select its meshes and create the skeleton; Rig2Motion fits the rest shape, and Bind takes the old skeleton's modifier off and tells you.
+      - "Do my files need Rig2Motion to play?": No. The rig is Blender's own constraints and drivers without Python, so it plays and renders on any computer and on render farms.
+      - "Can I use the animations in a commercial game?": Yes. The animations and props that come with Rig2Motion can be used in personal and commercial projects, including games you sell.
+      - "How heavy can my mesh be?": A 170,000-vertex character binds in about 4 seconds and a 660,000-vertex one in about 8, on an RTX 4060 and Ryzen 7 3700X class computer.
+      - "Does it need an internet connection or an account?": No. Everything runs inside Blender, including AI Assist, the optional landmark models that refine shoulders, elbows and fingers.
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items: [The Rig2Motion add-on (Blender extension), A demo .blend file, Documentation]
+      - title: Compatibility
+        items: [Blender 5.0 or newer, "Windows, macOS and Linux", No internet or account needed]
+      - title: License
+        items: [The add-on code is licensed under GPL-3.0-or-later., Animations and props can be used in commercial projects.]
+
+  - type: more

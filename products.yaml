@@ -47,6 +47,19 @@ categories:
 #   pairs         hand-picked products to recommend first (the "Pairs well with" card rotates through the first three)
 #   flag          optional ribbon on the card cover, e.g. NEW or BESTSELLER
 products:
+  - id: rig2motion
+    name: Rig2Motion
+    tagline: Auto-Rig & 308 Animations
+    superhive: rig2motion
+    category: tools
+    kind: Add-on
+    blender: "5.0+"
+    summary: Pick a skeleton and it fits your character, bind clean weights in one click, then play 308 animations live, put props in the hands and export to Unreal, Unity or Godot.
+    badges: [9 skeleton types, 308 animations, Game-engine export]
+    pairs: [grounded, atmoslab, crawlers]
+    flag: NEW
+    status: published
+
   - id: atmoslab
     name: AtmosLab
     tagline: Volumetric Fog & Day-Night Sky
