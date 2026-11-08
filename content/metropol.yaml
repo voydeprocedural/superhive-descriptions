@@ -100,7 +100,7 @@ sections:
       - "In Blender, go to Edit > Preferences > Get Extensions, open the drop-down menu, choose **Install from Disk** and pick `metropol-1.0.0.zip`."
       - A **Metropol** tab appears in the 3D Viewport sidebar (press N).
       - Click **Add City**. A city with a river takes about ten seconds on a recent PC.
-      - Pick a **Style**, then a **Sky** and click **Set Sky & Light**.
+      - Pick a **Style**, then a **Sky** and click **Set Sky**.
       - Place your camera and render, or click **Real-time Look** and fly around in EEVEE.
 
   - type: faq
