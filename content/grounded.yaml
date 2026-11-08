@@ -248,7 +248,7 @@ sections:
       - Transforms: Write every instance to CSV or JSON.
       - Unreal and Unity: Export a folder of FBX meshes, a transforms table and an import script. The scripts are written for Unreal Engine 5.3 and later, Unity 2022.3 LTS and Unity 6, and have not been run inside those engines yet; the FBX files and the table are complete on their own.
       - Asset Browser: Scatter straight from your own Asset Browser library.
-      - Voyde add-ons: TerrainLab, AtmosLab and Cityform are recognized when you have them. Grounded works the same without them.
+      - Voyde add-ons: TerrainLab, AtmosLab and Metropol are recognized when you have them. Grounded works the same without them.
 
   - type: chips
     kicker: Perfect for
