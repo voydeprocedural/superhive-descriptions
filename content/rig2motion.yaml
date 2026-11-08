@@ -8,8 +8,8 @@ intro:
   - The rig uses only Blender's own constraints and drivers, so your files play on any computer, with or without the add-on.
 chips: [Blender 5.0 or newer, 9 skeleton types, 308 animations, 46 hand props, Unreal · Unity · Godot]
 hero:
-  src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/motions.gif
-  alt: The Rig2Motion Studio motion library; clicking a card plays the pistol clips on a rigged character
+  src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/moves-grid.gif
+  alt: The same rigged character walking, running, jumping, dancing and crouch walking with library clips
 video: C_hc29Tdn6M
 
 stats:
@@ -53,30 +53,14 @@ sections:
         alt: Animator controls raising the left arm with IK while the shoulder follows
         caption: IK/FK, foot roll, finger curl and shoulders that follow the arm.
 
-  - type: gallery
+  - type: feature
     kicker: The motion library
-    title: Walk, run, jump, flip, dance
+    title: All 308 motions, every skeleton type
     text:
-      - The same rigged character with six of the 308 clips, each played with one click on its card.
-    items:
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/walk.gif
-        alt: The rigged character walking
-        caption: Walk
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/run.gif
-        alt: The rigged character running
-        caption: Run
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/jump.gif
-        alt: The rigged character jumping
-        caption: Jump
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/backflip.gif
-        alt: The rigged character doing a backflip
-        caption: Backflip
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/dance.gif
-        alt: The rigged character dancing the Charleston
-        caption: Dance
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/crouch.gif
-        alt: The rigged character walking crouched
-        caption: Crouch walk
+      - Humans, fox, horse, bird, dragon, kaiju, spider, snake and shark. Every motion has a live card in the Studio; click one and it plays on your character.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/all-motions.gif
+      alt: Every motion in the Rig2Motion library playing on its card, page by page, humans first and then the creatures
 
   - type: pair
 
@@ -86,6 +70,9 @@ sections:
     text:
       - One floating panel next to your character, with every step on a rail on its left. The skeleton types and the game engines are cards, and the whole motion library plays at once, so you can pick a walk by looking at it.
       - Prefer Blender's sidebar? Everything in the Studio is also in the **N** panel, and the two share their settings.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/motions.gif
+      alt: The Rig2Motion Studio motion library; clicking a card plays the pistol clips on a rigged character
 
   - type: steps
     kicker: Quick start
