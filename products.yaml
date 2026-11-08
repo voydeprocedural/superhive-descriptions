@@ -73,6 +73,19 @@ products:
     flag: NEW
     status: draft
 
+  - id: cityform
+    name: Cityform
+    tagline: One-Click Procedural Cities
+    superhive: cityform
+    category: gn
+    kind: Add-on
+    blender: "5.2"
+    summary: Whole procedural cities in one click, on a grid or on roads you draw, with towers, tiled roofs, suburbs, a river and a far city to the horizon.
+    badges: [One click, Your own roads, 5 styles]
+    pairs: [skyflow, cloud-sketch, trash-scatter]
+    flag: NEW
+    status: draft
+
   - id: crawlers
     name: Crawlers
     tagline: Lifelike Creature Swarms
