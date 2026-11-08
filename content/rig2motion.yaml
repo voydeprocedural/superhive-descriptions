@@ -10,6 +10,7 @@ chips: [Blender 5.0 or newer, 9 skeleton types, 308 animations, 46 hand props, U
 hero:
   src: https://voydeprocedural.github.io/superhive-descriptions/media/rig2motion/motions.gif
   alt: The Rig2Motion Studio motion library; clicking a card plays the pistol clips on a rigged character
+video: C_hc29Tdn6M
 
 stats:
   - 9: skeleton types
