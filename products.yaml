@@ -86,6 +86,19 @@ products:
     flag: NEW
     status: draft
 
+  - id: driplab
+    name: DripLab
+    tagline: Real Fluid Simulation & Painted Drips
+    superhive: driplab
+    category: gn
+    kind: Add-on
+    blender: "5.0+"
+    summary: Pour cream, honey or chocolate onto any product with a real fluid simulation, or paint drips that need no bake. Shot recipes, wet surfaces, a ready studio and 43 presets.
+    badges: [Real simulation, Product Studio, 43 presets]
+    pairs: [freezing-effect, gobolab, weave-it]
+    flag: NEW
+    status: draft
+
   - id: metropol
     name: Metropol
     tagline: One-Click Procedural Cities

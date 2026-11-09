@@ -1,0 +1,161 @@
+# Long description of DripLab (new product, 1.0.0). Facts from drip-lab/docs/documentation.md.
+# Media is hosted on this repo's GitHub Pages (site/media/driplab/); the renders were made with the add-on
+# (drip-lab/tools/make_sim_shot.py, render_promo.py). The models in the renders are Poly Haven CC0 models.
+
+headline: Pour honey, chocolate, lotion or paint onto any product, painted in seconds or simulated for real.
+intro:
+  - "**DripLab** puts liquids on your products in Blender, two ways. **Paint** them procedurally: strokes become drips, drizzles and glazes that follow the surface, and **Pour** drops a stream that pools and runs over the edges, live on the timeline with nothing to bake."
+  - "For hero shots, **Simulate** the pour for real. DripLab sets up Blender's own liquid solver around your product, with the viscosity and material of the preset: honey runs, lotion piles up, paint follows every curve of a face. **Product Studio** adds the backdrop, softbox lights and a depth-of-field camera in one click."
+chips: [Real simulation, Procedural pours, Product Studio, Wetness, 43 presets]
+hero:
+  src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/jar.gif
+  alt: White lotion pours onto a blue face cream jar and piles up in a soft heap on its gold lid
+# video: <YouTube id of the promo video, once it is uploaded>
+
+stats:
+  - 43: presets
+  - 2: ways to pour
+  - 5: studio styles
+  - 5: demo setups
+
+sections:
+  - type: features
+    kicker: Key features
+    title: From a quick drip to a hero pour
+    items:
+      - Real simulation: Simulate Pour sets up Blender's liquid solver around the selected product, sized and aimed for you, with the liquid's real viscosity, worked out for the size the product has in life.
+      - Shot Recipes: One button builds a Hero Pour, Speed Ramp Pour, Cream Swirl, Thin Drizzle or Pipette Drops around your product, with the studio and camera move that suit the shot.
+      - Liquid Film: Closes the tears of thin liquid with no new bake, so stretched liquid stays one smooth surface.
+      - Thicken After Pour: Creams and chocolate come to rest on their own instead of sliding off the product.
+      - Pour, live: One click puts a source above the object; the procedural stream falls, pools and drips over the edges as you play, with nothing to bake.
+      - Slow motion and close-ups: Slow Motion gives the liquid the look of a high-speed camera, and Close-Up spends the voxels where the camera is, for finer liquid at the same bake time.
+      - Drops: Release a drop every few frames instead of a stream, like a pipette or a bottle's opening.
+      - Product Studio: Curved backdrop, softboxes, strip lights and a camera with depth of field, scaled to your product, in five styles.
+      - Wetness: The surface around the liquid turns darker and glossy, with an optional stain, without touching its material.
+      - Paint with strokes: Draw on the surface; strokes become drips, drizzles and glazes that follow it.
+      - Toppings: Sprinkles, balls, flakes, bubbles, crumbs, drops and chips on top of the liquid.
+      - 43 presets: Desserts, sauces, cosmetics, industrial and FX liquids, each with its own material and physics. Save your own in My Presets.
+
+  - type: feature
+    kicker: Simulation
+    title: A real pour, set up in one click
+    text:
+      - Select your product and what it stands on, pick a preset and press **Simulate Pour**. DripLab builds the liquid domain around them, turns them into colliders and places a source you can move and tilt. Press **Bake** and Blender's own solver (Mantaflow) simulates the pour.
+      - Every preset brings its physics. Water and serums run, honey and caramel flow slowly, lotions and creams pile up. Each liquid has its real viscosity, and **Real Size** tells DripLab how big the product is in life, so a 5 cm jar pours like a 5 cm jar however large you modelled it. The liquid gets the preset's material, toppings and a wet look on the product, and its surface is smoothed for close-ups. No extra software: the bake is a folder next to your .blend file, so it renders on any machine with Blender, render farms included.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/sim-bust.jpg
+      alt: Orange paint simulated pouring over a white marble bust, running down the side of the face
+
+  - type: feature
+    kicker: Pour
+    title: Select, pick a preset, press Pour
+    text:
+      - A source with an arrow appears above the object (or at the 3D cursor). Play the timeline and the stream leaves along the arrow, piles up a little where it lands, spreads into a pool that grows with the poured amount and runs over the edges in drips.
+      - "**Pour Radius** sets how far the pool spreads, **Coat Drips** how many drips run off, and **Start Frame** and **Duration** when and how long it pours. When the pour stops, the tail of the stream breaks off and falls."
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/pour-steps.jpg
+      alt: "Four frames of a pour: the stream falls, the pool spreads, it runs over the edge, the drips settle"
+
+  - type: pair
+
+  - type: gallery
+    kicker: On anything
+    title: Any object, any fluid
+    text:
+      - "Simulated: lotion that coils on a plate, ganache poured over a strawberry cake, salted caramel over an apple. Painted: honey on a croissant, glazes on doughnuts and a caramel spiral on pancakes."
+      - The models in these renders are CC0 models from Poly Haven and are not included. The demo scene is.
+    items:
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/swirl.jpg
+        alt: A rope of white lotion coils into a glossy swirl on a dark plate
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/cake.jpg
+        alt: Dark chocolate ganache pours onto a dome cake covered in strawberry slices
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/apple.jpg
+        alt: Salted caramel with salt flakes covering a red apple
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/croissant.jpg
+        alt: Honey painted onto a croissant on a wooden board
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/glaze.jpg
+        alt: Two doughnuts with a sprinkled white glaze and a green matcha glaze
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/drizzle.jpg
+        alt: A caramel spiral drizzled over a stack of pancakes with butter
+
+  - type: feature
+    kicker: Pour at an angle
+    title: Aim it like a real pour
+    text:
+      - Move the source to aim and rotate it to pour from the side. The stream leaves along the arrow and arcs down; **Pour Speed** sets how far the arc reaches.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/angled-pour.gif
+      alt: Toxic green slime poured from the side arcs onto a dark rock and drips down, leaving a wet halo
+
+  - type: feature
+    kicker: Wetness
+    title: The surface soaks it up
+    text:
+      - Turn on **Wetness** and the surface around the fluid looks wet, darker and glossy, fading out over **Wet Spread**. It follows the fluid live, so a pour leaves a growing wet halo.
+      - The surface object and its material are not changed. The wet look is a thin transparent layer that belongs to the fluid, so it works with any material in Cycles and EEVEE. **Wet Stain** lets the colour of the fluid soak in.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/wetness.jpg
+      alt: The same slime-covered rock with Wetness off on the left and on the right, where the rock around the slime is darker and glossy
+
+  - type: specs
+    kicker: Presets
+    title: 43 presets in six categories
+    text:
+      - Every preset is a starting point. Its settings stay editable in the sidebar, and you can apply another preset to a fluid without losing its strokes, surface or pour.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/presets.jpg
+      alt: Grid of the 43 DripLab presets, each shown on a small dark puck
+    items:
+      - Basic: Plain Drip, Plain Coat.
+      - Desserts: Dark Ganache, Mirror Glaze, Birthday Glaze, Matcha Glaze, Milk and White Chocolate Drizzle, Salted Caramel, Hot Fudge, Strawberry Coulis, Lemon Curd, Royal Icing, Whipped Cream.
+      - Sauces & Food: Wildflower Honey, Melted Cheese, BBQ Sauce, Sriracha, Balsamic Reduction, Soy Glaze, Olive Oil Sheen.
+      - Cosmetics: Face Serum, Body Lotion, Hair Gel, Lip Gloss, Liquid Foundation, Nail Polish, Pearl Shampoo, Condensation.
+      - Industrial: Wet Paint, Motor Oil, Engine Grease, Epoxy Resin, Molten Copper, Quicksilver Beads.
+      - FX: Fresh Blood, Old Blood, Toxic Ooze, Alien Goo, Black Goo, Ectoplasm, Lava Flow, Candle Wax.
+
+  - type: feature
+    kicker: Interface
+    title: Everything in one sidebar tab
+    text:
+      - The **DripLab** tab in the 3D Viewport sidebar holds the preset gallery with previews, the Add Fluid and Pour buttons, Shot Recipes, the Simulation panel and Product Studio, and every setting of the selected fluid. The presets are also in the Asset Browser, ready to drag onto an object.
+      - A bake is safe in the panel. Its physics lock once it is baked, since changing them would delete it; **Free Bake** asks first, then you change them and bake again.
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/interface.jpg
+      alt: Blender with a baked lotion pour on a face cream jar and the DripLab Simulation panel open
+
+  - type: chips
+    kicker: Perfect for
+    title: Where it fits
+    items: [Food and dessert renders, Cosmetics product shots, Paint and drip art, Slime and horror FX, Oil and grease on props, Motion graphics loops]
+
+  - type: steps
+    kicker: Installation
+    title: Up and running in a minute
+    items:
+      - Download `drip_lab-1.0.0.zip` from your Superhive library. Do not unzip it.
+      - Drag the zip into Blender, or go to **Edit ▸ Preferences ▸ Get Extensions**, open the **⌄** menu at the top right and choose **Install from Disk**.
+      - Press **N** in the 3D Viewport and open the **DripLab** tab.
+      - Select an object, pick a preset and press **Pour**, then play the timeline. Or press **Add Fluid** and draw on the object.
+
+  - type: faq
+    kicker: FAQ
+    title: Good to know
+    items:
+      - "Is the simulation real?": Yes. It runs on Mantaflow, the liquid solver built into Blender, with nothing extra to install. DripLab sets it up for product shots; you bake it like any Blender simulation, and the bake is a folder next to your .blend file.
+      - "Can I change a simulation after baking it?": "Yes: press **Free Bake**, change the settings or the preset, and bake again. Liquid Film and the toppings stay editable on a bake."
+      - "Do painted fluids need baking?": No. They are Geometry Nodes driven by the frame, so every frame can be scrubbed, re-timed and changed at any moment.
+      - "Cycles or EEVEE?": Both. The materials are procedural, and the wet layer uses blended transparency in EEVEE.
+      - "Is it heavy on the viewport?": Fluids are meshed from a volume. Lower **Quality ▸ Resolution Viewport** while you work and keep **Use Render Resolution** on for full detail in renders. Animated fluids update on every frame of playback, so hide the ones you are not working on or turn finished ones into meshes.
+      - "Does the file render without the add-on?": Yes. Fluids are Geometry Nodes and materials stored in the .blend file, so it also renders on a machine or render farm without DripLab.
+      - "Does it work on animated objects?": "Yes: **Stick to an animated object** binds a fluid to a deforming mesh with Surface Deform or armature weights, and **Unstick** brings the editable fluid back."
+      - "Which Blender versions?": Blender 5.0 or newer. It was tested on Blender 5.0, 5.1 and 5.2.
+      - "Can I use it in commercial work?": Yes. Your renders and animations are yours to use in any project.
+
+  - type: facts
+    kicker: Details
+    title: What you get
+    cards:
+      - title: Included
+        items: [DripLab add-on (Blender extension zip), 43 presets with previews, Demo scene with five ready-made setups, Documentation]
+      - title: Compatibility
+        items: [Blender 5.0 or newer, "Tested on Blender 5.0, 5.1 and 5.2", Cycles and EEVEE, The add-on code is licensed under GPL-3.0-or-later.]
