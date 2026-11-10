@@ -7,8 +7,8 @@ intro:
   - "The buildings are assembled from a real modular kit, with moulded windows, cornices, tiled and metal roofs, dormers, rear wings and streets that are not ruled with a straight edge. Draw your own roads, curved or at any angle, and Metropol builds the blocks between them. One click switches the whole city to a style, from a glass metropolis to a European old town or a wet night."
 chips: [One click, Your own roads, 5 city styles, 9 real skies, Far city to the horizon]
 hero:
-  src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/hero.jpg
-  alt: Aerial view of a Metropol city at golden hour, towers in the centre, tiled roofs running to the horizon
+  src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/orbit-styles.webp
+  alt: The camera circles a Metropol city while it changes style, from Modern Metropolis to European Old Town, Sunbelt and Gritty
 
 stats:
   - 5: city styles
@@ -40,11 +40,18 @@ sections:
     text:
       - "The same city holds up from a plane and from the pavement. Far away it is a roofscape running into the haze; up close it has shopfronts with goods on the shelves, signs, signals and street furniture."
     items:
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/roofs.jpg
-        alt: Low aerial view of city blocks with tiled, slate and metal roofs, dormers and courtyards
-        caption: "Hip, gable and lean-to roofs with dormers, in clay tile, slate and metal."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/street.jpg
-        alt: Street-level view of a brick building with shops, a crossing and trees
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/far-city.webp
+        alt: A slow flight over the city, the street grid running on to the horizon
+        caption: "**Far City** carries the streets on to the horizon."
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/golden-street.webp
+        alt: The camera moves along a street of towers and trees in warm evening light
+        caption: "Detail all the way down to the kerb."
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/street-corner.webp
+        alt: A street corner with shops, the rooms behind the glass lit and stocked
+        caption: "Shopfronts with goods on the shelves and rooms behind the glass."
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/street-walk.webp
+        alt: A walk down a shopping street with trees, lamps and street signs
+        caption: "Trees, lamps, signals and furniture on every street."
 
   - type: gallery
     kicker: Your layout
@@ -52,23 +59,53 @@ sections:
     text:
       - "Draw road centre lines from above as the edges of a mesh or as a curve and click **From Roads**. Crossing roads meet in junctions, loose ends are ignored, and each enclosed area becomes a block in its district."
     items:
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/roads-city.webp
+        alt: Glowing ring and radial road lines drawn over fields, then the city Metropol builds between them
+        caption: "Ring and radial roads drawn by hand, and the city built from them."
       - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/roads.jpg
         alt: Drawn ring and radial road lines beside the city built from them
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/river.jpg
-        alt: A river through the city with stone quays and a bridge
+        caption: "Curved and diagonal streets become blocks too."
 
   - type: gallery
+    kicker: In among the blocks
+    title: Rivers, markets and pitches
+    text:
+      - "Turn the middle of the city into a river with quay walls and a bridge for every street that crosses it. Public places fill whole blocks: a market with striped stalls, a floodlit football pitch, tennis and basketball courts, a sports hall, a supermarket, a filling station, a school and a car park."
+    items:
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/river.webp
+        alt: A river through the city with stone quays, trees and a bridge
+        caption: "Rivers with quays and bridges."
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/market.webp
+        alt: A market square with rows of striped stalls among the blocks
+        caption: "A market with striped stalls."
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/pitch.webp
+        alt: A floodlit football pitch with fences and trees in the city
+        caption: "Pitches, courts, a sports hall and a school."
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/river-dusk.webp
+        alt: The camera glides along a river at blue hour, past towers, quays and a row of bridges
+        caption: "Blue hour on the river."
+
+  - type: gallery
+    kicker: After dark
+    title: From day to night in one click
+    text:
+      - "Pick a night sky and the city switches on: every window gets its own lamp colour and curtain, offices run on cool tubes and shop windows glow. Street lamps near the camera are real lights with shadows; further away they turn into painted pools of light that cost no render time."
+    items:
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/day-night.webp
+        alt: The camera swings over downtown as the city turns from a golden day to a lit night and back
+        caption: "The same city by day and by night."
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/night-street.webp
+        alt: A wet street at night, lit by shop windows and street lamps
+        caption: "Lit rooms, shop windows, real street lamps and wet asphalt."
+
+  - type: feature
     kicker: Styles
     title: One city, five moods
     text:
       - "**Style** sets the district mixes, heights and streets of every city object and the sky, haze, age, wetness and lit windows of the scene. Only what a style lists changes, so it is a starting point you can keep tweaking."
-    items:
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/night_street.jpg
-        alt: A wet street at night, lit by shop windows and street lamps
-        caption: "Night: lit rooms, shop windows and wet streets."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/european.jpg
-        alt: European Old Town style with stone apartment blocks, mansards and tiled roofs
-        caption: "**European Old Town**: stone and plaster blocks, a low centre, tiled roofs."
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/metropol/european.jpg
+      alt: European Old Town style with stone apartment blocks, mansards and tiled roofs
 
   - type: pair
 
