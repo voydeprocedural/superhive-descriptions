@@ -1,6 +1,7 @@
 # Long description of DripLab (new product, 1.0.0). Facts from drip-lab/docs/documentation.md.
 # Media is hosted on this repo's GitHub Pages (site/media/driplab/); the renders were made with the add-on
-# (drip-lab/tools/make_sim_shot.py, render_promo.py). The models in the renders are Poly Haven CC0 models.
+# (drip-lab/tools/make_sim_shot.py, render_promo.py). The models in the renders are Poly Haven CC0 models and
+# public-domain statue scans from SMK.
 
 headline: Pour honey, chocolate, lotion or paint onto any product, painted in seconds or simulated for real.
 intro:
@@ -24,7 +25,8 @@ sections:
     title: From a quick drip to a hero pour
     items:
       - Real simulation: Simulate Pour sets up Blender's liquid solver around the selected product, sized and aimed for you, with the liquid's real viscosity, worked out for the size the product has in life.
-      - Shot Recipes: One button builds a Hero Pour, Speed Ramp Pour, Cream Swirl, Thin Drizzle or Pipette Drops around your product, with the studio and camera move that suit the shot.
+      - Shot Recipes: One button builds a Hero Pour, Speed Ramp Pour, Cream Swirl, Thin Drizzle, Pipette Drops or Paint Splash around your product, with the studio and camera move that suit the shot.
+      - Paint Splash: Throw paint at a product or a statue from the side. It flies as a sheet with drops at its edges and hangs on the surface in slow motion, like a high-speed camera shot.
       - Liquid Film: Closes the tears of thin liquid with no new bake, so stretched liquid stays one smooth surface.
       - Thicken After Pour: Creams and chocolate come to rest on their own instead of sliding off the product.
       - Pour, live: One click puts a source above the object; the procedural stream falls, pools and drips over the edges as you play, with nothing to bake.
@@ -43,8 +45,18 @@ sections:
       - Select your product and what it stands on, pick a preset and press **Simulate Pour**. DripLab builds the liquid domain around them, turns them into colliders and places a source you can move and tilt. Press **Bake** and Blender's own solver (Mantaflow) simulates the pour.
       - Every preset brings its physics. Water and serums run, honey and caramel flow slowly, lotions and creams pile up. Each liquid has its real viscosity, and **Real Size** tells DripLab how big the product is in life, so a 5 cm jar pours like a 5 cm jar however large you modelled it. The liquid gets the preset's material, toppings and a wet look on the product, and its surface is smoothed for close-ups. No extra software: the bake is a folder next to your .blend file, so it renders on any machine with Blender, render farms included.
     media:
-      src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/sim-bust.jpg
-      alt: Orange paint simulated pouring over a white marble bust, running down the side of the face
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/splash.jpg
+      alt: Orange paint thrown at a marble bust of Antinous, wrapping over the curls and flying off in a sheet
+
+  - type: feature
+    kicker: Paint Splash
+    title: Slow-motion paint, thrown at any model
+    text:
+      - "The **Paint Splash** recipe puts the source beside your model and throws across it. The paint flies as a sheet with drops at its edges, wraps over the shape and hangs there in slow motion, like a high-speed camera shot."
+      - "**Throw Lift**, **Throw Swing** and **Throw Taper** shape the throw, **Hold After Landing** slows time once the paint lands. One bake gives you every camera: a close-up, a second angle, the full figure. (The statues are public-domain scans from SMK, Copenhagen, and are not included.)"
+    media:
+      src: https://voydeprocedural.github.io/superhive-descriptions/media/driplab/statues.jpg
+      alt: Four Greek statues splashed with orange, purple, blue and gold paint, seen close up, from a second camera and full figure
 
   - type: feature
     kicker: Pour
