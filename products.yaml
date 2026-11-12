@@ -60,6 +60,19 @@ products:
     flag: NEW
     status: published
 
+  - id: terrain-lab
+    name: TerrainLab
+    tagline: Realistic Terrain Generator
+    superhive: terrainlab-realistic-terrain-generator
+    category: terrain
+    kind: Add-on
+    blender: "5.0–5.2"
+    summary: Build terrains from landform layers, erode them with water and wind in seconds, add rivers, skies and a material that paints itself, then export to game engines.
+    badges: [17 presets, River networks, Game-engine export]
+    pairs: [terrain-materials-pack, skyflow, ultimate-terrain-pack]
+    flag: NEW
+    status: published
+
   - id: atmoslab
     name: AtmosLab
     tagline: Volumetric Fog & Day-Night Sky
@@ -84,7 +97,7 @@ products:
     badges: [12 biomes, 395 models, Seasons & weather]
     pairs: [ultimate-terrain-pack, smart-scatter-kit, trash-scatter]
     flag: NEW
-    status: draft
+    status: published
 
   - id: driplab
     name: DripLab
@@ -102,7 +115,7 @@ products:
   - id: metropol
     name: Metropol
     tagline: One-Click Procedural Cities
-    superhive: metropol
+    superhive: metropol-one-click-procedural-cities
     category: gn
     kind: Add-on
     blender: "5.2"
@@ -110,7 +123,7 @@ products:
     badges: [One click, Your own roads, 5 styles]
     pairs: [skyflow, cloud-sketch, trash-scatter]
     flag: NEW
-    status: draft
+    status: published
 
   - id: crawlers
     name: Crawlers

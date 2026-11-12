@@ -535,14 +535,6 @@
   1600,
   900
  ],
- "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/fog-drift.gif": [
-  640,
-  360
- ],
- "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/forest-beams.gif": [
-  640,
-  360
- ],
  "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/forest-sunbeams.jpg": [
   1600,
   900
@@ -550,10 +542,6 @@
  "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/golden-dust.jpg": [
   1600,
   900
- ],
- "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/lake-dawn.gif": [
-  640,
-  360
  ],
  "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/lamp-lit-night.jpg": [
   1600,
@@ -571,23 +559,59 @@
   1600,
   900
  ],
- "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/presets.gif": [
-  640,
-  340
- ],
- "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/sun.gif": [
-  640,
-  340
- ],
- "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/time.gif": [
-  640,
-  340
- ],
  "https://voydeprocedural.github.io/superhive-descriptions/media/atmoslab/valley-mist.jpg": [
   1600,
   900
  ],
  "https://voydeprocedural.github.io/superhive-descriptions/media/blendbuddy/photo-pet-steps.jpg": [
+  1280,
+  720
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/angled-pour.gif": [
+  640,
+  360
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/apple.jpg": [
+  1280,
+  720
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/bust.jpg": [
+  1280,
+  720
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/carrot.jpg": [
+  1280,
+  720
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/croissant.jpg": [
+  1280,
+  720
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/duck.jpg": [
+  1280,
+  720
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/interface.jpg": [
+  1600,
+  900
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/lion.jpg": [
+  1280,
+  720
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/pour-steps.jpg": [
+  1280,
+  720
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/pour.gif": [
+  640,
+  360
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/presets.jpg": [
+  1600,
+  900
+ ],
+ "https://voydeprocedural.github.io/superhive-descriptions/media/driplab/wetness.jpg": [
   1280,
   720
  ]
