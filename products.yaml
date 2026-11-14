@@ -47,6 +47,19 @@ categories:
 #   pairs         hand-picked products to recommend first (the "Pairs well with" card rotates through the first three)
 #   flag          optional ribbon on the card cover, e.g. NEW or BESTSELLER
 products:
+  - id: ageforge
+    name: AgeForge
+    tagline: One Slider Ages Any Object
+    superhive: ageforge
+    category: gn
+    kind: Add-on
+    blender: "5.0+"
+    summary: Drag one slider and any object gets older in the right order, dust and grime first, then worn edges and rain streaks, then rust, moss, peeling paint and cracks. Its own material stays underneath.
+    badges: [One age slider, 9 effects, Time-lapse in one click]
+    pairs: [metropol, trash-scatter, surface-forge]
+    flag: NEW
+    status: draft
+
   - id: rig2motion
     name: Rig2Motion
     tagline: Auto-Rig & 308 Animations
