@@ -47,6 +47,19 @@ categories:
 #   pairs         hand-picked products to recommend first (the "Pairs well with" card rotates through the first three)
 #   flag          optional ribbon on the card cover, e.g. NEW or BESTSELLER
 products:
+  - id: ocean-lab
+    name: OceanLab
+    tagline: Realistic Ocean with Live Interaction
+    superhive: oceanlab
+    category: gn
+    kind: Add-on
+    blender: "5.0–5.3"
+    summary: An animated open sea you can see into. Pick one of nine ocean types, from a tropical lagoon to a storm, with lace foam, props that ride the waves and objects that push the water live. Renders in EEVEE and Cycles without the add-on.
+    badges: [9 ocean types, Water with depth, Live interaction]
+    pairs: [atmoslab, skyflow, cloud-sketch]
+    flag: NEW
+    status: draft
+
   - id: ageforge
     name: AgeForge
     tagline: One Slider Ages Any Object
