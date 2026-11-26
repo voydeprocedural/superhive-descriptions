@@ -47,31 +47,31 @@ sections:
       - "Every picture here is one click in the **Type** menu, then **Bake Waves**. A type is a whole sea: how hard the wind blows, the swell that runs under it, how deep the water is, which colours it keeps and how far you see into it. The sky is yours: each sea is shown under one that suits it."
       - "A type is a starting point, not a cage. Everything it sets is an ordinary slider afterwards, so you can take the Storm and calm it down, or give the Lake the water of the lagoon."
     items:
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-OPEN_OCEAN.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-OPEN_OCEAN.webp
         alt: Deep blue open ocean with scattered whitecaps under a sky of small clouds
         caption: "**Open Ocean.** A fresh breeze over a long swell, deep blue water."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-TROPICAL.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-TROPICAL.webp
         alt: Clear turquoise water over pale sand with small glittering wavelets
         caption: "**Tropical Lagoon.** Four metres of clear water over pale sand."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-MEDITERRANEAN.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-MEDITERRANEAN.webp
         alt: Calm cobalt blue sea under a cloudless sky with the glitter of the sun on it
         caption: "**Mediterranean.** Clear cobalt water, a gentle breeze."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-NORTH_ATLANTIC.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-NORTH_ATLANTIC.webp
         alt: A steel grey sea under a closed sky, a heavy swell rolling through it
         caption: "**North Atlantic.** A strong breeze and a heavy swell under a closed sky."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-STORM.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-STORM.webp
         alt: A dark heaving sea streaked with foam, a wave crest rising over the horizon
         caption: "**Storm.** A strong gale, nine metre waves, foam in streaks."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-ARCTIC.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-ARCTIC.webp
         alt: Cold dark blue water with a slow swell under a pale low sun
         caption: "**Arctic.** Cold, dark and almost still, with a slow swell under it."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-GLASSY.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-GLASSY.webp
         alt: A smooth sea at sunset that mirrors the sky, the path of the sun broken by a slow swell
         caption: "**Glassy Swell.** Hardly any wind, a smooth swell that mirrors the sky."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-COAST.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-COAST.webp
         alt: Murky green water with a short chop under a soft sky
         caption: "**Green Coast.** Murky green water near the shore."
-      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-LAKE.jpg
+      - src: https://voydeprocedural.github.io/superhive-descriptions/media/ocean-lab/type-LAKE.webp
         alt: Dark fresh water with small short waves in the evening sun
         caption: "**Lake.** Small, short waves and no swell."
 
